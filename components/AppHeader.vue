@@ -1,0 +1,174 @@
+<template>
+  <div class="header-wrapper"><!-- Begin .header-wrapper div -->
+    <header class="header">
+      <a class="header-logo" href="/"></a>
+
+      <nav class="header-nav">
+        <ul class="header-menu">
+          <li class="header-menu-item"><a href="/">Home</a></li>
+          <li class="header-menu-item"><a href="/about">About</a></li>
+          <li class="header-menu-item"><a href="/resume">Resume</a></li>
+          <li class="header-menu-item"><a href="/contact">Contact Me</a></li>
+        </ul>
+      </nav>
+
+      <button class="header-theme-switch" @click="switchTheme" role="switch" aria-label="light/dark mode"></button>
+    </header>
+
+    <audio class="header-theme-switch-audio-on" src="/audio/light-on.mp3"></audio>
+    <audio class="header-theme-switch-audio-off" src="/audio/light-off.mp3"></audio>
+  </div><!-- End .header-wrapper div -->
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        audio: '',
+        displayedTheme: '',
+        headerThemeSwitch: '',
+        moonSVG: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+          <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd" />
+          </svg>`,
+        preferredTheme: '',
+        root: '',
+        storedTheme: '',
+        systemTheme: '',
+        sunSVG: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+          <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+          </svg>`
+      }
+    },
+    methods: {
+      loadTheme() {
+        this.headerThemeSwitch = document.querySelector('.header-theme-switch');
+
+        this.storedTheme = localStorage.getItem('bob-arndt-theme');
+
+        this.systemTheme = window
+          .matchMedia('(prefers-color-scheme: dark)')
+          .matches ? 'dark' : 'light';
+
+        this.preferredTheme = this.storedTheme || this.systemTheme;
+
+        if (this.preferredTheme === 'light') {
+          this.headerThemeSwitch.innerHTML = this.moonSVG;
+          this.audio = document.querySelector('.header-theme-switch-audio-on');
+        } else {
+          this.headerThemeSwitch.innerHTML = this.sunSVG;
+          this.audio = document.querySelector('.header-theme-switch-audio-off');
+        }
+
+        this.root = document.querySelector(':root');
+        this.root.setAttribute('color-scheme', this.preferredTheme);
+
+        localStorage.setItem('bob-arndt-theme', this.preferredTheme);
+      },
+      switchTheme() {
+        if (this.preferredTheme === 'light') {
+          this.preferredTheme = 'dark';
+          this.headerThemeSwitch.innerHTML = this.sunSVG;
+          this.audio = document.querySelector('.header-theme-switch-audio-on');
+        } else {
+          this.preferredTheme = 'light';
+          this.headerThemeSwitch.innerHTML = this.moonSVG;
+          this.audio = document.querySelector('.header-theme-switch-audio-off');
+        }
+
+        this.root.setAttribute('color-scheme', this.preferredTheme);
+        localStorage.setItem('bob-arndt-theme', this.preferredTheme);
+
+        this.audio.currentTime = 0;
+        this.audio.play();
+      },
+    },
+    mounted() {
+      this.loadTheme();
+    }
+  }
+</script>
+
+<style scoped lang="scss">
+  .header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width-site);
+    padding: 0 3.2rem;
+    width: var(--width-full);
+  }
+
+  .header-logo {
+    background-image: var(--header-logo-background-image);
+    height: 4.2rem;
+    margin-right: auto;
+    width: 12rem;
+  }
+
+  .header-menu {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-wide);
+    list-style-type: none;
+    margin-right: 5rem;
+    text-transform: uppercase;
+
+    @media (max-width: 40em) {
+      display: none;
+    }
+  }
+
+  .header-menu-item {
+    color: var(--color-header-menu-item);
+    display: inline-block;
+
+    &:not(:last-of-type) {
+      margin-right: 2.4rem;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:is(:link, :visited) {
+        color: var(--color-header-menu-item);
+      }
+
+      &:is(:active, :focus, :hover) {
+        color: var(--color-rose-600);
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .header-theme-switch {
+    background-color: transparent;
+    border-radius: 50%;
+    color: var(--color-azure-600);
+    cursor: pointer;
+    display: grid;
+    height: 2.5rem;
+    place-items: center;
+    width: 2.5rem;
+
+    &:hover {
+      color: var(--color-azure-400);
+    }
+  }
+
+  .header-wrapper {
+    align-items: center;
+    background-color: var(--color-header-background);
+    backdrop-filter: blur(4px);
+    display: flex;
+    box-shadow: (var(--drop-shadow-header));
+    height: 6.4rem;
+    position: fixed;
+    top: 0;
+    width: var(--width-full);
+    z-index: 10;
+  }
+</style>
