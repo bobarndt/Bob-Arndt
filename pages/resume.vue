@@ -1,5 +1,8 @@
 <template>
   <div class="resume-wrapper-outer">
+    <div class="resume-scroll-progress-bar">
+      <div class="resume-scroll-progress-bar-fill"></div>
+    </div>
     <div class="resume-wrapper-inner"><!-- Begin .resume-wrapper-inner div -->
       <main class="resume-main">
         <h1 class="resume-title">Professional Resume</h1>
@@ -19,7 +22,7 @@
           <div class="resume-section-flex-container">
             <h2 class="resume-article-title">Technical Skills</h2>
             <ul class="resume-skills-list">
-              <li>JavaScript / TypeScript / VueJS / NuxtJS</li>
+              <li>JavaScript / VueJS / NuxtJS</li>
               <li>NodeJS / NPM / Vite</li>
               <li>Ajax / JSON / RESTful APIs</li>
               <li>HTML5 / Responsive Design</li>
@@ -107,7 +110,29 @@
   </div>
 </template>
 
-<script></script>
+<script>
+  export default {
+    methods: {
+      showScrollProgress() {
+        window.addEventListener('scroll', () => {
+          const scrollProgressBarFill = document.querySelector('.resume-scroll-progress-bar-fill');
+          let percentScrolled = 100;
+          let scrollable = document.documentElement.scrollHeight - window.innerHeight;
+          let scrolled = window.scrollY;
+
+          if (scrollable > 0) {
+            percentScrolled = Math.ceil(scrolled / scrollable * 100);
+          }
+
+          scrollProgressBarFill.style.width = `${ percentScrolled }%`;
+        });
+      }
+    },
+    mounted() {
+      this.showScrollProgress();
+    }
+  }
+</script>
 
 <style scoped lang="scss">
   .resume-article {
@@ -241,6 +266,21 @@
     }
   }
 
+
+  .resume-scroll-progress-bar {
+    background-color: var(--color-white);
+    height: .5rem;
+    left: 0;
+    position: fixed;
+    top: 6.4rem;
+    width: 100%;
+  }
+
+  .resume-scroll-progress-bar-fill {
+    background-color: var(--color-progress-bar-fill);
+    height: 100%;
+    width: 0%;
+  }
   .resume-section {
     border-bottom: 1px solid var(--color-resume-section-divider);
     margin-bottom: 2.4rem;
@@ -291,12 +331,12 @@
   }
 
   .resume-wrapper-inner {
-    margin-left: auto;
-    margin-right: auto;
+    margin: .5rem auto 0;
     max-width: var(--max-width-site);
   }
 
   .resume-wrapper-outer {
     margin-top: 6.4rem;
+    position: relative;
   }
 </style>
