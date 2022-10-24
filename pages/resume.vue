@@ -43,7 +43,7 @@
                 </div>
                 <span class="resume-employer-description">Recent Projects :</span>
                 <h5 class="resume-recent-employer">Children's Health</h5>
-                <p class="resume-body-text">Contributed to ongoing development and maintenance of enterprise site <a class="resume-link" href="https://www.childrens.com" target="_blank">“www.childrens.com”</a>, as well as related internal and public-facing web properties for Children’s Medical Center of Dallas. Extensive use of IBM Websphere Application Server (CMS), JavaScript, jQuery, Sass and Gulp.</p>
+                <p class="resume-body-text">Contributed to ongoing development and maintenance of enterprise site <a class="resume-external-link" href="https://www.childrens.com" target="_blank">“www.childrens.com”</a>, as well as related internal and public-facing web properties for Children’s Medical Center of Dallas. Extensive use of IBM Websphere Application Server (CMS), JavaScript, jQuery, Sass and Gulp.</p>
                 <h5 class="resume-recent-employer">CBRE</h5>
                 <p class="resume-body-text">Participated in building CBRE myVantage with Angular 6 and Bootstrap. myVantage is an internal tool to empower CBRE salespeople to create and configure highly customized proposals for their prospects and existing customers.</p>
                 <h5 class="resume-recent-employer">American Airlines</h5>
@@ -105,14 +105,31 @@
           </div>
         </section>
 
+        <a class="resume-download-button-link" href="/Bob-Arndt-resume.pdf" target="_blank">
+          <button class="resume-download-button">
+            <span class="resume-download-button-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M17,11l-1.41-1.41L13,12.17V4h-2v8.17L8.41,9.59L7,11l5,5 L17,11z"/></g></svg>
+            </span>
+            <span class="resume-download-button-text">Download Resume</span>
+          </button>
+        </a>
+
       </main>
     </div><!-- End .resume-wrapper-inner div -->
+
   </div>
 </template>
 
 <script>
   export default {
+    data() {
+      return {
+        resumeDownloadIcon: '',
+
+      }
+    },
     methods: {
+      loadPage() {},
       showScrollProgress() {
         window.addEventListener('scroll', () => {
           const scrollProgressBarFill = document.querySelector('.resume-scroll-progress-bar-fill');
@@ -129,6 +146,7 @@
       }
     },
     mounted() {
+      this.loadPage();
       this.showScrollProgress();
     }
   }
@@ -187,6 +205,34 @@
     font-weight: var(--font-weight-bold);
   }
 
+  .resume-download-button {
+    align-items: center;
+    background-color: var(--color-resume-download-button);
+    color: var(--color-resume-download-button-text);
+    cursor: pointer;
+    display: flex;
+    font-size: var(--font-size-xsmall);
+    font-weight: 800;
+    gap: 2rem;
+    height: 4.6rem;
+    justify-content: center;
+    letter-spacing: var(--letter-spacing-xxwide);
+    margin-bottom: 2.8rem;
+    transition: all 0.5s ease-out;
+    width: var(--width-full);
+
+    &:hover {
+      background-color: var(--color-resume-download-button-hover);
+      color: var(--color-resume-download-button-text-hover);
+
+      .resume-download-button-icon {
+        transform: scale(120%);
+      }
+    }
+
+
+  }
+
   .resume-degree,
   .resume-employer {
     color: var(--color-resume-employer);
@@ -203,24 +249,8 @@
     padding-bottom: 1.4rem;
   }
 
-  .resume-link {
-    font-weight: var(--font-weight-bold);
-    text-decoration: none;
-
-    &:is(:link, :visited) {
-      color: var(--color-blue-500);
-    }
-
-    &:is(:active, :focus, :hover) {
-      background-color: var(--color-azure-400);
-      color: var(--color-black);
-        cursor: pointer;
-    }
-  }
-
   .resume-image {
     border-radius: .6rem;
-    display: inline-block;
     box-shadow: var(--drop-shadow-light);
     width: 24rem;
   }
@@ -239,6 +269,21 @@
 
     & > p {
       padding-top: 1.4rem;
+    }
+  }
+
+  .resume-external-link {
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+
+    &:is(:link, :visited) {
+      color: var(--color-resume-external-link);
+    }
+
+    &:is(:focus, :hover, :active) {
+      background-color: var(--color-resume-external-link-hover-background);
+      color: var(--color-resume-external-link-hover-text);
+      cursor: pointer;
     }
   }
 
@@ -277,7 +322,7 @@
   }
 
   .resume-scroll-progress-bar-fill {
-    background-color: var(--color-progress-bar-fill);
+    background-color: var(--color-resume-progress-bar-fill);
     height: 100%;
     width: 0%;
   }
@@ -286,9 +331,10 @@
     margin-bottom: 2.4rem;
     padding-bottom: 2.4rem;
 
-    &:last-child {
+    &:last-of-type {
       border-bottom: none;
       margin-bottom: 0;
+      padding-bottom: 1rem;
     }
   }
 

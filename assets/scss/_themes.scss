@@ -8,9 +8,16 @@
   --color-header-background: var(--color-indigo-900);
   --color-header-menu-item: var(--color-white);
   --color-page-background: var(--color-slate-900);
-  --color-progress-bar-fill: var(--color-azure-400);
-  --color-resume-employer: var(--color-blue-500);
-  --color-resume-section-divider: var(--color-blue-500);
+  --color-resume-download-button: var(--color-azure-600);
+  --color-resume-download-button-hover: var(--color-azure-500);
+  --color-resume-download-button-text: var(--color-slate-800);
+  --color-resume-download-button-text-hover: var(--color-slate-200);
+  --color-resume-external-link: var(--color-azure-400);
+  --color-resume-external-link-hover-background: var(--color-azure-400);
+  --color-resume-external-link-hover-text: var(--color-slate-900);
+  --color-resume-progress-bar-fill: var(--color-azure-400);
+  --color-resume-employer: var(--color-azure-400);
+  --color-resume-section-divider: var(--color-azure-500);
   --header-logo-background-image: url('/images/Arndt-logo-white.svg');
 }
 
@@ -22,8 +29,15 @@
   --color-header-background: hsla(0, 0%, 100%, 0.8);
   --color-header-menu-item: var(--color-indigo-900);
   --color-page-background: var(--color-white);
-  --color-progress-bar-fill: var(--color-indigo-800);
-  --color-resume-employer: var(--color-blue-700);
-  --color-resume-section-divider: var(--color-blue-700);
+  --color-resume-download-button: var(--color-indigo-900);
+  --color-resume-download-button-hover: var(--color-indigo-800);
+  --color-resume-download-button-text: var(--color-indigo-400);
+  --color-resume-download-button-text-hover: var(--color-azure-200);
+  --color-resume-external-link: var(--color-indigo-800);
+  --color-resume-external-link-hover-background: var(--color-azure-400);
+  --color-resume-external-link-hover-text: var(--color-indigo-900);
+  --color-resume-progress-bar-fill: var(--color-indigo-500);
+  --color-resume-employer: var(--color-indigo-800);
+  --color-resume-section-divider: var(--color-indigo-800);
   --header-logo-background-image: url('/images/Arndt-logo-indigo.svg');
 }
