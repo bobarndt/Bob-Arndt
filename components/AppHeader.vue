@@ -108,7 +108,7 @@
   }
 
   .header-menu {
-    display: block;
+    display: flex;
     font-size: 1.2rem;
     font-weight: var(--font-weight-bold);
     letter-spacing: var(--letter-spacing-wide);
@@ -123,7 +123,6 @@
 
   .header-menu-item {
     color: var(--color-header-menu-item);
-    display: inline-block;
 
     &:not(:last-of-type) {
       margin-right: 2.4rem;
@@ -136,7 +135,7 @@
         color: var(--color-header-menu-item);
       }
 
-      &:is(:active, :focus, :hover) {
+      &:is(:focus, :hover, :active) {
         color: var(--color-rose-600);
         cursor: pointer;
         text-decoration: underline;
@@ -149,7 +148,7 @@
     border-radius: 50%;
     color: var(--color-azure-600);
     cursor: pointer;
-    display: grid;
+    display: flex;
     height: 2.5rem;
     place-items: center;
     width: 2.5rem;
