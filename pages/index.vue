@@ -61,7 +61,6 @@
   .hero-image {
     border: var(--border-rose);
     border-radius: var(--border-radius);
-    display: inline-block;
     box-shadow: var(--drop-shadow-dark);
     margin-top: 3.2rem;
     width: 24rem;
