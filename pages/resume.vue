@@ -123,10 +123,7 @@
 <script>
   export default {
     data() {
-      return {
-        resumeDownloadIcon: '',
-
-      }
+      return {}
     },
     methods: {
       loadPage() {},
@@ -226,8 +223,12 @@
       color: var(--color-resume-download-button-text-hover);
 
       .resume-download-button-icon {
-        transform: scale(140%);
+        animation: pulse-download-icon 2s linear 4;
       }
+    }
+
+    @media (max-width: 40em) {
+      margin-bottom: 6rem;
     }
   }
 

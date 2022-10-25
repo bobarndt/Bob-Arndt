@@ -155,6 +155,7 @@
     width: 2.5rem;
 
     &:hover {
+      animation: pulse-theme-icon 2s linear 4;
       color: var(--color-azure-400);
     }
   }
