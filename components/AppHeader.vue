@@ -122,14 +122,14 @@
   }
 
   .header-menu-item {
-    color: var(--color-header-menu-item);
-
     &:not(:last-of-type) {
       margin-right: 2.4rem;
     }
 
     a {
+      color: var(--color-header-menu-item);
       text-decoration: none;
+      transition: color 0.25s ease-in;
 
       &:is(:link, :visited) {
         color: var(--color-header-menu-item);
@@ -138,7 +138,7 @@
       &:is(:focus, :hover, :active) {
         color: var(--color-rose-600);
         cursor: pointer;
-        text-decoration: underline;
+        // text-decoration: underline;
       }
     }
   }
@@ -151,6 +151,7 @@
     display: flex;
     height: 2.5rem;
     place-items: center;
+    transition: color 0.25s ease-in;
     width: 2.5rem;
 
     &:hover {
