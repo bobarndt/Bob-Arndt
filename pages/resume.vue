@@ -108,7 +108,7 @@
         <a class="resume-download-button-link" href="/Bob-Arndt-resume.pdf" target="_blank">
           <button class="resume-download-button">
             <span class="resume-download-button-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M17,11l-1.41-1.41L13,12.17V4h-2v8.17L8.41,9.59L7,11l5,5 L17,11z"/></g></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="20px" viewBox="0 0 24 24" width="20px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M17,11l-1.41-1.41L13,12.17V4h-2v8.17L8.41,9.59L7,11l5,5 L17,11z"/></g></svg>
             </span>
             <span class="resume-download-button-text">Download Resume</span>
           </button>
@@ -226,11 +226,13 @@
       color: var(--color-resume-download-button-text-hover);
 
       .resume-download-button-icon {
-        transform: scale(120%);
+        transform: scale(140%);
       }
     }
+  }
 
-
+  .resume-download-button-link {
+    text-decoration: none;
   }
 
   .resume-degree,
