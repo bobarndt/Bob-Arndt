@@ -2,7 +2,7 @@
   <div class="footer-wrapper"><!-- Begin .footer-wrapper div -->
     <footer class="footer">
       <img class="footer-logo" src="/images/Arndt-logo-white.svg" alt="Bob Arndt logo" width="76">
-      <span class="footer-copyright">© 2022 REAlizations, Inc.</span>
+      <span class="footer-copyright">© 2022 REAlizations, Inc. All rights reserved.</span>
     </footer>
   </div><!-- End .footer-wrapper div -->
 </template>
@@ -30,9 +30,9 @@
 
   .footer-copyright {
     color: var(--color-footer-text);
-    font-size: var(--font-size-xsmall);
+    font-size: var(--font-size-xxxsmall);
     font-weight: var(--font-weight-bold);
-    letter-spacing: var(--letter-spacing-wide);
+    letter-spacing: var(--letter-spacing-xwide);
 
     @media (max-width: 40em) {
       font-size: var(--font-size-xxsmall);
