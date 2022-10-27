@@ -131,16 +131,28 @@
       return {}
     },
     methods: {
+      handleScroll() {
+        const backToTopButton = document.querySelector('.resume-back-to-top-button');
+        const rootElement = document.documentElement;
+        const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+        if ((rootElement.scrollTop) / scrollTotal > 0.60) {
+          backToTopButton.classList.add('resume-show-button');
+        } else {
+          backToTopButton.classList.remove('resume-show-button');
+        }
+      },
       loadPage() {
-        document.querySelector('.resume-back-to-top-button').addEventListener('click', this.scrollToTop);
+        document.addEventListener('scroll', this.handleScroll);
+        document.querySelector('.resume-back-to-top-button')
+          .addEventListener('click', this.scrollToTop);
       },
       scrollToTop() {
         document.documentElement.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
+          top: 0,
+          behavior: 'smooth'
+        });
       },
-      showScrollProgress() {
+      showScrollDownProgress() {
         window.addEventListener('scroll', () => {
           const scrollProgressBarFill = document.querySelector('.resume-scroll-progress-bar-fill');
           let percentScrolled = 100;
@@ -157,7 +169,7 @@
     },
     mounted() {
       this.loadPage();
-      this.showScrollProgress();
+      this.showScrollDownProgress();
     }
   }
 </script>
@@ -192,13 +204,14 @@
 
   .resume-back-to-top-button {
     background-color: transparent;
-    bottom: 14rem;
+    bottom: 15.5rem;
     color: var(--color-rose-600);
-    display: block;
-    opacity: .6;
+    opacity: 0;
     position: fixed;
     right: 3rem;
-    transition: opacity .25s;
+    transform: translateY(15.5rem);
+    transition: all 1s ease;
+    z-index: 100;
 
     &:hover {
       animation: pulse-icon 2s linear 4;
@@ -208,6 +221,11 @@
     svg {
       fill: var(--color-rose-600);
     }
+  }
+
+  .resume-show-button {
+    opacity: .6;
+    transform: translateY(0);
   }
 
   .resume-body-text {
