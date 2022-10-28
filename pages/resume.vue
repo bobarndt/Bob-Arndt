@@ -211,7 +211,6 @@
     right: 3rem;
     transform: translateY(15.5rem);
     transition: all 1s ease;
-    z-index: 100;
 
     &:hover {
       animation: pulse-icon 2s linear 4;

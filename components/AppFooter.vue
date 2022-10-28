@@ -18,7 +18,6 @@
     margin-right: auto;
     max-width: var(--max-width-site);
     padding: 0 3.2rem;
-    row-gap: 0;
     width: var(--width-full);
 
     @media (max-width: 40em) {
