@@ -4,7 +4,7 @@
       <div class="resume-scroll-progress-bar-fill"></div>
     </div>
 
-    <button title="Back to top" class="resume-back-to-top-button">
+    <button class="resume-back-to-top-button">
       <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40"><path d="M18.958 25.917h2.125v-7.875l3.25 3.291 1.459-1.458L20 14.083l-5.792 5.792 1.459 1.458 3.291-3.291ZM20 35.833q-3.25 0-6.146-1.25t-5.042-3.395q-2.145-2.146-3.395-5.042T4.167 20q0-3.292 1.25-6.187 1.25-2.896 3.395-5.021 2.146-2.125 5.042-3.375T20 4.167q3.292 0 6.188 1.25 2.895 1.25 5.02 3.375 2.125 2.125 3.375 5.021 1.25 2.895 1.25 6.187 0 3.25-1.25 6.146t-3.375 5.042q-2.125 2.145-5.02 3.395-2.896 1.25-6.188 1.25Zm0-2.083q5.75 0 9.75-4.021t4-9.729q0-5.75-4-9.75t-9.75-4q-5.708 0-9.729 4-4.021 4-4.021 9.75 0 5.708 4.021 9.729Q14.292 33.75 20 33.75ZM20 20Z"/></svg>
     </button>
 
@@ -100,7 +100,7 @@
           </div>
         </section>
 
-        <section class="resume-section">
+        <section class="resume-section back-to-top-observer-target">
           <div class="resume-section-flex-container">
             <h2 class="resume-article-title">Education</h2>
             <div class="resume-article-column">
@@ -127,24 +127,29 @@
 
 <script>
   export default {
-    data() {
-      return {}
-    },
     methods: {
       handleScroll() {
-        const backToTopButton = document.querySelector('.resume-back-to-top-button');
-        const rootElement = document.documentElement;
-        const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-        if ((rootElement.scrollTop) / scrollTotal > 0.60) {
-          backToTopButton.classList.add('resume-show-button');
-        } else {
-          backToTopButton.classList.remove('resume-show-button');
+        const observerOptions = {
+          rootMargin: '1000px'
         }
+        let backToTopObserver = new IntersectionObserver(this.backToTopObserverCallback, observerOptions);
+        backToTopObserver.observe(document.querySelector('.back-to-top-observer-target'));
       },
       loadPage() {
         document.addEventListener('scroll', this.handleScroll);
         document.querySelector('.resume-back-to-top-button')
           .addEventListener('click', this.scrollToTop);
+      },
+      backToTopObserverCallback(entries) {
+        const backToTopButton = document.querySelector('.resume-back-to-top-button');
+
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            backToTopButton.classList.add('resume-show-button');
+          } else {
+            backToTopButton.classList.remove('resume-show-button');
+          }
+        });
       },
       scrollToTop() {
         document.documentElement.scrollTo({
@@ -208,12 +213,12 @@
     color: var(--color-rose-600);
     opacity: 0;
     position: fixed;
-    right: 3rem;
+    right: 3.25rem;
     transform: translateY(15.5rem);
     transition: all 1s ease;
 
     &:hover {
-      animation: pulse-icon 2s linear 4;
+      animation: pulse-icon 2s linear 2;
       opacity: 1;
     }
 
