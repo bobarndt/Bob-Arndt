@@ -12,7 +12,7 @@
         </ul>
       </nav>
 
-      <button class="header-theme-switch" @click="switchTheme" role="switch" aria-label="light/dark mode"></button>
+      <button class="header-theme-switch" @click="switchTheme" role="switch" aria-label="light/dark mode" content="Light/Dark Mode" v-tippy></button>
     </header>
 
     <audio class="header-theme-switch-audio-on" src="/audio/light-on.mp3"></audio>
