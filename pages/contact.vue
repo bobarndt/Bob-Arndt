@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <h1 style="margin-top: 10rem">Contact Me</h1>
+  <div class="page-wrapper">
+    <main class="main">
+      <h1 class="page-title">Contact Me</h1>
+    </main>
   </div>
 </template>
-
-<script></script>
-
-<style scoped lang="scss"></style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page-wrapper"><!-- Begin .home-page-wrapper div -->
+  <div class="page-wrapper"><!-- Begin .page-wrapper div -->
     <div class="hero"><!-- Begin .hero div -->
       <div class="hero-image-wrapper">
         <img class="hero-image" src="/images/REA-1955.jpg" alt="Bob Arndt portrait">
@@ -20,7 +20,7 @@
       <p class="main-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
       <p class="main-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
     </main>
-  </div><!-- End .home-page-wrapper div -->
+  </div><!-- End .page-wrapper div -->
 </template>
 
 <script></script>
@@ -91,36 +91,5 @@
     letter-spacing: var(--letter-spacing-wide);
     line-height: 3.75rem;
     text-shadow: var(--text-shadow);
-  }
-
-  .home-page-wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: var(--max-width-site);
-    padding-bottom: 1rem;
-    padding-top: 6.4rem;
-  }
-
-  .main {
-    background-color: var(--color-main-background);
-    color: var(--color-main-text);
-    padding-bottom: 4rem;
-    padding-top: 4rem;
-  }
-
-  .main-text {
-    font-size: var(--font-size-medium);
-    letter-spacing: var(--letter-spacing-normal);
-    line-height: 3.4rem;
-    padding-left: 3.2rem;
-    padding-right: 3.2rem;
-
-    &:not(:first-of-type) {
-      margin-top: 2.4rem;
-    }
-
-    &:last-of-type {
-      margin-bottom: 4rem;
-    }
   }
 </style>

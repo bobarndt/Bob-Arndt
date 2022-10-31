@@ -1,17 +1,17 @@
 <template>
-  <div class="resume-wrapper-outer">
+  <div class="page-wrapper"><!-- Begin .page-wrapper div -->
 
     <button class="resume-back-to-top-button" content="Back to Top" v-tippy>
       <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40"><path d="M18.958 25.917h2.125v-7.875l3.25 3.291 1.459-1.458L20 14.083l-5.792 5.792 1.459 1.458 3.291-3.291ZM20 35.833q-3.25 0-6.146-1.25t-5.042-3.395q-2.145-2.146-3.395-5.042T4.167 20q0-3.292 1.25-6.187 1.25-2.896 3.395-5.021 2.146-2.125 5.042-3.375T20 4.167q3.292 0 6.188 1.25 2.895 1.25 5.02 3.375 2.125 2.125 3.375 5.021 1.25 2.895 1.25 6.187 0 3.25-1.25 6.146t-3.375 5.042q-2.125 2.145-5.02 3.395-2.896 1.25-6.188 1.25Zm0-2.083q5.75 0 9.75-4.021t4-9.729q0-5.75-4-9.75t-9.75-4q-5.708 0-9.729 4-4.021 4-4.021 9.75 0 5.708 4.021 9.729Q14.292 33.75 20 33.75ZM20 20Z"/></svg>
     </button>
 
-    <div class="resume-wrapper-inner"><!-- Begin .resume-wrapper-inner div -->
+    <div class="resume-wrapper"><!-- Begin .resume-wrapper div -->
       <div class="resume-scroll-progress-bar">
         <div class="resume-scroll-progress-bar-fill"></div>
       </div>
 
       <main class="resume-main">
-        <h1 class="resume-title">Professional Resume</h1>
+        <h1 class="page-title">Professional Resume</h1>
 
         <div class="resume-image-wrapper">
           <img class="resume-image" src="/images/REA-1955.jpg" alt="Bob Arndt">
@@ -121,9 +121,9 @@
         </a>
 
       </main>
-    </div><!-- End .resume-wrapper-inner div -->
+    </div><!-- End .resume-wrapper div -->
 
-  </div>
+  </div><!-- End .page-wrapper div -->
 </template>
 
 <script>
@@ -228,11 +228,6 @@
     }
   }
 
-  .resume-show-button {
-    opacity: .6;
-    transform: translateY(0);
-  }
-
   .resume-body-text {
     font-size: var(--font-size-xsmall);
     font-weight: var(--font-weight-medium);
@@ -279,7 +274,7 @@
       color: var(--color-resume-download-button-text-hover);
 
       .resume-download-button-icon {
-        animation: pulse-icon-download-resume 2s linear 4;
+        animation: pulse-icon-download-resume 2s linear 2;
       }
     }
 
@@ -403,6 +398,11 @@
     }
   }
 
+  .resume-show-button {
+    opacity: .6;
+    transform: translateY(0);
+  }
+
   .resume-skills-list {
     font-size: var(--font-size-xsmall);
     letter-spacing: var(--letter-spacing-wide);
@@ -420,26 +420,8 @@
     padding-bottom: 1.4rem;
   }
 
-  .resume-title {
-    background-image: linear-gradient(to bottom, var(--color-white), var(--color-slate-300));
-    border-radius: .6rem;
-    box-shadow: var(--drop-shadow-light);
-    color: var(--color-indigo-900);
-    font-size: 3.2rem;
-    font-weight: var(--font-weight-bold);
-    letter-spacing: var(--letter-spacing-xwide);
-    margin-bottom: 3.2rem;
-    padding: 2.4rem;
-    text-align: center;
-  }
-
-  .resume-wrapper-inner {
+  .resume-wrapper {
     margin: .5rem auto 0;
     max-width: var(--max-width-site);
-  }
-
-  .resume-wrapper-outer {
-    margin-top: 6.4rem;
-    position: relative;
   }
 </style>

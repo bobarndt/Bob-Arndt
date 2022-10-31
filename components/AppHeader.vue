@@ -155,7 +155,7 @@
     width: 2.5rem;
 
     &:hover {
-      animation: pulse-icon 2s linear 4;
+      animation: pulse-icon 2s linear 2;
       color: var(--color-azure-400);
     }
   }
