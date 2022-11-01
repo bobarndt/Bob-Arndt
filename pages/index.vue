@@ -1,16 +1,18 @@
 <template>
   <div class="page-wrapper"><!-- Begin .page-wrapper div -->
     <div class="hero"><!-- Begin .hero div -->
-      <div class="hero-image-wrapper">
-        <img class="hero-image" src="/images/REA-1955.jpg" alt="Bob Arndt portrait">
+      <div class="hero-animated-background-image">
+        <img src="/images/macbook.jpg" alt="MacBook Pro">
       </div>
 
-      <div class="hero-greeting-wrapper">
-        <h1 class="hero-greeting">Hi, I'm Bob Arndt</h1>
-      </div>
+      <div class="hero-content">
+        <div class="hero-greeting-wrapper">
+          <h1 class="hero-greeting">Hi, I'm Bob Arndt</h1>
+        </div>
 
-      <div class="hero-profile">
-        <p class="hero-profile-text">Software development professional with over 20 years industry experience blending strong creative and technical skills. 15 years in the design and development of web sites and web applications for corporate, institutional, professional and individual clients. Adept designer with the skills to fashion clear and compelling user experiences. Strengths encompass both coding and graphic design resulting in function-rich, responsive, visually appealing sites that convey substance and professionalism.</p>
+        <div class="hero-profile">
+          <p class="hero-profile-text">Software development professional with over 20 years industry experience blending strong creative and technical skills. 15 years in the design and development of web sites and web applications for corporate, institutional, professional and individual clients. Adept designer with the skills to fashion clear and compelling user experiences. Strengths encompass both coding and graphic design resulting in function-rich, responsive, visually appealing sites that convey substance and professionalism.</p>
+        </div>
       </div>
     </div><!-- End .hero div -->
 
@@ -27,14 +29,26 @@
 
 <style scoped lang="scss">
   .hero {
-    background-image: url('/images/macbook.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 2.4rem;
-    padding-left: 3.2rem;
-    padding-right: 3.2rem;
-    width: var(--width-full);
+    background: transparent;
+    margin-top: 6.4rem;
+    max-width: var(--max-width-site);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero-animated-background-image img {
+    animation: hero-background-image 30s infinite;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+    @media (max-width: 56rem) {
+      animation: none;
+    }
+  }
+
+  .hero-content {
+    padding: 4rem 3.2rem 2.4rem;
   }
 
   .hero-greeting {
@@ -53,22 +67,9 @@
     border-radius: var(--border-radius);
     box-shadow: var(--drop-shadow-dark);
     margin-bottom: 3.2rem;
-    margin-top: 3.2rem;
+    margin-top: 16rem;
     opacity: 0.7;
     padding: 4.8rem 3.2rem;
-  }
-
-  .hero-image {
-    border: var(--border-rose);
-    border-radius: var(--border-radius);
-    box-shadow: var(--drop-shadow-dark);
-    margin-top: 3.2rem;
-    width: 24rem;
-  }
-
-  .hero-image-wrapper {
-    display: flex;
-    justify-content: center;
   }
 
   .hero-profile {
@@ -91,5 +92,9 @@
     letter-spacing: var(--letter-spacing-wide);
     line-height: 3.75rem;
     text-shadow: var(--text-shadow);
+  }
+
+  .page-wrapper {
+    padding-top: 0;
   }
 </style>
