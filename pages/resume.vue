@@ -10,20 +10,19 @@
         <div class="resume-scroll-progress-bar-fill"></div>
       </div>
 
-      <main class="resume-main">
-        <h1 class="page-title">Professional Resume</h1>
-
-        <div class="resume-image-wrapper">
-          <img class="resume-image" src="/images/REA-1955.jpg" alt="Bob Arndt">
+      <div class="hero"><!-- Begin .hero div -->
+        <div class="hero-animated-background-image">
+          <img src="/images/vue-code.min.jpg" alt="Bob Arndt | Web design and development professional in Dallas, Texas, USA">
         </div>
 
-        <section class="resume-section">
-          <div class="resume-section-flex-container">
-            <h2 class="resume-article-title">Professional Profile</h2>
-            <p class="resume-profile-text">Software development professional with over 20 years industry experience blending strong creative and technical skills. 15 years in the design and development of web sites and web applications for corporate, institutional, professional and individual clients. Adept designer with the skills to fashion clear and compelling user experiences. Strengths encompass both coding and graphic design resulting in function-rich, responsive, visually appealing sites that convey substance and professionalism.</p>
+        <div class="hero-content">
+          <div class="hero-title-wrapper">
+            <h1 class="hero-title">Professional Resume</h1>
           </div>
-        </section>
+        </div>
+      </div><!-- End .hero div -->
 
+      <main class="resume-main">
         <section class="resume-section">
           <div class="resume-section-flex-container">
             <h2 class="resume-article-title">Technical Skills</h2>
@@ -181,6 +180,59 @@
 </script>
 
 <style scoped lang="scss">
+  .hero {
+    align-items: center;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    margin-top: 6.4rem;
+    max-width: var(--max-width-site);
+    min-height: 50rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero-animated-background-image img {
+    animation: hero-background-image 30s infinite;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @media (max-width: 56rem) {
+      animation: none;
+    }
+  }
+
+  .hero-content {
+    padding: 0 3.2rem;
+    width: 100%;
+  }
+
+  .hero-title {
+    color: var(--color-indigo-500);
+    font-size: 7.2rem;
+    font-weight: var(--font-weight-black);
+    letter-spacing: var(--letter-spacing-xxwide);
+    text-align: center;
+    text-shadow: var(--text-shadow);
+  }
+
+  .hero-title-wrapper {
+    background-color: var(--color-black);
+    backdrop-filter: var(--backdrop-blur);
+    border: var(--border-indigo);
+    border-radius: var(--border-radius);
+    box-shadow: var(--drop-shadow-dark);
+    opacity: 0.7;
+    padding: 4.8rem 3.2rem;
+    width: 100%;
+  }
+
+  .page-wrapper {
+    padding-top: 0;
+  }
   .resume-article {
     margin-top: 0;
 

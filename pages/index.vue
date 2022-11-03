@@ -2,7 +2,7 @@
   <div class="page-wrapper"><!-- Begin .page-wrapper div -->
     <div class="hero"><!-- Begin .hero div -->
       <div class="hero-animated-background-image">
-        <img src="/images/treeline.min.jpg" alt="Bob Arndt | Web design and development professional in Dallas, Texas, USA">
+        <img src="/images/macbook.min.jpg" alt="Bob Arndt | Web design and development professional in Dallas, Texas, USA">
       </div>
 
       <div class="hero-content">
@@ -52,7 +52,7 @@
   }
 
   .hero-greeting {
-    color: var(--color-indigo-500);
+    color: var(--color-rose-300);
     font-size: 7.2rem;
     font-weight: var(--font-weight-black);
     letter-spacing: var(--letter-spacing-xxwide);
@@ -63,7 +63,7 @@
   .hero-greeting-wrapper {
     background-color: var(--color-black);
     backdrop-filter: var(--backdrop-blur);
-    border: var(--border-indigo);
+    border: var(--border-rose);
     border-radius: var(--border-radius);
     box-shadow: var(--drop-shadow-dark);
     margin-bottom: 3.2rem;
@@ -75,7 +75,7 @@
   .hero-profile {
     background-color: var(--color-black);
     backdrop-filter: var(--backdrop-blur);
-    border: var(--border-indigo);
+    border: var(--border-rose);
     border-radius: var(--border-radius);
     box-shadow: var(--drop-shadow-dark);
     margin-bottom: 3.2rem;

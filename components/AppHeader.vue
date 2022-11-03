@@ -170,6 +170,6 @@
     position: fixed;
     top: 0;
     width: var(--width-full);
-    z-index: 10;
+    z-index: 1000;
   }
 </style>
