@@ -8,6 +8,16 @@
       <div class="hero-content">
           <div class="hero-title-wrapper">
             <h1 class="hero-title">About Me</h1>
+            <h1 class="hero-title-overlay">
+              <span>A</span>
+              <span>b</span>
+              <span>o</span>
+              <span>u</span>
+              <span>t</span>
+              <span>&nbsp;</span>
+              <span>M</span>
+              <span>e</span>
+            </h1>
           </div>
         </div>
     </div><!-- End .hero div -->
@@ -21,55 +31,42 @@
 </template>
 
 <style scoped lang="scss">
-  .hero {
-    align-items: center;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    margin-top: 6.4rem;
-    max-width: var(--max-width-site);
-    min-height: 50rem;
-    overflow: hidden;
-    position: relative;
-  }
+  .hero-title-overlay {
+    span:nth-child(1) {
+      animation: hero-title-fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
 
-  .hero-animated-background-image img {
-    animation: hero-background-image 30s infinite;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+    span:nth-child(2) {
+      animation: hero-title-fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
 
-    @media (max-width: 56rem) {
-      animation: none;
+    span:nth-child(3) {
+      animation: hero-title-fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(4) {
+      animation: hero-title-fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(5) {
+      animation: hero-title-fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(6) {
+      animation: hero-title-fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(7) {
+      animation: hero-title-fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(8) {
+      animation: hero-title-fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
     }
   }
 
-  .hero-content {
-    padding: 0 3.2rem;
-    width: 100%;
-    z-index: 100;
-  }
-
-  .hero-title {
-    color: var(--color-indigo-500);
-    font-size: 7.2rem;
-    font-weight: var(--font-weight-black);
-    letter-spacing: var(--letter-spacing-xxwide);
-    text-align: center;
-    text-shadow: var(--text-shadow);
-  }
-
   .hero-title-wrapper {
-    background-color: var(--color-black);
-    backdrop-filter: var(--backdrop-blur);
     border: var(--border-indigo);
-    border-radius: var(--border-radius);
-    box-shadow: var(--drop-shadow-dark);
-    opacity: 0.7;
-    padding: 4.8rem 3.2rem;
-    width: 100%;
   }
 
   .page-wrapper {

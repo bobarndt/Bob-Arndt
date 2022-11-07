@@ -6,8 +6,27 @@
       </div>
 
       <div class="hero-content">
-        <div class="hero-greeting-wrapper">
-          <h1 class="hero-greeting">Hi, I'm Bob Arndt</h1>
+        <div class="hero-title-wrapper">
+          <h1 class="hero-title">Hi, I'm Bob Arndt</h1>
+          <h1 class="hero-title-overlay">
+            <span>H</span>
+            <span>i</span>
+            <span>,</span>
+            <span>&nbsp;</span>
+            <span>I</span>
+            <span>'</span>
+            <span>m</span>
+            <span>&nbsp;</span>
+            <span>B</span>
+            <span>o</span>
+            <span>b</span>
+            <span>&nbsp;</span>
+            <span>A</span>
+            <span>r</span>
+            <span>n</span>
+            <span>d</span>
+            <span>t</span>
+          </h1>
         </div>
 
         <div class="hero-profile">
@@ -29,47 +48,7 @@
 
 <style scoped lang="scss">
   .hero {
-    background: transparent;
-    margin-top: 6.4rem;
-    max-width: var(--max-width-site);
-    overflow: hidden;
-    position: relative;
-  }
-
-  .hero-animated-background-image img {
-    animation: hero-background-image 30s infinite;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-
-    @media (max-width: 56rem) {
-      animation: none;
-    }
-  }
-
-  .hero-content {
-    padding: 4rem 3.2rem 2.4rem;
-  }
-
-  .hero-greeting {
-    color: var(--color-rose-300);
-    font-size: 7.2rem;
-    font-weight: var(--font-weight-black);
-    letter-spacing: var(--letter-spacing-xxwide);
-    text-align: center;
-    text-shadow: var(--text-shadow);
-  }
-
-  .hero-greeting-wrapper {
-    background-color: var(--color-black);
-    backdrop-filter: var(--backdrop-blur);
-    border: var(--border-rose);
-    border-radius: var(--border-radius);
-    box-shadow: var(--drop-shadow-dark);
-    margin-bottom: 3.2rem;
-    margin-top: 16rem;
-    opacity: 0.7;
-    padding: 4.8rem 3.2rem;
+    min-height: 60rem;
   }
 
   .hero-profile {
@@ -78,7 +57,6 @@
     border: var(--border-rose);
     border-radius: var(--border-radius);
     box-shadow: var(--drop-shadow-dark);
-    margin-bottom: 3.2rem;
     margin-top: 3.2rem;
     opacity: 0.7;
     padding: 3.2rem;
@@ -92,6 +70,76 @@
     letter-spacing: var(--letter-spacing-wide);
     line-height: 3.75rem;
     text-shadow: var(--text-shadow);
+  }
+
+  .hero-title-overlay {
+    span:nth-child(1) {
+      animation: hero-title-fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(2) {
+      animation: hero-title-fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(3) {
+      animation: hero-title-fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(4) {
+      animation: hero-title-fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(5) {
+      animation: hero-title-fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(6) {
+      animation: hero-title-fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(7) {
+      animation: hero-title-fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(8) {
+      animation: hero-title-fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(9) {
+      animation: hero-title-fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(10) {
+      animation: hero-title-fade-in 0.8s 1.0s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(11) {
+      animation: hero-title-fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(12) {
+      animation: hero-title-fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(13) {
+      animation: hero-title-fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(14) {
+      animation: hero-title-fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(15) {
+      animation: hero-title-fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(16) {
+      animation: hero-title-fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(17) {
+      animation: hero-title-fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
   }
 
   .page-wrapper {

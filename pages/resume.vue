@@ -18,11 +18,39 @@
         <div class="hero-content">
           <div class="hero-title-wrapper">
             <h1 class="hero-title">Professional Resume</h1>
+            <h1 class="hero-title-overlay">
+              <span>P</span>
+              <span>r</span>
+              <span>o</span>
+              <span>f</span>
+              <span>e</span>
+              <span>s</span>
+              <span>s</span>
+              <span>i</span>
+              <span>o</span>
+              <span>n</span>
+              <span>a</span>
+              <span>l</span>
+              <span>&nbsp;</span>
+              <span>R</span>
+              <span>e</span>
+              <span>s</span>
+              <span>u</span>
+              <span>m</span>
+              <span>e</span>
+            </h1>
           </div>
         </div>
       </div><!-- End .hero div -->
 
       <main class="resume-main">
+        <section class="resume-section">
+          <div class="resume-section-flex-container">
+            <h2 class="resume-article-title">Professional Profile</h2>
+            <p class="resume-profile-text">Software development professional with over 20 years industry experience blending strong creative and technical skills. 15 years in the design and development of web sites and web applications for corporate, institutional, professional and individual clients. Adept designer with the skills to fashion clear and compelling user experiences. Strengths encompass both coding and graphic design resulting in function-rich, responsive, visually appealing sites that convey substance and professionalism.</p>
+          </div>
+        </section>
+
         <section class="resume-section">
           <div class="resume-section-flex-container">
             <h2 class="resume-article-title">Technical Skills</h2>
@@ -180,54 +208,86 @@
 </script>
 
 <style scoped lang="scss">
-  .hero {
-    align-items: center;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    margin-top: 6.4rem;
-    max-width: var(--max-width-site);
-    min-height: 50rem;
-    overflow: hidden;
-    position: relative;
-  }
+  .hero-title-overlay {
+    span:nth-child(1) {
+      animation: hero-title-fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
 
-  .hero-animated-background-image img {
-    animation: hero-background-image 30s infinite;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+    span:nth-child(2) {
+      animation: hero-title-fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
 
-    @media (max-width: 56rem) {
-      animation: none;
+    span:nth-child(3) {
+      animation: hero-title-fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(4) {
+      animation: hero-title-fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(5) {
+      animation: hero-title-fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(6) {
+      animation: hero-title-fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(7) {
+      animation: hero-title-fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(8) {
+      animation: hero-title-fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(9) {
+      animation: hero-title-fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(10) {
+      animation: hero-title-fade-in 0.8s 1.0s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(11) {
+      animation: hero-title-fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(12) {
+      animation: hero-title-fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(13) {
+      animation: hero-title-fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(14) {
+      animation: hero-title-fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(15) {
+      animation: hero-title-fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(16) {
+      animation: hero-title-fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(17) {
+      animation: hero-title-fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(18) {
+      animation: hero-title-fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(19) {
+      animation: hero-title-fade-in 0.8s 1.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
     }
   }
 
-  .hero-content {
-    padding: 0 3.2rem;
-    width: 100%;
-  }
-
-  .hero-title {
-    color: var(--color-indigo-500);
-    font-size: 7.2rem;
-    font-weight: var(--font-weight-black);
-    letter-spacing: var(--letter-spacing-xxwide);
-    text-align: center;
-    text-shadow: var(--text-shadow);
-  }
-
   .hero-title-wrapper {
-    background-color: var(--color-black);
-    backdrop-filter: var(--backdrop-blur);
     border: var(--border-indigo);
-    border-radius: var(--border-radius);
-    box-shadow: var(--drop-shadow-dark);
-    opacity: 0.7;
-    padding: 4.8rem 3.2rem;
-    width: 100%;
   }
 
   .page-wrapper {
