@@ -1,5 +1,5 @@
 <template>
-  <div class="header-wrapper"><!-- Begin .header-wrapper div -->
+  <div class="header-wrapper">
     <header class="header">
       <a class="header-logo" href="/"></a>
 
@@ -12,12 +12,19 @@
         </ul>
       </nav>
 
+      <div class="hamburger" role="switch" aria-label="menu" content="Menu" v-tippy>
+        <div class="hamburger__container">
+          <div class="hamburger__inner"></div>
+          <div class="hamburger__hidden"></div>
+        </div>
+      </div>
+
       <button class="header-theme-switch" @click="switchTheme" role="switch" aria-label="light/dark mode" content="Light/Dark Mode" v-tippy></button>
     </header>
 
     <audio class="header-theme-switch-audio-on" src="/audio/light-on.mp3"></audio>
     <audio class="header-theme-switch-audio-off" src="/audio/light-off.mp3"></audio>
-  </div><!-- End .header-wrapper div -->
+  </div>
 </template>
 
 <script>
@@ -81,9 +88,16 @@
         this.audio.currentTime = 0;
         this.audio.play();
       },
+      toggleHamburgerState() {
+        document.querySelector('.hamburger')
+          .addEventListener('click', event => {
+            event.currentTarget.classList.toggle('is-active');
+          })
+      }
     },
     mounted() {
       this.loadTheme();
+      this.toggleHamburgerState();
     }
   }
 </script>
@@ -113,8 +127,9 @@
     font-weight: var(--font-weight-bold);
     letter-spacing: var(--letter-spacing-wide);
     list-style-type: none;
-    margin-right: 5rem;
+    margin-right: 2rem;
     text-transform: uppercase;
+    // visibility: hidden;
 
     @media (max-width: 40em) {
       display: none;
@@ -138,7 +153,6 @@
       &:is(:focus, :hover, :active) {
         color: var(--color-rose-600);
         cursor: pointer;
-        // text-decoration: underline;
       }
     }
   }
