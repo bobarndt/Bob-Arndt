@@ -36,6 +36,40 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+a {
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-decoration: none;
+}
+
+.link {
+  position: relative;
+  transition: clip-path 275ms ease;
+
+  &:hover span::before,
+  &:focus span::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  span {
+    color: var(--color-link);
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: attr(data-content);
+      clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+      color: var(--color-link-overlay);
+      letter-spacing: var(--letter-spacing-wide);
+      position: absolute;
+      text-decoration: underline;
+      text-decoration-color: var(--color-link-overlay);
+      transition: clip-path 350ms ease;
+    }
+  }
+}
+
 .main {
   background-color: var(--color-main-background);
   padding: 4rem 3.2rem;

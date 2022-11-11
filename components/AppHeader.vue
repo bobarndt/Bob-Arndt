@@ -5,10 +5,10 @@
 
       <nav class="header-nav">
         <ul class="header-menu">
-          <li class="header-menu-item"><a href="/">Home</a></li>
-          <li class="header-menu-item"><a href="/about">About</a></li>
-          <li class="header-menu-item"><a href="/resume">Resume</a></li>
-          <li class="header-menu-item"><a href="/contact">Contact Me</a></li>
+          <li class="header-menu-item"><a class="link" href="/"><span data-content="Home">Home</span></a></li>
+          <li class="header-menu-item"><a class="link" href="/about"><span data-content="About">About</span></a></li>
+          <li class="header-menu-item"><a class="link" href="/resume"><span data-content="Resume">Resume</span></a></li>
+          <li class="header-menu-item"><a class="link" href="/contact"><span data-content="Contact Me">Contact Me</span></a></li>
         </ul>
       </nav>
 
@@ -144,20 +144,20 @@
       margin-right: 2.4rem;
     }
 
-    a {
-      color: var(--color-header-menu-item);
-      text-decoration: none;
-      transition: color 0.25s ease-in;
+    // a {
+    //   color: var(--color-header-menu-item);
+    //   text-decoration: none;
+    //   transition: color 0.25s ease-in;
 
-      &:is(:link, :visited) {
-        color: var(--color-header-menu-item);
-      }
+    //   &:is(:link, :visited) {
+    //     color: var(--color-header-menu-item);
+    //   }
 
-      &:is(:focus, :hover, :active) {
-        color: var(--color-rose-600);
-        cursor: pointer;
-      }
-    }
+    //   &:is(:focus, :hover, :active) {
+    //     color: var(--color-rose-600);
+    //     cursor: pointer;
+    //   }
+    // }
   }
 
   .header-theme-switch {

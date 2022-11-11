@@ -76,7 +76,7 @@
                 </div>
                 <span class="resume-employer-description">Recent Projects :</span>
                 <h5 class="resume-recent-employer">Children's Health</h5>
-                <p class="resume-body-text">Contributed to ongoing development and maintenance of enterprise site <a class="resume-external-link" href="https://www.childrens.com" target="_blank">“www.childrens.com”</a>, as well as related internal and public-facing web properties for Children’s Medical Center of Dallas. Extensive use of IBM Websphere Application Server (CMS), JavaScript, jQuery, Sass and Gulp.</p>
+                <p class="resume-body-text">Contributed to ongoing development and maintenance of enterprise site <a class="link" href="https://www.childrens.com" target="_blank"><span data-content="www.childrens.com">www.childrens.com</span></a>, as well as related internal and public-facing web properties for Children’s Medical Center of Dallas. Extensive use of IBM Websphere Application Server (CMS), JavaScript, jQuery, Sass and Gulp.</p>
                 <h5 class="resume-recent-employer">CBRE</h5>
                 <p class="resume-body-text">Participated in building CBRE myVantage with Angular 6 and Bootstrap. myVantage is an internal tool to empower CBRE salespeople to create and configure highly customized proposals for their prospects and existing customers.</p>
                 <h5 class="resume-recent-employer">American Airlines</h5>
@@ -415,19 +415,6 @@
     padding-bottom: 1.4rem;
   }
 
-  .resume-image {
-    border-radius: .6rem;
-    box-shadow: var(--drop-shadow-light);
-    width: 24rem;
-  }
-
-  .resume-image-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3.2rem;
-    margin-top: 3.2rem;
-  }
-
   .resume-job-title {
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-bold);
@@ -435,21 +422,6 @@
 
     & > p {
       padding-top: 1.4rem;
-    }
-  }
-
-  .resume-external-link {
-    font-weight: var(--font-weight-bold);
-    text-decoration: none;
-
-    &:is(:link, :visited) {
-      color: var(--color-resume-external-link);
-    }
-
-    &:is(:focus, :hover, :active) {
-      background-color: var(--color-resume-external-link-hover-background);
-      color: var(--color-resume-external-link-hover-text);
-      cursor: pointer;
     }
   }
 
