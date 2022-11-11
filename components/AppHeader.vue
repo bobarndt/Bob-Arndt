@@ -47,6 +47,10 @@
       }
     },
     methods: {
+      initialize() {
+        this.loadTheme();
+        this.toggleHamburgerState();
+      },
       loadTheme() {
         this.headerThemeSwitch = document.querySelector('.header-theme-switch');
 
@@ -96,8 +100,7 @@
       }
     },
     mounted() {
-      this.loadTheme();
-      this.toggleHamburgerState();
+      this.initialize();
     }
   }
 </script>
