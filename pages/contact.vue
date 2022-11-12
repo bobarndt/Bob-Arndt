@@ -71,7 +71,4 @@
       animation: hero-title-fade-in 0.8s 1.0s forwards cubic-bezier(0.11, 0, 0.5, 0);
     }
   }
-  .page-wrapper {
-    padding-top: 0;
-  }
 </style>

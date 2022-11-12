@@ -290,9 +290,6 @@
     border: var(--border-indigo);
   }
 
-  .page-wrapper {
-    padding-top: 0;
-  }
   .resume-article {
     margin-top: 0;
 
@@ -390,7 +387,7 @@
       }
     }
 
-    @media (max-width: 40em) {
+    @media (max-width: 40rem) {
       margin-bottom: 6rem;
     }
   }
@@ -477,7 +474,7 @@
   .resume-section-flex-container {
     display: flex;
 
-    @media (max-width: 40em) {
+    @media (max-width: 40rem) {
       flex-direction: column;
     }
   }

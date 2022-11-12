@@ -1,6 +1,6 @@
 <template>
   <div class="page-wrapper"><!-- Begin .page-wrapper div -->
-    <div class="hero"><!-- Begin .hero div -->
+    <div class="hero">
       <div class="hero-animated-background-image">
         <img src="/images/macbook.min.jpg" alt="Bob Arndt | Web design and development professional in Dallas, Texas, USA">
       </div>
@@ -28,15 +28,11 @@
             <span>t</span>
           </h1>
         </div>
-
-        <div class="hero-profile">
-          <p class="hero-profile-text">Software development professional with over 20 years industry experience blending strong creative and technical skills. 15 years in the design and development of web sites and web applications for corporate, institutional, professional and individual clients. Adept designer with the skills to fashion clear and compelling user experiences. Strengths encompass both coding and graphic design resulting in function-rich, responsive, visually appealing sites that convey substance and professionalism.</p>
-        </div>
       </div>
-    </div><!-- End .hero div -->
+    </div>
 
     <main class="main">
-      <p class="main-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+      <p class="main-text">Software development professional with over 20 years industry experience blending strong creative and technical skills. 15 years in the design and development of web sites and web applications for corporate, institutional, professional and individual clients. Adept designer with the skills to fashion clear and compelling user experiences. Strengths encompass both coding and graphic design resulting in function-rich, responsive, visually appealing sites that convey substance and professionalism.</p>
       <p class="main-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
       <p class="main-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
       <p class="main-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
@@ -47,31 +43,6 @@
 <script></script>
 
 <style scoped lang="scss">
-  .hero {
-    min-height: 60rem;
-  }
-
-  .hero-profile {
-    background-color: var(--color-black);
-    backdrop-filter: var(--backdrop-blur);
-    border: var(--border-rose);
-    border-radius: var(--border-radius);
-    box-shadow: var(--drop-shadow-dark);
-    margin-top: 3.2rem;
-    opacity: 0.7;
-    padding: 3.2rem;
-  }
-
-  .hero-profile-text {
-    color: var(--color-slate-200);
-    font-size: var(--font-size-medium);
-    font-style: var(--font-style-italic);
-    font-weight: var(--font-weight-bold);
-    letter-spacing: var(--letter-spacing-wide);
-    line-height: 3.75rem;
-    text-shadow: var(--text-shadow);
-  }
-
   .hero-title-overlay {
     span:nth-child(1) {
       animation: hero-title-fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
@@ -140,9 +111,5 @@
     span:nth-child(17) {
       animation: hero-title-fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
     }
-  }
-
-  .page-wrapper {
-    padding-top: 0;
   }
 </style>

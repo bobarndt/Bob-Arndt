@@ -24,7 +24,18 @@
 
     <audio class="header-theme-switch-audio-on" src="/audio/light-on.mp3"></audio>
     <audio class="header-theme-switch-audio-off" src="/audio/light-off.mp3"></audio>
-  </div>
+
+  <!-- <div class="drop-down-menu">
+    <nav class="header-nav">
+      <ul class="header-menu">
+        <li class="header-menu-item"><a class="link" href="/"><span data-content="Home">Home</span></a></li>
+        <li class="header-menu-item"><a class="link" href="/about"><span data-content="About">About</span></a></li>
+        <li class="header-menu-item"><a class="link" href="/resume"><span data-content="Resume">Resume</span></a></li>
+        <li class="header-menu-item"><a class="link" href="/contact"><span data-content="Contact Me">Contact Me</span></a></li>
+      </ul>
+    </nav>
+  </div> -->
+</div>
 </template>
 
 <script>
@@ -114,6 +125,7 @@
     margin-right: auto;
     max-width: var(--max-width-site);
     padding: 0 3.2rem;
+    position: relative;
     width: var(--width-full);
   }
 
@@ -132,9 +144,8 @@
     list-style-type: none;
     margin-right: 2rem;
     text-transform: uppercase;
-    // visibility: hidden;
 
-    @media (max-width: 40em) {
+    @media (max-width: 40rem) {
       display: none;
     }
   }
@@ -143,21 +154,6 @@
     &:not(:last-of-type) {
       margin-right: 2.4rem;
     }
-
-    // a {
-    //   color: var(--color-header-menu-item);
-    //   text-decoration: none;
-    //   transition: color 0.25s ease-in;
-
-    //   &:is(:link, :visited) {
-    //     color: var(--color-header-menu-item);
-    //   }
-
-    //   &:is(:focus, :hover, :active) {
-    //     color: var(--color-rose-600);
-    //     cursor: pointer;
-    //   }
-    // }
   }
 
   .header-theme-switch {

@@ -20,7 +20,7 @@
     padding: 0 3.2rem;
     width: var(--width-full);
 
-    @media (max-width: 40em) {
+    @media (max-width: 40rem) {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -33,7 +33,7 @@
     font-weight: var(--font-weight-bold);
     letter-spacing: var(--letter-spacing-xwide);
 
-    @media (max-width: 40em) {
+    @media (max-width: 40rem) {
       font-size: var(--font-size-xxsmall);
       margin-top: 1rem;
     }
@@ -53,7 +53,7 @@
     position: fixed;
     width: var(--width-full);
 
-    @media (max-width: 40em) {
+    @media (max-width: 40rem) {
       height: 8rem;
     }
   }
