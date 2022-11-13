@@ -3,7 +3,7 @@
     <header class="header">
       <a class="header-logo" href="/"></a>
 
-      <nav class="header-nav">
+      <nav>
         <ul class="header-menu">
           <li class="header-menu-item"><a class="link" href="/"><span data-content="Home">Home</span></a></li>
           <li class="header-menu-item"><a class="link" href="/about"><span data-content="About">About</span></a></li>
@@ -12,30 +12,21 @@
         </ul>
       </nav>
 
-      <div class="hamburger" role="switch" aria-label="menu" content="Menu" v-tippy>
+      <div class="hamburger" role="switch" aria-label="menu" content="Menu">
         <div class="hamburger__container">
           <div class="hamburger__inner"></div>
           <div class="hamburger__hidden"></div>
         </div>
       </div>
 
-      <button class="header-theme-switch" @click="switchTheme" role="switch" aria-label="light/dark mode" content="Light/Dark Mode" v-tippy></button>
+      <button class="header-theme-switch" @click="switchTheme" role="switch" aria-label="light/dark mode" content="Light/Dark Mode"></button>
     </header>
 
     <audio class="header-theme-switch-audio-on" src="/audio/light-on.mp3"></audio>
     <audio class="header-theme-switch-audio-off" src="/audio/light-off.mp3"></audio>
+  </div>
 
-  <!-- <div class="drop-down-menu">
-    <nav class="header-nav">
-      <ul class="header-menu">
-        <li class="header-menu-item"><a class="link" href="/"><span data-content="Home">Home</span></a></li>
-        <li class="header-menu-item"><a class="link" href="/about"><span data-content="About">About</span></a></li>
-        <li class="header-menu-item"><a class="link" href="/resume"><span data-content="Resume">Resume</span></a></li>
-        <li class="header-menu-item"><a class="link" href="/contact"><span data-content="Contact Me">Contact Me</span></a></li>
-      </ul>
-    </nav>
-  </div> -->
-</div>
+  <NavigationMenu />
 </template>
 
 <script>
@@ -145,7 +136,7 @@
     margin-right: 2rem;
     text-transform: uppercase;
 
-    @media (max-width: 40rem) {
+    @media (max-width: 640px) {
       display: none;
     }
   }
@@ -183,6 +174,6 @@
     position: fixed;
     top: 0;
     width: var(--width-full);
-    z-index: 1000;
+    z-index: 10;
   }
 </style>
