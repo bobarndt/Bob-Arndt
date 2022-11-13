@@ -169,7 +169,7 @@
 
     &:hover {
       animation: pulse-icon 2s linear 2;
-      color: var(--color-azure-400);
+      color: var(--color-header-theme-switch);
     }
   }
 
