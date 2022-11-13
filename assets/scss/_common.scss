@@ -73,6 +73,10 @@ a {
 .main {
   background-color: var(--color-main-background);
   padding: 4rem 3.2rem;
+
+  @media (max-width: 490px) {
+    padding-bottom: 8rem;
+  }
 }
 
 .main-text {
