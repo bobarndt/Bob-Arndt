@@ -502,7 +502,6 @@
   }
 
   .resume-wrapper {
-    margin: .5rem auto 0;
     max-width: var(--max-width-site);
   }
 </style>
