@@ -1,10 +1,10 @@
 <template>
-  <div class="footer-wrapper"><!-- Begin .footer-wrapper div -->
+  <div class="footer-wrapper">
     <footer class="footer">
       <img class="footer-logo" src="/images/Arndt-logo-white.svg" alt="Bob Arndt logo" width="76">
       <span class="footer-copyright">© 2022 REAlizations, Inc. All rights reserved.</span>
     </footer>
-  </div><!-- End .footer-wrapper div -->
+  </div>
 </template>
 
 <script></script>
