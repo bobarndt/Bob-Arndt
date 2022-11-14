@@ -451,7 +451,7 @@
     height: .5rem;
     position: sticky;
     top: 6.4rem;
-    z-index: 100;
+    z-index: 20;
   }
 
   .resume-scroll-progress-bar-fill {
