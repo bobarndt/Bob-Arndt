@@ -156,6 +156,17 @@
 <script>
   export default {
     methods: {
+      backToTopObserverCallback(entries) {
+        const backToTopButton = document.querySelector('.resume-back-to-top-button');
+
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            backToTopButton.classList.add('resume-show-button');
+          } else {
+            backToTopButton.classList.remove('resume-show-button');
+          }
+        });
+      },
       handleScroll() {
         const observerOptions = {
           rootMargin: '1000px'
@@ -167,17 +178,6 @@
         document.addEventListener('scroll', this.handleScroll);
         document.querySelector('.resume-back-to-top-button')
           .addEventListener('click', this.scrollToTop);
-      },
-      backToTopObserverCallback(entries) {
-        const backToTopButton = document.querySelector('.resume-back-to-top-button');
-
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            backToTopButton.classList.add('resume-show-button');
-          } else {
-            backToTopButton.classList.remove('resume-show-button');
-          }
-        });
       },
       scrollToTop() {
         document.documentElement.scrollTo({
