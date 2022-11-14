@@ -500,8 +500,4 @@
     font-weight: var(--font-weight-bold);
     padding-bottom: 1.4rem;
   }
-
-  .resume-wrapper {
-    max-width: var(--max-width-site);
-  }
 </style>
