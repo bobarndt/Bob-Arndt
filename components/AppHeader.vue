@@ -26,7 +26,7 @@
     <audio class="header-theme-switch-audio-off" src="/audio/light-off.mp3"></audio>
   </div>
 
-  <NavigationMenu />
+  <!-- <NavigationMenu /> -->
 </template>
 
 <script>
@@ -167,7 +167,7 @@
   .header-wrapper {
     align-items: center;
     background-color: var(--color-header-background);
-    backdrop-filter: blur(4px);
+    // backdrop-filter: blur(4px);
     display: flex;
     box-shadow: (var(--drop-shadow-header));
     height: 6.4rem;
