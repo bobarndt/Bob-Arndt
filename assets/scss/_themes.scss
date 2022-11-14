@@ -16,6 +16,7 @@
   --color-resume-download-button-text: var(--color-slate-800);
   --color-resume-download-button-text-hover: var(--color-slate-200);
   --color-resume-employer: var(--color-azure-400);
+  --color-resume-progress-bar-background: var(--color-slate-200);
   --color-resume-progress-bar-fill: var(--color-azure-400);
   --color-resume-section-divider: var(--color-azure-500);
   --header-logo-background-image: url('/images/Arndt-logo-white.svg');
@@ -37,7 +38,8 @@
   --color-resume-download-button-text: var(--color-slate-400);
   --color-resume-download-button-text-hover: var(--color-slate-200);
   --color-resume-employer: var(--color-indigo-800);
-  --color-resume-progress-bar-fill: var(--color-indigo-500);
+  --color-resume-progress-bar-background: var(--color-azure-400);
+  --color-resume-progress-bar-fill: var(--color-indigo-600);
   --color-resume-section-divider: var(--color-indigo-800);
   --header-logo-background-image: url('/images/Arndt-logo-indigo.svg');
 }
