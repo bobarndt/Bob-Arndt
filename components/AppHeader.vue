@@ -167,7 +167,6 @@
   .header-wrapper {
     align-items: center;
     background-color: var(--color-header-background);
-    // backdrop-filter: blur(4px);
     display: flex;
     box-shadow: (var(--drop-shadow-header));
     height: 6.4rem;
