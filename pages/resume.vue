@@ -10,7 +10,7 @@
         <div class="resume-scroll-progress-bar-fill"></div>
       </div>
 
-      <div class="hero"><!-- Begin .hero div -->
+      <div class="hero-wrapper"><!-- Begin .hero div -->
         <div class="hero-animated-background-image">
           <img src="/images/vue-code.min.jpg" alt="Bob Arndt | Web design and development professional in Dallas, Texas, USA">
         </div>

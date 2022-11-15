@@ -1,6 +1,6 @@
 <template>
   <div class="page-wrapper"><!-- Begin .page-wrapper div -->
-    <div class="hero">
+    <div class="hero-wrapper">
       <div class="hero-animated-background-image">
         <img src="/images/macbook.min.jpg" alt="Bob Arndt | Web design and development professional in Dallas, Texas, USA">
       </div>

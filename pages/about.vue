@@ -1,6 +1,6 @@
 <template>
   <div class="page-wrapper">
-    <div class="hero"><!-- Begin .hero div -->
+    <div class="hero-wrapper"><!-- Begin .hero div -->
       <div class="hero-animated-background-image">
         <img src="/images/treeline.min.jpg" alt="Bob Arndt | Web design and development professional in Dallas, Texas, USA">
       </div>
