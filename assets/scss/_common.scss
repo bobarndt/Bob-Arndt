@@ -72,7 +72,6 @@ a {
 
 .main {
   background-color: var(--color-main-background);
-  height: 100vh;
   padding: 4rem 3.2rem;
 
   @media (max-width: 490px) {
@@ -95,20 +94,8 @@ a {
   }
 }
 
-.page-title {
-  background-image: linear-gradient(to bottom, var(--color-white), var(--color-slate-300));
-  border-radius: .6rem;
-  box-shadow: var(--drop-shadow-light);
-  color: var(--color-indigo-900);
-  font-size: 3.2rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-xwide);
-  margin-bottom: 3.2rem;
-  padding: 2.4rem;
-  text-align: center;
-}
-
 .page-wrapper {
+  background-color: var(--color-main-background);
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
