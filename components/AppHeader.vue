@@ -5,10 +5,10 @@
 
       <nav>
         <ul class="header-menu">
-          <li class="header-menu-item"><a class="link" href="/"><span data-content="Home">Home</span></a></li>
-          <li class="header-menu-item"><a class="link" href="/about"><span data-content="About">About</span></a></li>
-          <li class="header-menu-item"><a class="link" href="/resume"><span data-content="Resume">Resume</span></a></li>
-          <li class="header-menu-item"><a class="link" href="/contact"><span data-content="Contact Me">Contact Me</span></a></li>
+          <li class="header-menu-item"><a class="header-menu-link" href="/"><span data-content="Home">Home</span></a></li>
+          <li class="header-menu-item"><a class="header-menu-link" href="/about"><span data-content="About">About</span></a></li>
+          <li class="header-menu-item"><a class="header-menu-link" href="/resume"><span data-content="Resume">Resume</span></a></li>
+          <li class="header-menu-item"><a class="header-menu-link" href="/contact"><span data-content="Contact Me">Contact Me</span></a></li>
         </ul>
       </nav>
 
@@ -129,12 +129,11 @@
 
   .header-menu {
     display: flex;
-    font-size: 1.2rem;
+    font-size: var(--font-size-xsmall);
     font-weight: var(--font-weight-bold);
     letter-spacing: var(--letter-spacing-wide);
     list-style-type: none;
     margin-right: 2rem;
-    text-transform: uppercase;
 
     @media (max-width: 640px) {
       display: none;
@@ -144,6 +143,37 @@
   .header-menu-item {
     &:not(:last-of-type) {
       margin-right: 2.4rem;
+    }
+  }
+
+  .header-menu-link {
+    cursor: pointer;
+    font-weight: var(--font-weight-xbold);
+    letter-spacing: var(--letter-spacing-xxwide);
+    position: relative;
+    text-decoration: none;
+    transition: clip-path 275ms ease;
+
+    &:hover span::before,
+    &:focus span::before {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    span {
+      color: var(--color-link);
+      display: inline-block;
+      position: relative;
+
+      &::before {
+        content: attr(data-content);
+        clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+        color: var(--color-link-overlay);
+        letter-spacing: var(--letter-spacing-xxwide);
+        position: absolute;
+        text-decoration: underline;
+        text-decoration-color: var(--color-link-overlay);
+        transition: clip-path 350ms ease;
+      }
     }
   }
 
