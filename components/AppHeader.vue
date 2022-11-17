@@ -25,8 +25,6 @@
     <audio class="header-theme-switch-audio-on" src="/audio/light-on.mp3"></audio>
     <audio class="header-theme-switch-audio-off" src="/audio/light-off.mp3"></audio>
   </div>
-
-  <!-- <NavigationMenu /> -->
 </template>
 
 <script>
