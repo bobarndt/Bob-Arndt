@@ -22,6 +22,8 @@
       <button class="header-theme-switch" @click="switchTheme" role="switch" aria-label="light/dark mode" content="Light/Dark Mode"></button>
     </header>
 
+    <audio class="header-menu-audio-open" src="/audio/menu-open.mp3"></audio>
+    <audio class="header-menu-audio-close" src="/audio/menu-close.mp3"></audio>
     <audio class="header-theme-switch-audio-on" src="/audio/light-on.mp3"></audio>
     <audio class="header-theme-switch-audio-off" src="/audio/light-off.mp3"></audio>
   </div>
