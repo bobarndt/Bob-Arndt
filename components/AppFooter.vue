@@ -52,6 +52,7 @@
     height: 4.8rem;
     position: fixed;
     width: var(--width-full);
+    z-index: 10;
 
     @media (max-width: 40rem) {
       height: 8rem;
