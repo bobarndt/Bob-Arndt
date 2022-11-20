@@ -96,6 +96,6 @@
   }
 
   .menu-hidden {
-    display: none;
+    visibility: hidden;
   }
 </style>
