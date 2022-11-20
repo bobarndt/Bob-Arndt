@@ -4,9 +4,9 @@
       <a class="header-logo" href="/"></a>
 
       <div class="hamburger" role="switch" aria-label="menu" content="Menu" @click="toggleMenuDisplay">
-        <div class="hamburger__container">
-          <div class="hamburger__inner"></div>
-          <div class="hamburger__hidden"></div>
+        <div class="hamburger-container">
+          <div class="hamburger-inner"></div>
+          <div class="hamburger-hidden"></div>
         </div>
       </div>
 
