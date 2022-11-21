@@ -19,12 +19,27 @@
   export default {
     methods: {
       highlightCurrentMenuItem() {
+        const pageNameFromURL = location.pathname.substring(1) || 'home';
+
         let menuItems = document.querySelectorAll(".menu-item");
         menuItems = new Array(...menuItems);
 
-        // let item = menuItems.filter((item) => item.classList.contains(lookFor))[0];
-        // item.classList.add("active");      }
+        menuItems.forEach(menuItem => {
+          let pageNameFromMenuItem = menuItem.textContent.toLowerCase();
+          let spacePosition = pageNameFromMenuItem.indexOf(' ');
+
+          if (spacePosition > 0) {
+            pageNameFromMenuItem = pageNameFromMenuItem.substring(0, spacePosition);
+          }
+
+          if (pageNameFromURL === pageNameFromMenuItem) {
+            menuItem.classList.add("active");
+          }
+        });
       }
+    },
+    mounted() {
+      this.highlightCurrentMenuItem();
     }
   }
 </script>
@@ -44,7 +59,11 @@
 
   .menu-item {
     line-height: var(--line-height-menu-item);
-  }
+
+    &.active a span {
+        color: var(--color-azure-500);
+      }
+}
 
   .menu-link {
     cursor: pointer;
@@ -73,10 +92,6 @@
         text-decoration: underline;
         text-decoration-color: var(--color-link-overlay);
         transition: clip-path 350ms ease;
-      }
-
-      &.active {
-        color: var(--color-azure-500);
       }
     }
   }
