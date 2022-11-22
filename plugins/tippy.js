@@ -5,8 +5,8 @@ export default defineNuxtPlugin(nuxtApp => {
     {
       defaultProps: {
         animation: 'scale',
-        delay: 300,
-        duration: 300,
+        delay: 200,
+        duration: 200,
         hideOnClick: true,
         placement: 'auto-end',
         role: 'tooltip',

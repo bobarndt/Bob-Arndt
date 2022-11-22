@@ -1,38 +1,42 @@
 /*! _hamburger.scss */
 
-$hamburger-padding: 15px;
-$hamburger-width: 24px;
-$hamburger-height: 20px;
 $hamburger-background-color: transparent;
-$hamburger-line-color: var(--color-azure-600);
-$hamburger-hover-line-color: var(--color-rose-600);
-$hamburger-line-height: 2px;
 $hamburger-border-radius: 4px;
-$hamburger-transition-time: 0.4s;
+$hamburger-height: 20px;
+$hamburger-hover-line-color: var(--color-rose-600);
+$hamburger-initial-opposition: 5px;
+$hamburger-line-color: var(--color-azure-600);
+$hamburger-line-height: 2px;
+$hamburger-padding: 15px;
 $hamburger-transition-function: ease;
 $hamburger-transition-opacity: 0;
+$hamburger-transition-time: 0.4s;
 $hamburger-vertical-gap: 7px;
-$hamburger-initial-opposition: 5px;
+$hamburger-width: 24px;
 $hamburger-hide-distance: $hamburger-width + $hamburger-padding;
 
 @mixin line-props {
-  width: 100%;
-  height: $hamburger-line-height;
   background-color: $hamburger-line-color;
   border-radius: $hamburger-border-radius;
+  height: $hamburger-line-height;
   position: absolute;
   transition-property: transform, opacity;
   transition-timing-function: ease;
   transition-duration: $hamburger-transition-time;
+  width: 100%;
 }
 
 .hamburger {
-  padding: $hamburger-padding;
+  background-color: $hamburger-background-color;
   cursor: pointer;
   display: inline-block;
-  overflow: hidden;
-  background-color: $hamburger-background-color;
   margin-right: 2rem;
+  overflow: hidden;
+  padding: $hamburger-padding;
+
+  @media (max-width: 40rem) {
+    margin-right: 1rem;
+  }
 
   &-container {
     width: $hamburger-width;
@@ -60,7 +64,6 @@ $hamburger-hide-distance: $hamburger-width + $hamburger-padding;
     top: 50%;
     transform: translate($hamburger-initial-opposition, -50%);
     opacity: 1;
-
 
     &::before,
     &::after {
@@ -113,7 +116,6 @@ $hamburger-hide-distance: $hamburger-width + $hamburger-padding;
     background-color: $hamburger-hover-line-color;
     top: 50%;
     transform: translate(#{$hamburger-hide-distance}, -50%);
-
 
     &::before,
     &::after {

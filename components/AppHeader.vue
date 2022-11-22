@@ -3,7 +3,11 @@
     <header class="header">
       <a class="header-logo" href="/"></a>
 
-      <div class="hamburger" role="switch" aria-label="menu" content="Menu" @click="toggleMenuDisplay">
+      <a class="header-social-link-icon" href="https://www.linkedin.com/in/bob-arndt/" target="_blank"><ion-icon class="linkedin" name="logo-linkedin"></ion-icon></a>
+
+      <a class="header-social-link-icon github" href="https://github.com/bobarndt/Bob-Arndt" target="_blank"><ion-icon class="github" name="logo-github"></ion-icon></a>
+
+      <div class="hamburger" role="switch" aria-label="menu" @click="toggleMenuDisplay">
         <div class="hamburger-container">
           <div class="hamburger-inner"></div>
           <div class="hamburger-hidden"></div>
@@ -132,14 +136,30 @@
     width: 12rem;
   }
 
+  .header-social-link-icon {
+    display: inline-block;
+    height: 2.8rem;
+    margin-right: 4rem;
+    width: 2.8rem;
+
+    &:last-of-type {
+      margin-right: 2rem;
+    }
+
+    @media (max-width: 40rem) {
+      margin-right: 2rem;
+
+      &:last-of-type {
+        margin-right: .4rem;
+      }
+    }
+  }
+
   .header-theme-switch {
     background-color: transparent;
-    border-radius: 50%;
     color: var(--color-azure-600);
     cursor: pointer;
-    display: flex;
     height: 2.5rem;
-    place-items: center;
     transition: color 0.25s ease-in;
     width: 2.5rem;
 
@@ -159,5 +179,16 @@
     top: 0;
     width: var(--width-full);
     z-index: 10;
+  }
+
+  ion-icon {
+    color: var(--color-header-menu-icon);
+    font-size: 2.2rem;
+    margin-top: .25rem;
+
+    &:hover {
+      animation: pulse-icon 2s ease-in-out 2;
+      color: var(--color-header-menu-icon-hover);
+    }
   }
 </style>
