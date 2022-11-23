@@ -12,8 +12,10 @@
   --drop-shadow-header: .25rem 0 1rem var(--color-black);
   --drop-shadow-light: .15rem .15rem .15rem var(--color-slate-600);
 
-  --font-size-base: 62.5%;  // 10px
+  --font-family-sans: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  --font-family-serif: 'Caslon Pro', Merriweather, Georgia, 'Times New Roman', serif;
 
+  --font-size-base: 62.5%;  // 10px
   --font-size-xxxsmall: 1rem;
   --font-size-xxsmall: 1.25rem;
   --font-size-xsmall: 1.4rem;
@@ -35,16 +37,17 @@
   --font-weight-xbold: 800;
   --font-weight-black: 900;
 
-  --font-family-sans: 'Proxima Nova', Arial, Helvetica, sans-serif;
-  --font-family-serif: 'Caslon Pro', Merriweather, Georgia, 'Times New Roman', serif;
-
   --letter-spacing-tight: -.005em;
   --letter-spacing-normal: normal;
   --letter-spacing-wide: 0.025em;
   --letter-spacing-xwide: 0.05em;
   --letter-spacing-xxwide: 0.1em;
+  --letter-spacing-xxxwide: 0.15em;
 
   --line-height-base: 1.7;
+  --line-height-default: 1;
+  --line-height-short: 1.2;
+  --line-height-tall: 2;
   --line-height-menu-item: 3;
 
   --max-width-site: 128rem;
