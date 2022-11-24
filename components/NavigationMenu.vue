@@ -74,9 +74,6 @@
   }
 
   .menu-item {
-    font-family: var(--font-family-serif);
-    font-size: 4rem;
-    font-style: italic;
     line-height: var(--line-height-menu-item);
 
     &.active a span {

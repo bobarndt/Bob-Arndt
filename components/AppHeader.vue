@@ -3,6 +3,8 @@
     <header class="header">
       <a class="header-logo" href="/"></a>
 
+      <a class="header-social-link-icon home" href="/"><ion-icon src="/images/home.svg"></ion-icon></a>
+
       <a class="header-social-link-icon" href="https://www.linkedin.com/in/bob-arndt/" target="_blank"><ion-icon class="linkedin" name="logo-linkedin"></ion-icon></a>
 
       <a class="header-social-link-icon github" href="https://github.com/bobarndt/Bob-Arndt" target="_blank"><ion-icon class="github" name="logo-github"></ion-icon></a>
