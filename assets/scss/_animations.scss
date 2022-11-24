@@ -48,3 +48,17 @@
     transform: scale(1.4);
   }
 }
+
+@keyframes pulse-icon-menu {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25%, 75% {
+    transform: scale(1.35);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+

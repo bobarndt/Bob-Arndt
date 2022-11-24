@@ -2,7 +2,7 @@
 
 [color-scheme="dark"] {
   --color-footer-background: var(--color-indigo-900);
-  --color-footer-text: var(--color-white);
+  --color-footer-text: var(--color-slate-200);
   --color-header-background: var(--color-indigo-900);
   --color-header-menu-icon: var(--color-slate-400);
   --color-header-menu-icon-hover: var(--color-white);
@@ -12,6 +12,7 @@
   --color-main-background: var(--color-slate-900);
   --color-main-text: var(--color-slate-200);
   --color-menu-background: var(--color-indigo-800);
+  --color-menu-link-overlay: var(--color-white);
   --color-menu-tech-stack-border: var(--color-indigo-900);
   --color-page-background: var(--color-slate-800);
   --color-resume-download-button: var(--color-azure-600);
@@ -19,7 +20,7 @@
   --color-resume-download-button-text: var(--color-slate-800);
   --color-resume-download-button-text-hover: var(--color-slate-200);
   --color-resume-employer: var(--color-azure-400);
-  --color-resume-progress-bar-background: var(--color-slate-200);
+  --color-resume-progress-bar-background: var(--color-slate-400);
   --color-resume-progress-bar-fill: var(--color-azure-400);
   --color-resume-section-divider: var(--color-azure-500);
   --header-logo-background-image: url('/images/Arndt-logo-white.svg');
@@ -27,16 +28,17 @@
 
 [color-scheme="light"] {
   --color-footer-background: var(--color-indigo-900);
-  --color-footer-text: var(--color-white);
+  --color-footer-text: var(--color-slate-200);
   --color-header-background: var(--color-slate-200);
   --color-header-menu-icon: var(--color-azure-600);
   --color-header-menu-icon-hover: var(--color-indigo-900);
   --color-header-theme-switch: var(--color-slate-900);
   --color-link: var(--color-indigo-800);
   --color-link-overlay: var(--color-rose-600);
-  --color-main-background: var(--color-blue-200);
+  --color-main-background: var(--color-slate-300);
   --color-main-text: var(--color-slate-900);
   --color-menu-background: var(--color-indigo-900);
+  --color-menu-link-overlay: var(--color-white);
   --color-menu-tech-stack-border: var(--color-indigo-800);
   --color-page-background: var(--color-slate-600);
   --color-resume-download-button: var(--color-indigo-800);
