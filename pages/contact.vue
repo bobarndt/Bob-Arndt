@@ -2,26 +2,26 @@
   <div class="page-wrapper">
     <div class="hero-wrapper"><!-- Begin .hero div -->
       <div class="hero-animated-background-image">
-        <img src="/images/leaf-water-drops.min.jpg" alt="Bob Arndt | Web design and development professional in Dallas, Texas, USA">
+        <img src="/images/graffiti.min.jpg" alt="Bob Arndt | Web design and development professional in Dallas, Texas, USA">
       </div>
 
       <div class="hero-content">
-          <div class="hero-title-wrapper">
-            <h1 class="hero-title">Contact Me</h1>
-            <h1 class="hero-title-overlay">
-              <span>C</span>
-              <span>o</span>
-              <span>n</span>
-              <span>t</span>
-              <span>a</span>
-              <span>c</span>
-              <span>t</span>
-              <span>&nbsp;</span>
-              <span>M</span>
-              <span>e</span>
-            </h1>
-          </div>
+        <div class="hero-title-wrapper">
+          <h1 class="hero-title">Contact Me</h1>
+          <h1 class="hero-title-overlay">
+            <span>C</span>
+            <span>o</span>
+            <span>n</span>
+            <span>t</span>
+            <span>a</span>
+            <span>c</span>
+            <span>t</span>
+            <span>&nbsp;</span>
+            <span>M</span>
+            <span>e</span>
+          </h1>
         </div>
+      </div>
     </div><!-- End .hero div -->
 
     <main class="main">
@@ -70,5 +70,9 @@
     span:nth-child(10) {
       animation: hero-title-fade-in 0.8s 1.0s forwards cubic-bezier(0.11, 0, 0.5, 0);
     }
+  }
+
+  .hero-title-wrapper {
+    border: var(--border-indigo);
   }
 </style>
