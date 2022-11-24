@@ -387,7 +387,7 @@
       }
     }
 
-    @media (max-width: 40rem) {
+    @media (max-width: 640px) {
       margin-bottom: 6rem;
     }
   }
@@ -474,7 +474,7 @@
   .resume-section-flex-container {
     display: flex;
 
-    @media (max-width: 40rem) {
+    @media (max-width: 640px) {
       flex-direction: column;
     }
   }

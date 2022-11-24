@@ -4,7 +4,7 @@
 
       <nav class="menu-nav">
         <ul class="menu-list">
-          <li class="menu-item"><a class="menu-link" href="/"><span data-content="Home">Home</span></a></li>
+          <li class="menu-item"><a class="menu-link" href="/"><ion-icon src="/images/home.svg"></ion-icon><span data-content="Home">Home</span></a></li>
           <li class="menu-item"><a class="menu-link" href="/about"><span data-content="About">About</span></a></li>
           <li class="menu-item"><a class="menu-link" href="/resume"><span data-content="Resume">Resume</span></a></li>
           <li class="menu-item"><a class="menu-link" href="/contact"><span data-content="Contact Me">Contact Me</span></a></li>
@@ -74,6 +74,9 @@
   }
 
   .menu-item {
+    font-family: var(--font-family-serif);
+    font-size: 4rem;
+    font-style: italic;
     line-height: var(--line-height-menu-item);
 
     &.active a span {

@@ -146,11 +146,17 @@
       margin-right: 2rem;
     }
 
-    @media (max-width: 40rem) {
+    @media (max-width: 640px) {
       margin-right: 2rem;
 
       &:last-of-type {
         margin-right: .4rem;
+      }
+    }
+
+    @media (max-width: 440px) {
+      &.home {
+        display: none;
       }
     }
   }
