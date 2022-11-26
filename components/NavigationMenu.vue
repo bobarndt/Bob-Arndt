@@ -19,21 +19,6 @@
         </ul>
       </nav>
 
-      <section class="menu-tech-stack desktop">
-        <p>Built with <ion-icon src="/images/nuxt3.svg"></ion-icon>, <ion-icon src="/images/vue3.svg"></ion-icon>, <ion-icon src="/images/sass.svg"></ion-icon>, and <ion-icon src="/images/vite.svg"></ion-icon> in <ion-icon src="/images/vscode.svg"></ion-icon>. Deployed on <ion-icon src="/images/netlify.svg"></ion-icon>. No React. No Tailwind. No gradients. No apology.</p>
-      </section>
-
-      <section class="menu-tech-stack tablet">
-        <p>Built with <ion-icon src="/images/nuxt3.svg"></ion-icon>, <ion-icon src="/images/vue3.svg"></ion-icon>, <ion-icon src="/images/sass.svg"></ion-icon>, and <ion-icon src="/images/vite.svg"></ion-icon> in <ion-icon src="/images/vscode.svg"></ion-icon>. Deployed on <ion-icon src="/images/netlify.svg"></ion-icon>.</p>
-        <p>No React. No Tailwind. No gradients. No apology.</p>
-      </section>
-
-      <section class="menu-tech-stack phone">
-        <p>Built with <ion-icon src="/images/nuxt3.svg"></ion-icon>, <ion-icon src="/images/vue3.svg"></ion-icon>, <ion-icon src="/images/sass.svg"></ion-icon>, and <ion-icon src="/images/vite.svg"></ion-icon> in <ion-icon src="/images/vscode.svg"></ion-icon>.</p>
-        <p>Deployed on <ion-icon src="/images/netlify.svg"></ion-icon>.</p>
-        <p>No React. No Tailwind. No gradients. No apology.</p>
-      </section>
-
     </div>
   </div>
 </template>
@@ -73,10 +58,10 @@
     border: .75rem solid rgba(0, 0, 0, .25);
     display: grid;
     font-size: var(--font-size-xlarge);
-    grid-template-rows: 1fr 15rem;
+    grid-template-rows: 1fr;
     height: 100%;
     max-width: var(--max-width-site);
-    opacity: 0.9;
+    opacity: 0.92;
     place-items: center;
     width: 100%;
   }
@@ -154,19 +139,20 @@
   }
 
   .menu-nav {
-    margin: 8rem auto 0;
+    margin: 0 auto;
   }
 
   .menu-tech-stack {
     background-color: var(--color-indigo-300);
-    border: .75rem solid var(--color-menu-tech-stack-border);
+    border: .5rem solid var(--color-menu-tech-stack-border);
     border-radius: 1.5rem;
     font-size: var(--font-size-xxxsmall);
     font-weight: var(--font-weight-xbold);
     letter-spacing: var(--letter-spacing-xxxwide);
-    margin: 0 auto 6rem;
+    margin: 0 auto 14rem;
+    opacity: 1;
     text-align: center;
-    width: 85%;
+    width: 72%;
 
     p {
       color: var(--color-slate-900);

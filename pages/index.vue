@@ -47,7 +47,7 @@
   .heading {
     font-style: var(--font-style-italic);
     font-weight: var(--font-weight-semi-bold);
-    letter-spacing: var(--letter-spacing-xxwide);
+    letter-spacing: var(--letter-spacing-xwide);
     line-height: var(--line-height-tall);
   }
 

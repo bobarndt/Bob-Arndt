@@ -59,7 +59,7 @@
               <li>NodeJS / NPM / Vite</li>
               <li>Ajax / JSON / RESTful APIs</li>
               <li>HTML5 / Responsive Design</li>
-              <li>CSS3 / Sass / PostCSS / Bootstrap / TailwindCSS</li>
+              <li>CSS3 / Sass / Bootstrap / TailwindCSS</li>
               <li>Git / Github</li>
             </ul>
           </div>
@@ -319,7 +319,7 @@
 
   .resume-back-to-top-button {
     background-color: transparent;
-    bottom: 15.5rem;
+    bottom: 9.25rem;
     color: var(--color-rose-600);
     opacity: 0;
     position: fixed;
@@ -425,8 +425,12 @@
   .resume-main {
     background-color: var(--color-main-background);
     color: var(--color-main-text);
-    padding: 3.2rem 3.2rem 5rem;
+    padding: 3.2rem 3.2rem 12rem;
     width: var(--width-full);
+
+    @media (max-width: 665px) {
+      padding-bottom: 9rem;
+    }
   }
 
   .resume-profile-text {
