@@ -41,6 +41,9 @@
           }
 
           if (pageNameFromURL === pageNameFromMenuItem) {
+            const icon = menuItem.firstChild.firstChild;
+
+            icon.classList.add('active');
             menuItem.classList.add("active");
           }
         });
@@ -121,6 +124,10 @@
       color: var(--color-slate-400);
       margin-bottom: -.2rem;
       margin-right: 4rem;
+
+      &.active {
+        color: var(--color-azure-400);
+      }
 
       &:hover {
         animation: pulse-icon-menu 2s linear 2;
