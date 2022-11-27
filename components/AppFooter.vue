@@ -60,7 +60,7 @@
   .footer-photo-wrapper {
     background-blend-mode: luminosity;
     background-color: var(--color-indigo-300);
-    background-image: url('/public/images/rea.jpg');
+    background-image: url('/images/rea.jpg');
     border-radius: 50%;
     bottom: 1rem;
     height: 11rem;
