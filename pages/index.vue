@@ -177,15 +177,15 @@
     border: .4rem solid var(--color-home-tech-stack-border);
     border-radius: 1.5rem;
     font-size: var(--font-size-xxsmall);
-    font-weight: var(--font-weight-semi-bold);
-    letter-spacing: var(--letter-spacing-xxwide);
+    font-weight: var(--font-weight-xbold);
+    letter-spacing: var(--letter-spacing-xwide);
     margin: 0 auto 6rem;
     opacity: 1;
     text-align: center;
     width: 100%;
 
     p {
-      color: var(--color-slate-900);
+      color: var(--color-slate-700);
       line-height: var(--line-height-tall);
       padding: 1rem 0;
     }
