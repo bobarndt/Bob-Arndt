@@ -374,7 +374,7 @@
     height: 4.6rem;
     justify-content: center;
     letter-spacing: var(--letter-spacing-xxwide);
-    margin-bottom: 2.8rem;
+    margin-bottom: 4rem;
     transition: all 0.5s ease-out;
     width: var(--width-full);
 

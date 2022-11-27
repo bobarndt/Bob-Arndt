@@ -179,7 +179,7 @@
     font-size: var(--font-size-xxsmall);
     font-weight: var(--font-weight-semi-bold);
     letter-spacing: var(--letter-spacing-xxwide);
-    margin: 0 auto 4rem;
+    margin: 0 auto 6rem;
     opacity: 1;
     text-align: center;
     width: 100%;
