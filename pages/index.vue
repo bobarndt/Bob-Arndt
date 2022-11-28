@@ -379,7 +379,7 @@
   .home-skills-item-caption {
     display: inline-block;
     font-size: var(--font-size-xsmall);
-    font-weight: var(--font-weight-xbold);
+    font-weight: var(--font-weight-bold);
     letter-spacing: var(--letter-spacing-wide);
     margin: 1rem auto;
   }
