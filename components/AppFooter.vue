@@ -21,7 +21,6 @@
   .footer-copyright {
     color: var(--color-footer-text);
     display: inline-block;
-    font-size: var(--font-size-xxxsmall);
     font-weight: var(--font-weight-xbold);
     letter-spacing: var(--letter-spacing-xwide);
     margin-right: 3.2rem;
