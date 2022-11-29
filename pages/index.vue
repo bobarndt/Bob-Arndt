@@ -239,10 +239,64 @@
     }
   }
 
+  .home-skills-grid {
+    background-color: var(--color-slate-900);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--drop-shadow-medium);
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .home-skills-item {
+    align-items: center;
+    border-radius: 1.5rem;
+    color: var(--color-home-skills-text);
+    display: flex;
+    height: 10rem;
+    justify-content: center;
+    padding: 2rem;
+    width: 10rem;
+  }
+
+  .home-skills-item-caption {
+    display: inline-block;
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-wide);
+    margin: 1rem auto;
+  }
+
+  .home-skills-item-wrapper {
+    align-items: center;
+    color: var(--color-home-skills-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 3rem 3rem 0 3rem;
+
+    @media (max-width: 400px) {
+      padding: 2rem 2rem 0 2rem;
+    }
+  }
+
+  .home-skills-title {
+    color: var(--color-home-skills-title);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .home-skills-wrapper {
+    margin-bottom: 4rem;
+  }
+
   .home-tech-stack {
     background-color: var(--color-indigo-300);
     border: .4rem solid var(--color-home-tech-stack-border);
     border-radius: 1.5rem;
+    box-shadow: var(--drop-shadow-medium);
     font-size: var(--font-size-xxsmall);
     font-weight: var(--font-weight-xbold);
     letter-spacing: var(--letter-spacing-xwide);
@@ -356,57 +410,5 @@
         }
       }
     }
-  }
-
-  .home-skills-grid {
-    background-color: var(--color-slate-900);
-    border-radius: var(--border-radius-large);
-    padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .home-skills-item {
-    align-items: center;
-    border-radius: 1.5rem;
-    color: var(--color-home-skills-text);
-    display: flex;
-    height: 10rem;
-    justify-content: center;
-    padding: 2rem;
-    width: 10rem;
-  }
-
-  .home-skills-item-caption {
-    display: inline-block;
-    font-size: var(--font-size-xsmall);
-    font-weight: var(--font-weight-bold);
-    letter-spacing: var(--letter-spacing-wide);
-    margin: 1rem auto;
-  }
-
-  .home-skills-item-wrapper {
-    align-items: center;
-    color: var(--color-home-skills-text);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 3rem 3rem 0 3rem;
-
-    @media (max-width: 400px) {
-      padding: 2rem 2rem 0 2rem;
-    }
-  }
-
-  .home-skills-title {
-    color: var(--color-home-skills-title);
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  .home-skills-wrapper {
-    margin-bottom: 4rem;
   }
 </style>
