@@ -359,6 +359,9 @@
   }
 
   .home-skills-grid {
+    background-color: var(--color-slate-900);
+    border-radius: var(--border-radius-large);
+    padding: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -370,7 +373,6 @@
     color: var(--color-home-skills-text);
     display: flex;
     height: 10rem;
-    // filter: grayscale(100%);
     justify-content: center;
     padding: 2rem;
     width: 10rem;
@@ -400,14 +402,11 @@
   .home-skills-title {
     color: var(--color-home-skills-title);
     font-size: 3rem;
-
-    @media (max-width: 703px) {
-      text-align: center;
-    }
+    margin-bottom: 2rem;
+    text-align: center;
   }
 
   .home-skills-wrapper {
     margin-bottom: 4rem;
   }
-
 </style>
