@@ -23,7 +23,7 @@
     </div><!-- End .hero div -->
 
     <main class="main">
-      <p class="main-text">No Facebook. No Instagram. No Twitter. No pre-natal murder. No climate change. No foreign invasion. No LGBT. No Fauci. No Gates. No WHO. No COVID. No vaccination. No mask. No cancel. No woke. No Antifa. No Stalinism. No Democrats. No Nancy. No Joe. No Bernie. No Beto. No UN. No FBI. No DOJ. No CRT. No BLM. No CNN. No MSM. No NPR. No PBS. No NFL. No NBA. No MLB. No ESPN. No Amazon. No Starbucks. No Disney. No apology.</p>
+      <p class="main-text">No Facebook. No Instagram. No Twitter. No pre-natal murder. No climate change. No foreign invasion. No LGBT. No Fauci. No Gates. No WHO. No COVID. No vaccination. No mask. No cancel. No woke. No Antifa. No Stalinism. No Democrats. No Nancy. No Joe. No Bernie. No Beto. No ACLU. No UN. No FBI. No DOJ. No CRT. No BLM. No CNN. No MSM. No NPR. No PBS. No NFL. No NBA. No MLB. No ESPN. No Amazon. No Starbucks. No Disney. No apology.</p>
       <p class="main-text">Ultra MAGA. NRA. Re-fund the police. Finish the wall. No compromise. DeSantis 2024. God bless America. No apology.</p>
     </main>
   </div>
