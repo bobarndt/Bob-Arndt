@@ -1,13 +1,13 @@
 <template>
   <div class="header-wrapper">
     <header class="header">
-      <a class="header-logo" href="/"></a>
+      <a class="header-logo" href="/" @click="playSound"></a>
 
-      <a class="header-social-link-icon home" href="/"><ion-icon src="/images/home.svg"></ion-icon></a>
+      <a class="header-social-link-icon home" href="/" @click="playSound"><ion-icon src="/images/home.svg"></ion-icon></a>
 
-      <a class="header-social-link-icon" href="https://www.linkedin.com/in/bob-arndt/" target="_blank"><ion-icon class="linkedin" name="logo-linkedin"></ion-icon></a>
+      <a class="header-social-link-icon" href="https://www.linkedin.com/in/bob-arndt/" @click="playSound" target="_blank"><ion-icon class="linkedin" name="logo-linkedin"></ion-icon></a>
 
-      <a class="header-social-link-icon github" href="https://github.com/bobarndt/Bob-Arndt" target="_blank"><ion-icon class="github" name="logo-github"></ion-icon></a>
+      <a class="header-social-link-icon github" href="https://github.com/bobarndt/Bob-Arndt" @click="playSound" target="_blank"><ion-icon class="github" name="logo-github"></ion-icon></a>
 
       <div class="hamburger" role="switch" aria-label="menu" @click="toggleMenuDisplay">
         <div class="hamburger-container">
@@ -23,6 +23,7 @@
     <audio class="header-menu-audio-close" src="/audio/menu-close.mp3"></audio>
     <audio class="header-theme-switch-audio-light" src="/audio/light-on.mp3"></audio>
     <audio class="header-theme-switch-audio-dark" src="/audio/light-off.mp3"></audio>
+    <audio class="header-link-audio" src="/audio/light-on.mp3"></audio>
   </div>
 </template>
 
@@ -73,6 +74,12 @@
         this.root.setAttribute('color-scheme', this.preferredTheme);
 
         localStorage.setItem('bob-arndt-theme', this.preferredTheme);
+      },
+      playSound() {
+        console.log('inside playSound method');
+        this.soundClip = document.querySelector('.header-theme-switch-audio-light');
+        this.soundClip.currentTime = 0;
+        this.soundClip.play();
       },
       switchTheme() {
         if (this.preferredTheme === 'light') {
