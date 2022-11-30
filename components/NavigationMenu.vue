@@ -4,27 +4,33 @@
 
       <nav class="menu-nav">
         <ul class="menu-list">
-          <div class="menu-item-wrapper">
+          <div class="menu-item-wrapper" @click="menuClose">
             <li class="menu-item"><a class="menu-link" href="/"><ion-icon src="/images/home.svg"></ion-icon><span data-content="Home">Home</span></a></li>
           </div>
-          <div class="menu-item-wrapper">
+          <div class="menu-item-wrapper" @click="menuClose">
             <li class="menu-item"><a class="menu-link" href="/about"><ion-icon src="/images/about-me.svg"></ion-icon><span data-content="About Me">About Me</span></a></li>
           </div>
-          <div class="menu-item-wrapper">
+          <div class="menu-item-wrapper" @click="menuClose">
             <li class="menu-item"><a class="menu-link" href="/resume"><ion-icon src="/images/resume.svg"></ion-icon><span data-content="Resume">Resume</span></a></li>
           </div>
-          <div class="menu-item-wrapper">
+          <div class="menu-item-wrapper" @click="menuClose">
             <li class="menu-item"><a class="menu-link" href="/contact"><ion-icon src="/images/contact-me.svg"></ion-icon><span data-content="Contact Me">Contact Me</span></a></li>
           </div>
         </ul>
       </nav>
 
+      <audio class="menu-audio-close" src="/audio/menu-close.mp3"></audio>
     </div>
   </div>
 </template>
 
 <script>
   export default {
+    data() {
+      return {
+        soundClip: '',
+      }
+    },
     methods: {
       highlightCurrentMenuItem() {
         const pageNameFromURL = location.pathname.substring(1) || 'home';
@@ -47,6 +53,11 @@
             menuItem.classList.add("active");
           }
         });
+      },
+      menuClose() {
+        this.soundClip = document.querySelector('.menu-audio-close');
+        this.soundClip.currentTime = 0;
+        this.soundClip.play();
       }
     },
     mounted() {
