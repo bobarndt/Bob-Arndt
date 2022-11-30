@@ -62,6 +62,7 @@
     background-image: url('/images/rea.jpg');
     border-radius: 50%;
     bottom: 1rem;
+    box-shadow: var(--drop-shadow-medium);
     height: 11rem;
     left: 3.2rem;
     overflow: hidden;
