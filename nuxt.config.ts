@@ -26,6 +26,10 @@ export default defineNuxtConfig({
     },
   },
 
+  css: [
+    '@/assets/scss/main.scss'
+  ],
+
   vue: {
     compilerOptions: {
       // treat all tags starting with 'ion-' as custom elements
@@ -33,9 +37,5 @@ export default defineNuxtConfig({
         return tag.startsWith('ion-');
       }
     }
-  },
-
-  css: [
-    '@/assets/scss/main.scss'
-  ]
+  }
 })
