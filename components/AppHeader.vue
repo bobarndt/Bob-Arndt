@@ -1,5 +1,5 @@
 <template>
-  <div class="header-wrapper">
+  <div ref="menuWrapper" class="header-wrapper">
     <header class="header">
       <a class="header-logo" href="/" @click="playSound"></a>
 
@@ -9,21 +9,21 @@
 
       <a class="header-social-link-icon github" href="https://github.com/bobarndt/Bob-Arndt" @click="playSound" target="_blank"><ion-icon class="github" name="logo-github"></ion-icon></a>
 
-      <div class="hamburger" role="switch" aria-label="menu" @click="toggleMenuDisplay">
+      <div ref="hamburger" class="hamburger" role="switch" aria-label="menu" @click="toggleMenuDisplay">
         <div class="hamburger-container">
           <div class="hamburger-inner"></div>
           <div class="hamburger-hidden"></div>
         </div>
       </div>
 
-      <button class="header-theme-switch" @click="switchTheme" role="switch" aria-label="light/dark mode" content="Light/Dark Mode"></button>
+      <button ref="headerThemeSwitch" class="header-theme-switch" @click="switchTheme" role="switch" aria-label="light/dark mode" content="Light/Dark Mode"></button>
     </header>
 
-    <audio class="header-menu-audio-open" src="/audio/menu-open.mp3"></audio>
-    <audio class="header-menu-audio-close" src="/audio/menu-close.mp3"></audio>
-    <audio class="header-theme-switch-audio-light" src="/audio/light-on.mp3"></audio>
-    <audio class="header-theme-switch-audio-dark" src="/audio/light-off.mp3"></audio>
-    <audio class="header-link-audio" src="/audio/light-on.mp3"></audio>
+    <audio ref="headerMenuAudioOpen" class="header-menu-audio-open" src="/audio/menu-open.mp3"></audio>
+    <audio ref="headerMenuAudioClose" class="header-menu-audio-close" src="/audio/menu-close.mp3"></audio>
+    <audio ref="headerThemeSwitchAudioLight" class="header-theme-switch-audio-light" src="/audio/light-on.mp3"></audio>
+    <audio ref="headerThemeSwitchAudioDark" class="header-theme-switch-audio-dark" src="/audio/light-off.mp3"></audio>
+    <audio ref="headerLinkAudio" class="header-link-audio" src="/audio/light-on.mp3"></audio>
   </div>
 </template>
 
@@ -31,7 +31,7 @@
   export default {
     data() {
       return {
-        soundClip: '',
+        audio: '',
         displayedTheme: '',
         headerThemeSwitch: '',
         moonSVG: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -52,7 +52,7 @@
         this.toggleHamburgerState();
       },
       loadTheme() {
-        this.headerThemeSwitch = document.querySelector('.header-theme-switch');
+        this.headerThemeSwitch = this.$refs.headerThemeSwitch;
 
         this.storedTheme = localStorage.getItem('bob-arndt-theme');
 
@@ -64,10 +64,10 @@
 
         if (this.preferredTheme === 'light') {
           this.headerThemeSwitch.innerHTML = this.moonSVG;
-          this.audio = document.querySelector('.header-theme-switch-audio-on');
+          this.audio = this.$refs.headerThemeSwitchAudioLight;
         } else {
           this.headerThemeSwitch.innerHTML = this.sunSVG;
-          this.audio = document.querySelector('.header-theme-switch-audio-off');
+          this.audio = this.$refs.headerThemeSwitchAudioDark;
         }
 
         this.root = document.querySelector(':root');
@@ -76,8 +76,7 @@
         localStorage.setItem('bob-arndt-theme', this.preferredTheme);
       },
       playSound() {
-        console.log('inside playSound method');
-        this.soundClip = document.querySelector('.header-theme-switch-audio-light');
+        this.soundClip = this.$refs.headerLinkAudio;
         this.soundClip.currentTime = 0;
         this.soundClip.play();
       },
@@ -85,38 +84,39 @@
         if (this.preferredTheme === 'light') {
           this.preferredTheme = 'dark';
           this.headerThemeSwitch.innerHTML = this.sunSVG;
-          this.soundClip = document.querySelector('.header-theme-switch-audio-light');
+          this.audio = this.$refs.headerThemeSwitchAudioLight;
         } else {
           this.preferredTheme = 'light';
           this.headerThemeSwitch.innerHTML = this.moonSVG;
-          this.soundClip = document.querySelector('.header-theme-switch-audio-dark');
+          this.audio = this.$refs.headerThemeSwitchAudioDark;
         }
 
         this.root.setAttribute('color-scheme', this.preferredTheme);
         localStorage.setItem('bob-arndt-theme', this.preferredTheme);
 
-        this.soundClip.currentTime = 0;
-        this.soundClip.play();
+        this.audio.currentTime = 0;
+        this.audio.play();
       },
       toggleHamburgerState() {
-        document.querySelector('.hamburger')
+        this.$refs.hamburger
           .addEventListener('click', event => {
             event.currentTarget.classList.toggle('is-active');
           })
       },
       toggleMenuDisplay() {
         const menu = document.querySelector('.menu-wrapper');
+        console.log(`menu: ${menu}`);
 
         if (!menu.classList.contains('menu-hidden')) {
-          this.soundClip = document.querySelector('.header-menu-audio-close');
+          this.audio = this.$refs.headerMenuAudioClose;
         } else {
-          this.soundClip = document.querySelector('.header-menu-audio-open');
+          this.audio = this.$refs.headerMenuAudioOpen;
         }
 
         menu.classList.toggle('menu-hidden');
 
-        this.soundClip.currentTime = 0;
-        this.soundClip.play();
+        this.audio.currentTime = 0;
+        this.audio.play();
       }
     },
     mounted() {

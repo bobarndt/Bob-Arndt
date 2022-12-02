@@ -26,7 +26,7 @@
 
     <main class="main">
       <section class="section-form">
-        <form class="contact-me-form" method="POST" name="Contact Me" data-netlify="true" netlify-honeypot="bot-field">
+        <form ref="contact-me" class="contact-me-form" method="POST" name="Contact Me" data-netlify="true" netlify-honeypot="bot-field">
           <fieldset>
             <ul>
               <li>
@@ -37,27 +37,27 @@
                 <label for="bot-field">Don’t fill this out if you’re human.</label>
               </li>
               <li class="form-field">
-                <input id="first-name" type="text" name="First Name" placeholder="First name" aria-labelledby="contact-me-form first-name" tabindex="1">
-                <span class="error-message first-name">Please enter your first name.</span>
+                <input ref="firstName" id="first-name" type="text" name="First Name" placeholder="First name" aria-labelledby="contact-me-form first-name" tabindex="1">
+                <span ref="firstNameError" class="error-message first-name">Please enter your first name.</span>
                 <label for="first-name">First Name</label>
               </li>
               <li class="form-field">
-                <input id="last-name" type="text" name="Last Name" placeholder="Last name" aria-labelledby="contact-me-form last-name" tabindex="2">
-                <span class="error-message last-name">Please enter your last name.</span>
+                <input ref="lastName" id="last-name" type="text" name="Last Name" placeholder="Last name" aria-labelledby="contact-me-form last-name" tabindex="2">
+                <span ref="lastNameError" class="error-message last-name">Please enter your last name.</span>
                 <label for="last-name">Last Name</label>
               </li>
               <li class="form-field">
-                <input id="email" type="email" name="Email Address" placeholder="Email address" aria-labelledby="contact-me-form email" tabindex="3">
-                <span class="error-message email">Please enter a valid email address (i.e. john.doe@example.com)</span>
+                <input ref="email" id="email" type="email" name="Email Address" placeholder="Email address" aria-labelledby="contact-me-form email" tabindex="3">
+                <span ref="emailError" class="error-message email">Please enter a valid email address (i.e. john.doe@example.com)</span>
                 <label for="email">Email Address</label>
               </li>
               <li class="form-field">
-                <textarea id="message" name="Message" cols="70" rows="10" placeholder="Message" aria-labelledby="contact-me-form message" tabindex="4"></textarea>
-                <span class="error-message message">Please enter your message</span>
+                <textarea ref="message" id="message" name="Message" cols="70" rows="10" placeholder="Message" aria-labelledby="contact-me-form message" tabindex="4"></textarea>
+                <span ref="messageError" class="error-message message">Please enter your message</span>
                 <label for="message">Message</label>
               </li>
             </ul>
-            <button type="button" role="button" class="send-button" name="send-button" tabindex="5" onclick="validateForm()">Send</button>
+            <button ref="sendButton" type="button" role="button" class="send-button" name="send-button" tabindex="5" onclick="validateForm()">Send</button>
           </fieldset>
         </form>
       </section>
@@ -68,12 +68,21 @@
 
 <script>
   export default {
+    data() {
+      return {
+        emailRegex: /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/,
+        isFormValid: false,
+        firstName: '',
+        lastName: '',
+        email: '',
+        message: ''
+      }
+    },
     methods: {
       clearErrorMessages() {},
       displayErrorMessages() {},
       initialize() {
-        const firstName = document.querySelector('#first-name');
-        firstName.focus();
+        this.$refs.firstName.focus();
       },
       validateForm() {},
     },
