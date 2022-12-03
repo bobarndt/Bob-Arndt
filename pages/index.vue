@@ -133,7 +133,8 @@
       <p class="main-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 
       <section class="home-tech-stack desktop">
-        <p>Built with <ion-icon src="/images/skills/nuxt3.svg"></ion-icon>, <ion-icon src="/images/skills/vue3.svg"></ion-icon>, <ion-icon src="/images/skills/sass.svg"></ion-icon>, and <ion-icon src="/images/skills/vite.svg"></ion-icon> in <ion-icon src="/images/skills/vscode.svg"></ion-icon>. Deployed on <ion-icon src="/images/skills/netlify.svg"></ion-icon>. No React. No Tailwind. No gradients. No apology.</p>
+        <p>Built with Nuxt 3, Vue 3, Sass and Vite in VSCode. Deployed on Netlify. No React. No Tailwind. No gradients. No apology.</p>
+        <!-- <p>Built with <ion-icon src="/images/skills/nuxt3.svg"></ion-icon>, <ion-icon src="/images/skills/vue3.svg"></ion-icon>, <ion-icon src="/images/skills/sass.svg"></ion-icon>, and <ion-icon src="/images/skills/vite.svg"></ion-icon> in <ion-icon src="/images/skills/vscode.svg"></ion-icon>. Deployed on <ion-icon src="/images/skills/netlify.svg"></ion-icon>. No React. No Tailwind. No gradients. No apology.</p> -->
       </section>
 
       <section class="home-tech-stack tablet">
@@ -296,7 +297,7 @@
     background-color: var(--color-indigo-300);
     border: .4rem solid var(--color-home-tech-stack-border);
     border-radius: 1.5rem;
-    box-shadow: var(--drop-shadow-medium);
+    box-shadow: var(--drop-shadow-light);
     font-size: var(--font-size-xxsmall);
     font-weight: var(--font-weight-xbold);
     letter-spacing: var(--letter-spacing-xwide);
