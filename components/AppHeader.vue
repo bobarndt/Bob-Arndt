@@ -143,6 +143,10 @@
     height: 4.2rem;
     margin-right: auto;
     width: 12rem;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .header-social-link-icon {
@@ -150,6 +154,10 @@
     height: 2.8rem;
     margin-right: 4rem;
     width: 2.8rem;
+
+    &:focus {
+      outline: none;
+    }
 
     &:last-of-type {
       margin-right: 2rem;
@@ -177,6 +185,10 @@
     height: 2.5rem;
     transition: color 0.25s ease-in;
     width: 2.5rem;
+
+    &:focus {
+      outline: none;
+    }
 
     &:hover {
       animation: pulse-icon 2s linear 2;
