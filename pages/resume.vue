@@ -365,7 +365,8 @@
   .resume-download-button {
     align-items: center;
     background-color: var(--color-resume-download-button);
-    color: var(--color-resume-download-button-text);
+    border-radius: var(--border-radius-small);
+    color: var(--color-slate-400);
     cursor: pointer;
     display: flex;
     font-size: var(--font-size-xsmall);
@@ -374,13 +375,16 @@
     height: 4.6rem;
     justify-content: center;
     letter-spacing: var(--letter-spacing-xxwide);
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     transition: all 0.5s ease-out;
     width: var(--width-full);
 
+    &:focus,
     &:hover {
       background-color: var(--color-resume-download-button-hover);
-      color: var(--color-resume-download-button-text-hover);
+      color: var(--color-white);
+      outline: none;
+
 
       .resume-download-button-icon {
         animation: pulse-icon-download-resume 2s linear 2;
@@ -393,6 +397,7 @@
   }
 
   .resume-download-button-link {
+    outline: none;
     text-decoration: none;
   }
 
