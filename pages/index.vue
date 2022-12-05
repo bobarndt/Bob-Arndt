@@ -255,6 +255,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media (max-width: 425px) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    @media (max-width: 405px) {
+      padding-left: .5rem;
+      padding-right: .5rem;
+    }
   }
 
   .home-skills-item {
