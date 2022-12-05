@@ -134,23 +134,30 @@
 
       <section class="home-tech-stack desktop">
         <p>Built with Nuxt 3, Vue 3, Sass and Vite in VSCode. Deployed on Netlify. No React. No Tailwind. No gradients. No apology.</p>
-        <!-- <p>Built with <ion-icon src="/images/skills/nuxt3.svg"></ion-icon>, <ion-icon src="/images/skills/vue3.svg"></ion-icon>, <ion-icon src="/images/skills/sass.svg"></ion-icon>, and <ion-icon src="/images/skills/vite.svg"></ion-icon> in <ion-icon src="/images/skills/vscode.svg"></ion-icon>. Deployed on <ion-icon src="/images/skills/netlify.svg"></ion-icon>. No React. No Tailwind. No gradients. No apology.</p> -->
       </section>
 
       <section class="home-tech-stack tablet">
-        <p>Built with <ion-icon src="/images/skills/nuxt3.svg"></ion-icon>, <ion-icon src="/images/skills/vue3.svg"></ion-icon>, <ion-icon src="/images/skills/sass.svg"></ion-icon>, and <ion-icon src="/images/skills/vite.svg"></ion-icon> in <ion-icon src="/images/skills/vscode.svg"></ion-icon>. Deployed on <ion-icon src="/images/skills/netlify.svg"></ion-icon>.</p>
+        <p>Built with Nuxt 3, Vue 3, Sass and Vite in VSCode. Deployed on Netlify.</p>
+        <p>No React. No Tailwind. No gradients. No apology.</p>
+      </section>
+
+      <section class="home-tech-stack small-tablet">
+        <p>Built with Nuxt 3, Vue 3, Sass and Vite in VSCode.</p>
+        <p>Deployed on Netlify.</p>
         <p>No React. No Tailwind. No gradients. No apology.</p>
       </section>
 
       <section class="home-tech-stack phone">
-        <p>Built with <ion-icon src="/images/skills/nuxt3.svg"></ion-icon>, <ion-icon src="/images/skills/vue3.svg"></ion-icon>, <ion-icon src="/images/skills/sass.svg"></ion-icon>, and <ion-icon src="/images/skills/vite.svg"></ion-icon> in <ion-icon src="/images/skills/vscode.svg"></ion-icon>.</p>
-        <p>Deployed on <ion-icon src="/images/skills/netlify.svg"></ion-icon>.</p>
-        <p>No React. No Tailwind. No gradients. No apology.</p>
+        <p>Built with Nuxt 3, Vue 3, Sass and Vite in VSCode.</p>
+        <p>Deployed on Netlify.</p>
+        <p>No React. No Tailwind. No gradients.</p>
+        <p>No apology.</p>
       </section>
 
       <section class="home-tech-stack small-phone">
-        <p>Built with <ion-icon src="/images/skills/nuxt3.svg"></ion-icon>, <ion-icon src="/images/skills/vue3.svg"></ion-icon>, <ion-icon src="/images/skills/sass.svg"></ion-icon>, and <ion-icon src="/images/skills/vite.svg"></ion-icon> in <ion-icon src="/images/skills/vscode.svg"></ion-icon>.</p>
-        <p>Deployed on <ion-icon src="/images/skills/netlify.svg"></ion-icon>.</p>
+        <p>Built with Nuxt 3, Vue 3, Sass and Vite</p>
+        <p>in VSCode.</p>
+        <p>Deployed on Netlify.</p>
         <p>No React. No Tailwind. No gradients.</p>
         <p>No apology.</p>
       </section>
@@ -243,7 +250,7 @@
   .home-skills-grid {
     background-color: var(--color-slate-900);
     border-radius: var(--border-radius-large);
-    box-shadow: var(--drop-shadow-medium);
+    box-shadow: var(--box-shadow-medium);
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -295,118 +302,136 @@
 
   .home-tech-stack {
     background-color: var(--color-indigo-300);
-    border: .4rem solid var(--color-home-tech-stack-border);
-    border-radius: 1.5rem;
-    box-shadow: var(--drop-shadow-light);
-    font-size: var(--font-size-xxsmall);
-    font-weight: var(--font-weight-xbold);
-    letter-spacing: var(--letter-spacing-xwide);
-    margin: 0 auto 6rem;
-    opacity: 1;
-    text-align: center;
-    width: 100%;
+    border: .3rem solid var(--color-home-tech-stack-border);
+    border-radius: var(--border-radius-small);
+    box-shadow: var(--box-shadow-medium);
+    margin: 0 auto 4rem;
 
     p {
       color: var(--color-slate-700);
+      font-size: var(--font-size-xxsmall);
+      font-weight: var(--font-weight-xbold);
+      letter-spacing: var(--letter-spacing-xwide);
       line-height: var(--line-height-tall);
       padding: 1rem 0;
+      text-align: center;
     }
 
-    ion-icon {
-      display: inline-block;
-      font-size: 2rem;
-      margin-bottom: -.6rem;
-      width: 2.2rem;
-    }
-
+    /* show desktop */
     &.tablet,
+    &.small-tablet,
     &.phone,
     &.small-phone {
       display: none;
     }
 
-    @media (max-width: 1160px) {
+    @media (max-width: 940px) {
+      /* show tablet */
       &.desktop,
+      &.small-tablet,
       &.phone,
       &.small-phone {
         display: none;
       }
       &.tablet {
         display: block;
-        margin: 0 auto 6rem;
-        width: 100%;
+        margin: 0 auto 4rem;
 
         p {
-          line-height: var(--line-height-short);
-          padding-top: 1rem;
+          padding-bottom: 0;
 
           &:last-of-type {
-            padding-bottom: 1rem;
-            padding-top: .25rem;
+            padding: 0 0 1rem;
           }
         }
       }
     }
 
     @media (max-width: 640px) {
-      &.tablet {
-        margin: 0 auto 6rem;
-      }
-    }
-
-    @media (max-width: 540px) {
+      /* show small tablet */
       &.desktop,
       &.tablet,
+      &.phone
       &.small-phone {
         display: none;
       }
-      &.phone {
+      &.small-tablet {
         display: block;
-        margin-bottom: 8rem;
-        width: 100%;
+        margin-bottom: 4rem;
 
         p {
-          line-height: var(--line-height-default);
-          line-height: var(--line-height-short);
-          padding: .75rem 0;
+          padding: 1rem 0 0;
 
           &:nth-of-type(2) {
-            padding-bottom: 1rem;
-            padding-top: .1rem;
+            padding: 0 0;
           }
 
           &:last-of-type {
-            padding-bottom: 1rem;
-            padding-top: .25rem;
+            padding: 0 0 1rem;
           }
         }
       }
     }
 
-    @media (max-width: 440px) {
+    @media (max-width: 490px) {
+      /* show phone */
       &.desktop,
       &.tablet,
+      &.small-tablet,
+      &.small-phone {
+        display: none;
+      }
+      &.phone {
+        display: block;
+        margin-bottom: 8rem;
+
+        p {
+          padding: 1rem 0 0;
+
+          &:nth-of-type(2) {
+            padding: 0 0;
+          }
+
+          &:nth-of-type(3) {
+            padding: 0 0;
+          }
+
+          &:last-of-type {
+            padding: 0 0 1rem;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 420px) {
+      /* show small phone */
+      &.desktop,
+      &.tablet,
+      &.small-tablet,
       &.phone {
         display: none;
       }
       &.small-phone {
         display: block;
         margin-bottom: 8rem;
-        width: 100%;
 
         p {
-          line-height: var(--line-height-default);
-          line-height: 1.2;
-          padding: .75rem 0;
+          padding: 1rem 0 0;
 
           &:nth-of-type(2) {
-            padding-bottom: 1rem;
-            padding-top: .1rem;
+            padding: 0 0;
+          }
+
+          &:nth-of-type(3) {
+            padding: 0 0;
+          }
+
+          &:nth-of-type(4) {
+            padding: 0 0;
           }
 
           &:last-of-type {
-            padding-bottom: 1rem;
-            padding-top: .25rem;
+            padding: 0 0 1rem;
           }
         }
       }
