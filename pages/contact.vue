@@ -327,7 +327,7 @@
     visibility: visible;
   }
 
-    .form-clear-button,
+  .form-clear-button,
   .form-send-button {
     align-items: center;
     background-color: var(--color-indigo-700);
@@ -413,7 +413,7 @@
   .section-form {
     background-image: linear-gradient(to bottom right, var(--color-slate-300), var(--color-slate-500));
     border-radius: var(--border-radius-large);
-    box-shadow: var(--drop-shadow-light);
+    box-shadow: var(--box-shadow-light);
     margin-bottom: 1.5rem;
     overflow: hidden;
     padding: 2rem 6rem 4rem;

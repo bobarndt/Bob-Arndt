@@ -200,7 +200,7 @@
     align-items: center;
     background-color: var(--color-header-background);
     display: flex;
-    box-shadow: (var(--drop-shadow-header));
+    box-shadow: (var(--box-shadow-header));
     height: 6.4rem;
     position: fixed;
     top: 0;
