@@ -174,6 +174,10 @@
         let backToTopObserver = new IntersectionObserver(this.backToTopObserverCallback, observerOptions);
         backToTopObserver.observe(document.querySelector('.back-to-top-observer-target'));
       },
+      initialize() {
+        this.loadPage();
+        this.showScrollDownProgress();
+      },
       loadPage() {
         document.addEventListener('scroll', this.handleScroll);
         document.querySelector('.resume-back-to-top-button')
@@ -201,8 +205,7 @@
       }
     },
     mounted() {
-      this.loadPage();
-      this.showScrollDownProgress();
+      this.initialize();
     }
   }
 </script>
