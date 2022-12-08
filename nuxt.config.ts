@@ -15,27 +15,12 @@ export default defineNuxtConfig({
           content: 'Bob Arndt | Web design and development professional in Dallas, Texas, USA'
         },
       ],
-      script: [
-        {
-          hid: 'ionicons',
-          src: 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js',
-          defer: true
-        }
-      ],
+      script: [],
       title: 'Bob Arndt | Web design and development professional in Dallas, Texas, USA'
     },
   },
 
   css: [
     '@/assets/scss/main.scss'
-  ],
-
-  vue: {
-    compilerOptions: {
-      // treat all tags starting with 'ion-' as custom elements
-      isCustomElement: tag => {
-        return tag.startsWith('ion-');
-      }
-    }
-  }
+  ]
 })
