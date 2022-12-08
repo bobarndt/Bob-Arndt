@@ -385,7 +385,6 @@
       color: var(--color-white);
       outline: none;
 
-
       .resume-download-button-icon {
         animation: pulse-icon-download-resume 2s linear 2;
       }
