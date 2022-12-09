@@ -170,11 +170,14 @@
 
 <style scoped lang="scss">
   .heading {
+    color: var(--color-main-text);
+    font-size: var(--font-size-medium);
     font-style: var(--font-style-italic);
     font-weight: var(--font-weight-semi-bold);
     letter-spacing: var(--letter-spacing-xwide);
     line-height: var(--line-height-tall);
     margin-bottom: 4rem;
+    padding: 0 .5rem;
   }
 
   .hero-title-overlay {
@@ -314,7 +317,7 @@
     background-color: var(--color-indigo-300);
     border: .3rem solid var(--color-home-tech-stack-border);
     border-radius: var(--border-radius-small);
-    box-shadow: var(--box-shadow-medium);
+    box-shadow: var(--shadow-elevation-high);
     margin: 0 auto 4rem;
 
     p {
