@@ -74,7 +74,7 @@
                 </div>
                 <span class="resume-employer-description">Recent Projects :</span>
                 <h5 class="resume-recent-employer">Children's Health</h5>
-                <p class="resume-body-text">Contributed to ongoing development and maintenance of enterprise site <a class="link" href="https://www.childrens.com" target="_blank"><span data-content="www.childrens.com">www.childrens.com</span></a><span ref="externalLinkIcon" class="link-external-icon"></span>, as well as related internal and public-facing web properties for Children’s Medical Center of Dallas. Extensive use of IBM Websphere Application Server (CMS), JavaScript, jQuery, Sass and Gulp.</p>
+                <p class="resume-body-text">Contributed to ongoing development and maintenance of enterprise site <a class="link" href="https://www.childrens.com" target="_blank"><span data-content="www.childrens.com">www.childrens.com</span><span ref="externalLinkIcon" class="external-link-icon"></span></a>, as well as related internal and public-facing web properties for Children’s Medical Center of Dallas. Extensive use of IBM Websphere Application Server (CMS), JavaScript, jQuery, Sass and Gulp.</p>
                 <h5 class="resume-recent-employer">CBRE</h5>
                 <p class="resume-body-text">Participated in building CBRE myVantage with Angular 6 and Bootstrap. myVantage is an internal tool to empower CBRE salespeople to create and configure highly customized proposals for their prospects and existing customers.</p>
                 <h5 class="resume-recent-employer">American Airlines</h5>
@@ -478,7 +478,7 @@
     height: 100%;
     width: 0%;
   }
-  
+
   .resume-section {
     border-bottom: 1px solid var(--color-resume-section-divider);
     margin-bottom: 2.4rem;
