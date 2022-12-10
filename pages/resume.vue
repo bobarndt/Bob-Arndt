@@ -1,9 +1,7 @@
 <template>
   <div class="page-wrapper"><!-- Begin .page-wrapper div -->
 
-    <button class="resume-back-to-top-button" content="Back to Top" v-tippy>
-      <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40"><path d="M18.958 25.917h2.125v-7.875l3.25 3.291 1.459-1.458L20 14.083l-5.792 5.792 1.459 1.458 3.291-3.291ZM20 35.833q-3.25 0-6.146-1.25t-5.042-3.395q-2.145-2.146-3.395-5.042T4.167 20q0-3.292 1.25-6.187 1.25-2.896 3.395-5.021 2.146-2.125 5.042-3.375T20 4.167q3.292 0 6.188 1.25 2.895 1.25 5.02 3.375 2.125 2.125 3.375 5.021 1.25 2.895 1.25 6.187 0 3.25-1.25 6.146t-3.375 5.042q-2.125 2.145-5.02 3.395-2.896 1.25-6.188 1.25Zm0-2.083q5.75 0 9.75-4.021t4-9.729q0-5.75-4-9.75t-9.75-4q-5.708 0-9.729 4-4.021 4-4.021 9.75 0 5.708 4.021 9.729Q14.292 33.75 20 33.75ZM20 20Z"/></svg>
-    </button>
+    <button ref="resumeBackToTopButton" class="resume-back-to-top-button" content="Back to Top" v-tippy></button>
 
     <div class="resume-wrapper"><!-- Begin .resume-wrapper div -->
       <div class="resume-scroll-progress-bar">
@@ -76,7 +74,7 @@
                 </div>
                 <span class="resume-employer-description">Recent Projects :</span>
                 <h5 class="resume-recent-employer">Children's Health</h5>
-                <p class="resume-body-text">Contributed to ongoing development and maintenance of enterprise site <a class="link" href="https://www.childrens.com" target="_blank"><span data-content="www.childrens.com">www.childrens.com</span></a>, as well as related internal and public-facing web properties for Children’s Medical Center of Dallas. Extensive use of IBM Websphere Application Server (CMS), JavaScript, jQuery, Sass and Gulp.</p>
+                <p class="resume-body-text">Contributed to ongoing development and maintenance of enterprise site <a class="link" href="https://www.childrens.com" target="_blank"><span data-content="www.childrens.com">www.childrens.com</span></a><span ref="externalLinkIcon" class="link-external-icon"></span>, as well as related internal and public-facing web properties for Children’s Medical Center of Dallas. Extensive use of IBM Websphere Application Server (CMS), JavaScript, jQuery, Sass and Gulp.</p>
                 <h5 class="resume-recent-employer">CBRE</h5>
                 <p class="resume-body-text">Participated in building CBRE myVantage with Angular 6 and Bootstrap. myVantage is an internal tool to empower CBRE salespeople to create and configure highly customized proposals for their prospects and existing customers.</p>
                 <h5 class="resume-recent-employer">American Airlines</h5>
@@ -140,9 +138,7 @@
 
         <a class="resume-download-button-link" href="/Bob-Arndt-resume.pdf" target="_blank">
           <button class="resume-download-button">
-            <span class="resume-download-button-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="20px" viewBox="0 0 24 24" width="20px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M17,11l-1.41-1.41L13,12.17V4h-2v8.17L8.41,9.59L7,11l5,5 L17,11z"/></g></svg>
-            </span>
+            <span ref="resumeDownloadButtonIcon" class="resume-download-button-icon"></span>
             <span class="resume-download-button-text">Download Resume</span>
           </button>
         </a>
@@ -155,10 +151,19 @@
 
 <script>
   export default {
+    data() {
+      return {
+        externalLinkIcon: ``,
+        externalLinkSVG: `<svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 0 24 24" width="14px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>`,
+        resumeBackToTopButton: ``,
+        resumeBackToTopSVG: `<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="36px" viewBox="0 0 24 24" width="36px" fill="#000000"><g><rect fill="none" height="24" width="24"/><path d="M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20 M12,22c5.52,0,10-4.48,10-10c0-5.52-4.48-10-10-10 C6.48,2,2,6.48,2,12C2,17.52,6.48,22,12,22L12,22z M11,12l0,4h2l0-4h3l-4-4l-4,4H11z"/></g></svg>`,
+        resumeDownloadButtonIcon: ``,
+        resumeDownloadSVG: `<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="20px" viewBox="0 0 24 24" width="20px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M17,11l-1.41-1.41L13,12.17V4h-2v8.17L8.41,9.59L7,11l5,5 L17,11z"/></g></svg>`
+      }
+    },
     methods: {
       backToTopObserverCallback(entries) {
         const backToTopButton = document.querySelector('.resume-back-to-top-button');
-
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             backToTopButton.classList.add('resume-show-button');
@@ -176,6 +181,7 @@
       },
       initialize() {
         this.loadPage();
+        this.setIcons();
         this.showScrollDownProgress();
       },
       loadPage() {
@@ -188,6 +194,14 @@
           top: 0,
           behavior: 'smooth'
         });
+      },
+      setIcons() {
+        this.externalLinkIcon = this.$refs.externalLinkIcon;
+        this.externalLinkIcon.innerHTML = this.externalLinkSVG;
+        this.resumeBackToTopButton = this.$refs.resumeBackToTopButton;
+        this.resumeBackToTopButton.innerHTML = this.resumeBackToTopSVG;
+        this.resumeDownloadButtonIcon = this.$refs.resumeDownloadButtonIcon;
+        this.resumeDownloadButtonIcon.innerHTML = this.resumeDownloadSVG;
       },
       showScrollDownProgress() {
         window.addEventListener('scroll', () => {
@@ -212,81 +226,81 @@
 
 <style scoped lang="scss">
   .hero-title-overlay {
-    span:nth-child(1) {
-      animation: hero-title-fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(1) {
+        animation: hero-title-fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(2) {
-      animation: hero-title-fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(2) {
+        animation: hero-title-fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(3) {
-      animation: hero-title-fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(3) {
+        animation: hero-title-fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(4) {
-      animation: hero-title-fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(4) {
+        animation: hero-title-fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(5) {
-      animation: hero-title-fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(5) {
+        animation: hero-title-fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(6) {
-      animation: hero-title-fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(6) {
+        animation: hero-title-fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(7) {
-      animation: hero-title-fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(7) {
+        animation: hero-title-fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(8) {
-      animation: hero-title-fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(8) {
+        animation: hero-title-fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(9) {
-      animation: hero-title-fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(9) {
+        animation: hero-title-fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(10) {
-      animation: hero-title-fade-in 0.8s 1.0s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(10) {
+        animation: hero-title-fade-in 0.8s 1.0s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(11) {
-      animation: hero-title-fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(11) {
+        animation: hero-title-fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(12) {
-      animation: hero-title-fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(12) {
+        animation: hero-title-fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(13) {
-      animation: hero-title-fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(13) {
+        animation: hero-title-fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(14) {
-      animation: hero-title-fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(14) {
+        animation: hero-title-fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(15) {
-      animation: hero-title-fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(15) {
+        animation: hero-title-fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(16) {
-      animation: hero-title-fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(16) {
+        animation: hero-title-fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(17) {
-      animation: hero-title-fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(17) {
+        animation: hero-title-fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(18) {
-      animation: hero-title-fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(18) {
+        animation: hero-title-fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
 
-    span:nth-child(19) {
-      animation: hero-title-fade-in 0.8s 1.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
+      span:nth-child(19) {
+        animation: hero-title-fade-in 0.8s 1.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
   }
 
   .hero-title-wrapper {
@@ -336,7 +350,7 @@
     }
 
     svg {
-      fill: var(--color-rose-600);
+      fill: var(--color-green-600);
     }
   }
 

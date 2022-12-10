@@ -43,6 +43,12 @@ a {
   text-decoration: none;
 }
 
+.link-external-icon {
+  color: var(--color-link-external-icon);
+  display: inline-block;
+  margin-bottom: -.2rem;
+}
+
 .link {
   position: relative;
   transition: clip-path 275ms ease;
@@ -53,7 +59,7 @@ a {
   }
 
   span {
-    color: var(--color-link);
+    color: var(--color-link-external-icon);
     display: inline-block;
     position: relative;
 
