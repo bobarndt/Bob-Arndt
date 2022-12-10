@@ -54,9 +54,14 @@
     },
     methods: {
       initialize() {
+        this.loadIcons();
         this.loadTheme();
-        this.setHeaderIcons();
         this.toggleHamburgerState();
+      },
+      loadIcons() {
+        this.$refs.headerIconHome.innerHTML = this.homeSVG;
+        this.$refs.headerIconGithub.innerHTML = this.githubSVG;
+        this.$refs.headerIconLinkedIn.innerHTML = this.linkedinSVG;
       },
       loadTheme() {
         this.headerIconThemeSwitch = this.$refs.headerIconThemeSwitch;
@@ -86,14 +91,6 @@
         this.soundClip = this.$refs.headerLinkAudio;
         this.soundClip.currentTime = 0;
         this.soundClip.play();
-      },
-      setHeaderIcons() {
-        this.headerIconHome = this.$refs.headerIconHome;
-        this.headerIconHome.innerHTML = this.homeSVG;
-        this.headerIconGithub = this.$refs.headerIconGithub;
-        this.headerIconGithub.innerHTML = this.githubSVG;
-        this.headerIconLinkedIn = this.$refs.headerIconLinkedIn;
-        this.headerIconLinkedIn.innerHTML = this.linkedinSVG;
       },
       switchTheme() {
         if (this.preferredTheme === 'light') {

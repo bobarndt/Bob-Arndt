@@ -153,11 +153,8 @@
   export default {
     data() {
       return {
-        externalLinkIcon: ``,
         externalLinkSVG: `<svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 0 24 24" width="14px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>`,
-        resumeBackToTopButton: ``,
         resumeBackToTopSVG: `<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="36px" viewBox="0 0 24 24" width="36px" fill="#000000"><g><rect fill="none" height="24" width="24"/><path d="M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20 M12,22c5.52,0,10-4.48,10-10c0-5.52-4.48-10-10-10 C6.48,2,2,6.48,2,12C2,17.52,6.48,22,12,22L12,22z M11,12l0,4h2l0-4h3l-4-4l-4,4H11z"/></g></svg>`,
-        resumeDownloadButtonIcon: ``,
         resumeDownloadSVG: `<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="20px" viewBox="0 0 24 24" width="20px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M17,11l-1.41-1.41L13,12.17V4h-2v8.17L8.41,9.59L7,11l5,5 L17,11z"/></g></svg>`
       }
     },
@@ -181,8 +178,13 @@
       },
       initialize() {
         this.loadPage();
-        this.setIcons();
+        this.loadIcons();
         this.showScrollDownProgress();
+      },
+      loadIcons() {
+        this.$refs.externalLinkIcon.innerHTML = this.externalLinkSVG;
+        this.$refs.resumeBackToTopButton.innerHTML = this.resumeBackToTopSVG;
+        this.$refs.resumeDownloadButtonIcon.innerHTML = this.resumeDownloadSVG;
       },
       loadPage() {
         document.addEventListener('scroll', this.handleScroll);
@@ -194,14 +196,6 @@
           top: 0,
           behavior: 'smooth'
         });
-      },
-      setIcons() {
-        this.externalLinkIcon = this.$refs.externalLinkIcon;
-        this.externalLinkIcon.innerHTML = this.externalLinkSVG;
-        this.resumeBackToTopButton = this.$refs.resumeBackToTopButton;
-        this.resumeBackToTopButton.innerHTML = this.resumeBackToTopSVG;
-        this.resumeDownloadButtonIcon = this.$refs.resumeDownloadButtonIcon;
-        this.resumeDownloadButtonIcon.innerHTML = this.resumeDownloadSVG;
       },
       showScrollDownProgress() {
         window.addEventListener('scroll', () => {
@@ -484,6 +478,7 @@
     height: 100%;
     width: 0%;
   }
+  
   .resume-section {
     border-bottom: 1px solid var(--color-resume-section-divider);
     margin-bottom: 2.4rem;
