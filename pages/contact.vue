@@ -1,6 +1,6 @@
 <template>
   <div class="page-wrapper">
-    <div class="hero-wrapper"><!-- Begin .hero div -->
+    <div class="hero-wrapper"><!-- Begin .hero-wrapper div -->
       <div class="hero-animated-background-image">
         <img src="/images/graffiti.min.jpg" alt="Bob Arndt | Web design and development professional in Dallas, Texas, USA">
       </div>
@@ -22,64 +22,59 @@
           </h1>
         </div>
       </div>
-    </div><!-- End .hero div -->
+    </div><!-- End .hero-wrapper div -->
 
     <main class="main">
       <section class="section-form">
-        <form ref="contactMe" class="contact-me-form" method="POST" @submit="submitForm" name="Contact Me" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <form ref="contactMeForm" class="contact-me-form" method="POST" @submit.prevent="handleSubmit" name="Contact Me" data-netlify="true" netlify-honeypot="bot-field">
           <fieldset>
             <ul>
               <li>
-                <input type="hidden" value="Contact Me" name="form-name">
+                <input type="hidden" name="form-name" value="Contact Me">
               </li>
               <li>
                 <input type="hidden" name="subject" value="Contact Me submission from bobarndt.com" />
               </li>
-              <li class="form-field bot-field">
+              <li class="input-wrapper bot-field">
                 <input type="text" name="bot-field">
                 <label for="bot-field">Don’t fill this out if you’re human.</label>
               </li>
-              <li class="form-field">
+              <li ref="firstNameParent" class="input-wrapper">
                 <input ref="firstNameInput" v-model="formValues.firstNameValue" id="first-name" type="text" name="First Name" placeholder="First name" aria-labelledby="contact-me-form first-name" tabindex="1">
-                <span ref="firstNameError" class="error-message first-name">Please enter your first name.</span>
+                <span ref="firstNameError" class="error-message"></span>
                 <label for="first-name">First Name</label>
               </li>
-              <li class="form-field">
+              <li ref="lastNameParent" class="input-wrapper">
                 <input ref="lastNameInput" v-model="formValues.lastNameValue" id="last-name" type="text" name="Last Name" placeholder="Last name" aria-labelledby="contact-me-form last-name" tabindex="2">
-                <span ref="lastNameError" class="error-message last-name">Please enter your last name.</span>
+                <span ref="lastNameError" class="error-message"></span>
                 <label for="last-name">Last Name</label>
               </li>
-              <li class="form-field">
+              <li ref="emailParent" class="input-wrapper">
                 <input ref="emailInput" v-model="formValues.emailValue" id="email" type="email" name="Email Address" placeholder="Email address" aria-labelledby="contact-me-form email" tabindex="3">
-                <span ref="emailError" class="error-message email">Please enter a valid email address (i.e. john.doe@example.com)</span>
+                <span ref="emailError" class="error-message"></span>
                 <label for="email">Email Address</label>
               </li>
-              <li class="form-field">
+              <li ref="messageParent" class="input-wrapper">
                 <textarea ref="messageInput" v-model="formValues.messageValue" id="message" name="Message" cols="70" rows="10" placeholder="Message" aria-labelledby="contact-me-form message" tabindex="4"></textarea>
-                <span ref="messageError" class="error-message message">Please enter your message</span>
+                <span ref="messageError" class="error-message"></span>
                 <label for="message">Message</label>
               </li>
             </ul>
           </fieldset>
 
           <div class="button-wrapper">
-            <button type="reset" class="form-clear-button" name="clear-button" tabindex="6" role="button">
-              <span class="form-clear-button-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"/></svg>
-              </span>
+            <button ref="formClearButton" type="reset" class="form-clear-button" name="clear-button" tabindex="6" role="button" @click="handleReset">
+              <span ref="formClearButtonSpan" class="form-clear-button-icon"></span>
               <span>Clear</span>
             </button>
-            <button type="submit" class="form-send-button" name="send-button" tabindex="5" role="button">
-              <span class="form-send-button-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="20px" viewBox="0 0 24 24" width="20px" fill="#000000"><g><rect fill="none" height="24" width="24"/><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h9v-2H4V8l8,5l8-5v5h2V6C22,4.9,21.1,4,20,4z M12,11L4,6h16L12,11z M19,15l4,4 l-4,4v-3h-4v-2h4V15z"/></g></svg>
-              </span>
+            <button ref="formSendButton" type="submit" class="form-send-button" name="send-button" tabindex="5" role="button">
+              <span ref="formSendButtonSpan" class="form-send-button-icon"></span>
               <span>Send</span>
             </button>
           </div>
 
         </form>
       </section>
-
     </main>
   </div>
 </template>
@@ -88,112 +83,138 @@
   export default {
     data() {
       return {
-        emailIsValid: false,
+        clearIcon: `<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"/></svg>`,
         emailRegex: /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/,
-        firstNameIsValid: false,
         formValues: {
-          firstNameValue: '',
-          lastNameValue: '',
-          emailValue: '',
-          messageValue: ''
+          firstNameValue: ``,
+          lastNameValue: ``,
+          emailValue: ``,
+          messageValue: ``
         },
-        lastNameIsValid: false,
-        messageIsValid: false,
+        isEmailValid: false,
+        isFirstNameValid: false,
+        isFormValid: false,
+        isLastNameValid: false,
+        isMessageValid: false,
+        sendIcon: `<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="20px" viewBox="0 0 24 24" width="20px" fill="#000000"><g><rect fill="none" height="24" width="24"/><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h9v-2H4V8l8,5l8-5v5h2V6C22,4.9,21.1,4,20,4z M12,11L4,6h16L12,11z M19,15l4,4 l-4,4v-3h-4v-2h4V15z"/></g></svg>`
       }
     },
     methods: {
-      clearErrorMessages() {
-        this.$refs.emailInput.classList.remove('invalid');
-        this.$refs.emailError.classList.remove('show');
-        this.$refs.firstNameInput.classList.remove('invalid');
-        this.$refs.firstNameError.classList.remove('show');
-        this.$refs.lastNameInput.classList.remove('invalid');
-        this.$refs.lastNameError.classList.remove('show');
-        this.$refs.messageInput.classList.remove('invalid');
-        this.$refs.messageError.classList.remove('show');
+      handleReset() {
+        this.setFocus();
       },
-      displayErrorMessages(field) {
-        if (field === 'firstName') {
-          this.$refs.emailError.classList.remove('show');
-          this.$refs.emailInput.classList.remove('invalid');
-          this.$refs.firstNameError.classList.add('show');
-          this.$refs.firstNameInput.classList.add('invalid');
-          this.$refs.lastNameError.classList.remove('show');
-          this.$refs.lastNameInput.classList.remove('invalid');
-          this.$refs.messageError.classList.remove('show');
-          this.$refs.messageInput.classList.remove('invalid');
-          this.$refs.firstNameInput.focus();
-        } else if (field === 'lastName') {
-          this.$refs.emailError.classList.remove('show');
-          this.$refs.emailInput.classList.remove('invalid');
-          this.$refs.firstNameError.classList.remove('show');
-          this.$refs.firstNameInput.classList.remove('invalid');
-          this.$refs.lastNameError.classList.add('show');
-          this.$refs.lastNameInput.classList.add('invalid');
-          this.$refs.messageError.classList.remove('show');
-          this.$refs.messageInput.classList.remove('invalid');
-          this.$refs.lastNameInput.focus();
-        } else if (field === 'email') {
-          this.$refs.emailError.classList.add('show');
-          this.$refs.emailInput.classList.add('invalid');
-          this.$refs.firstNameError.classList.remove('show');
-          this.$refs.firstNameInput.classList.remove('invalid');
-          this.$refs.lastNameError.classList.remove('show');
-          this.$refs.lastNameInput.classList.remove('invalid');
-          this.$refs.messageError.classList.remove('show');
-          this.$refs.messageInput.classList.remove('invalid');
-          this.$refs.emailInput.focus();
-        } else if (field === 'message') {
-          this.$refs.emailError.classList.remove('show');
-          this.$refs.emailInput.classList.remove('invalid');
-          this.$refs.firstNameError.classList.remove('show');
-          this.$refs.firstNameInput.classList.remove('invalid');
-          this.$refs.lastNameError.classList.remove('show');
-          this.$refs.lastNameInput.classList.remove('invalid');
-          this.$refs.messageError.classList.add('show');
-          this.$refs.messageInput.classList.add('invalid');
-          this.$refs.messageInput.focus();
-        } else if (field === 'all') {
-          this.$refs.emailError.classList.add('show');
-          this.$refs.emailInput.classList.add('invalid');
-          this.$refs.firstNameError.classList.add('show');
-          this.$refs.firstNameInput.classList.add('invalid');
-          this.$refs.lastNameError.classList.add('show');
-          this.$refs.lastNameInput.classList.add('invalid');
-          this.$refs.messageError.classList.add('show');
-          this.$refs.messageInput.classList.add('invalid');
-          this.$refs.firstNameInput.focus();
+      handleSubmit(event) {
+        this.isFirstNameValid = this.validateName(`first`),
+        this.isLastNameValid = this.validateName(`last`),
+        this.isEmailValid = this.validateEmail(),
+        this.isMessageValid = this.validateMessage();
+
+        this.isFormValid = this.isFirstNameValid &&
+          this.isLastNameValid &&
+          this.isEmailValid &&
+          this.isMessageValid;
+
+        console.log(`isFormValid = ${this.isFormValid}`);
+
+        if (this.isFormValid) {
+          this.$refs.contactMeForm.submit();
         }
       },
       initialize() {
+        this.loadIcons();
+        this.setFocus();
+      },
+      isBetween(valueLength, minimumLength, maximumLength) {
+        return valueLength < minimumLength || valueLength > maximumLength ? false : true;
+      },
+      isEmailFormatted(emailValue) {
+        return this.emailRegex.test(emailValue);
+      },
+      isRequired(inputValue) {
+        return inputValue === '' ? false : true;
+      },
+      loadIcons() {
+        this.$refs.formClearButtonSpan.innerHTML = this.clearIcon;
+        this.$refs.formSendButtonSpan.innerHTML = this.sendIcon;
+      },
+      setFocus() {
         this.$refs.firstNameInput.focus();
       },
-      submitForm(event) {
-        if (this.isFormValid()) {
-          console.log(`Form values`, this.formValues);
-          return;
-        }
+      showError(input, message) {
+        const inputParent = input.parentElement;
 
-        event.preventDefault();
-        displayErrorMessages(field);
+        inputParent.classList.remove(`valid`);
+        inputParent.classList.add(`invalid`);
+
+        const errorMessageSpan = inputParent.children[1];
+        errorMessageSpan.textContent = message;
       },
-      isFormValid() {
-        this.clearErrorMessages();
+      showSuccess(input) {
+        const inputParent = input.parentElement;
 
-        this.emailIsValid = (this.formValues.emailValue.length > 0) && (this.emailRegex.test(this.formValues.emailValue));
-        this.firstNameIsValid = this.formValues.firstNameValue.length > 0;
-        this.lastNameIsValid = this.formValues.lastNameValue.length > 0;
-        this.messageIsValid = this.formValues.messageValue.length > 0;
+        inputParent.classList.remove(`invalid`);
+        inputParent.classList.add(`valid`);
 
-        if (this.firstNameIsValid && this.lastNameIsValid && this.emailIsValid && this.messageIsValid) {
-          console.log(`this.firstNameIsValid = ${this.firstNameIsValid}`);
-          console.log(`this.lastNameIsValid = ${this.lastNameIsValid}`);
-          console.log(`this.emailIsValid = ${this.emailIsValid}`);
-          console.log(`this.messageIsValid = ${this.messageIsValid}`);
-          return true;
+        const errorMessageSpan = inputParent.children[1];
+        errorMessageSpan.textContent = ``;
+      },
+      validateEmail() {
+        const emailInput = this.$refs.emailInput;
+        const emailValue = this.formValues.emailValue.trim();
+        let isValid = false;
+
+        if (!this.isRequired(emailValue)) {
+          this.showError(emailInput, `Please enter your email address.`);
+        } else if (!this.isEmailFormatted(emailValue)) {
+          this.showError(emailInput, `Please enter a valid email address (i.e. john.doe@example.com`);
+        } else {
+          this.showSuccess(emailInput);
+          return isValid = true;
         }
 
-        return false;
+        return isValid;
+      },
+      validateMessage() {
+        const messageInput = this.$refs.messageInput;
+        const messageValue = this.formValues.messageValue.trim();
+        const minimumLength = 3, maximumLength = 300;
+        let isValid = false;
+
+        if (!this.isRequired(messageValue)) {
+          this.showError(messageInput, `Please enter your message.`);
+        } else if (!this.isBetween(messageValue.length, minimumLength, maximumLength)) {
+          this.showError(messageInput, `Your message must be between ${minimumLength} and ${maximumLength} characters.`);
+        } else {
+          this.showSuccess(messageInput);
+          isValid = true;
+        }
+
+        return isValid;
+      },
+      validateName(name) {
+        const minimumLength = 3, maximumLength = 25;
+        let isValid = false;
+        let nameToValidate = ``;
+        let valueToValidate = ``;
+
+        if (name === `first`) {
+          nameToValidate = this.$refs.firstNameInput;
+          valueToValidate = this.formValues.firstNameValue.trim();
+        } else {
+          nameToValidate = this.$refs.lastNameInput;
+          valueToValidate = this.formValues.lastNameValue.trim();
+        }
+
+        if (!this.isRequired(valueToValidate)) {
+          this.showError(nameToValidate, `Please enter your ${name} name.`);
+        } else if (!this.isBetween(valueToValidate.length, minimumLength, maximumLength)) {
+          this.showError(nameToValidate, `Your ${name} name must be between ${minimumLength} and ${maximumLength} characters.`);
+        } else {
+          this.showSuccess(nameToValidate);
+          isValid = true;
+        }
+
+        return isValid;
       },
     },
     mounted() {
@@ -307,7 +328,7 @@
     display: block;
   }
 
-  .form-field {
+  .input-wrapper {
     position: relative;
 
     &:not(:last-of-type) {
@@ -315,15 +336,15 @@
     }
   }
 
-  .form-field.bot-field {
+  .input-wrapper.bot-field {
     display: none;
   }
 
-  .form-field span.name.show {
+  .input-wrapper span.email.show {
     visibility: visible;
   }
 
-  .form-field span.email.show {
+  .input-wrapper span.name.show {
     visibility: visible;
   }
 
