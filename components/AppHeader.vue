@@ -162,6 +162,7 @@
     &:hover {
       animation: pulse-icon 2s linear 2;
       color: var(--color-header-link-icon-hover);
+      filter: var(--filter-header-link-icon-shadow);
       outline: none;
     }
 
@@ -207,6 +208,7 @@
     &:hover {
       animation: pulse-icon 2s linear 2;
       color: var(--color-header-theme-switch-hover);
+      filter: var(--filter-header-link-icon-shadow);
       outline: none;
     }
   }
