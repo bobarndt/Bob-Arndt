@@ -40,23 +40,23 @@
                 <label for="bot-field">Don’t fill this out if you’re human.</label>
               </li>
               <li ref="firstNameParent" class="input-wrapper">
-                <input ref="firstNameInput" v-model="formValues.firstNameValue" id="first-name" type="text" name="First Name" placeholder="First name" aria-labelledby="contact-me-form first-name" tabindex="1">
-                <span ref="firstNameError" class="error-message"></span>
+                <input ref="firstNameInput" v-model="formValues.firstNameValue" id="first-name" class="invalid" type="text" name="First Name" placeholder="First name" aria-labelledby="contact-me-form first-name" tabindex="1">
+                <span ref="firstNameError" class="error-message">firstName error message goes here</span>
                 <label for="first-name">First Name</label>
               </li>
               <li ref="lastNameParent" class="input-wrapper">
-                <input ref="lastNameInput" v-model="formValues.lastNameValue" id="last-name" type="text" name="Last Name" placeholder="Last name" aria-labelledby="contact-me-form last-name" tabindex="2">
-                <span ref="lastNameError" class="error-message"></span>
+                <input ref="lastNameInput" v-model="formValues.lastNameValue" id="last-name" class="invalid" ype="text" name="Last Name" placeholder="Last name" aria-labelledby="contact-me-form last-name" tabindex="2">
+                <span ref="lastNameError" class="error-message">lastName error message goes here</span>
                 <label for="last-name">Last Name</label>
               </li>
               <li ref="emailParent" class="input-wrapper">
-                <input ref="emailInput" v-model="formValues.emailValue" id="email" type="email" name="Email Address" placeholder="Email address" aria-labelledby="contact-me-form email" tabindex="3">
-                <span ref="emailError" class="error-message"></span>
+                <input ref="emailInput" v-model="formValues.emailValue" id="email" class="invalid" type="email" name="Email Address" placeholder="Email address" aria-labelledby="contact-me-form email" tabindex="3">
+                <span ref="emailError" class="error-message">email error message goes here</span>
                 <label for="email">Email Address</label>
               </li>
               <li ref="messageParent" class="input-wrapper">
-                <textarea ref="messageInput" v-model="formValues.messageValue" id="message" name="Message" cols="70" rows="10" placeholder="Message" aria-labelledby="contact-me-form message" tabindex="4"></textarea>
-                <span ref="messageError" class="error-message"></span>
+                <textarea ref="messageInput" v-model="formValues.messageValue" id="message" class="invalid" name="Message" cols="70" rows="10" placeholder="Message" aria-labelledby="contact-me-form message" tabindex="4"></textarea>
+                <span ref="messageError" class="error-message message">message error message goes here</span>
                 <label for="message">Message</label>
               </li>
             </ul>
@@ -278,7 +278,8 @@
     color: var(--color-indigo-600);
     font-size: var(--font-size-xxsmall);
     font-weight: var(--font-weight-xbold);
-    padding-left: 1.5rem;
+    letter-spacing: var(--letter-spacing-wide);
+    padding: .25rem 0 0 1.5rem;
     transition: all 0.3s;
   }
 
@@ -314,14 +315,21 @@
   }
 
   .error-message {
-    color: var(--color-rose-500);
+    color: var(--color-rose-600);
     display: block;
-    font-size: 1.2rem;
-    font-weight: 400;
-    left: 27rem;
+    font-size: var(--font-size-xxsmall);
+    font-weight: var(--font-weight-xbold);
+    letter-spacing: var(--letter-spacing-wide);
+    right: 1.5rem;
     position: absolute;
-    top: 1rem;
-    visibility: hidden;
+    top: 5.8rem;
+    transition: all 0.3s;
+    // visibility: hidden;
+
+    &.message {
+      // right: 50rem;
+      top: 23.75rem;
+    }
   }
 
   .error-visible {
@@ -369,6 +377,7 @@
     &:focus,
     &:hover {
       background-color: var(--color-indigo-900);
+      box-shadow: var(--box-shadow-light);
       color: var(--color-white);
       outline: none;
 
@@ -432,7 +441,7 @@
   }
 
   .section-form {
-    background-image: linear-gradient(to bottom right, var(--color-slate-300), var(--color-slate-500));
+    background-image: linear-gradient(to bottom right, var(--color-slate-300), var(--color-slate-400));
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-light);
     margin-bottom: 1.5rem;
