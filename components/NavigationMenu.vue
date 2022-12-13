@@ -65,16 +65,16 @@
         this.highlightCurrentMenuItem();
         this.loadIcons();
       },
-      menuClose() {
-        this.soundClip = this.$refs.menuAudioClose;
-        this.soundClip.currentTime = 0;
-        this.soundClip.play();
-      },
       loadIcons() {
         this.$refs.menuIconAboutMe.innerHTML = this.aboutmeSVG;
         this.$refs.menuIconContactMe.innerHTML = this.contactmeSVG;
         this.$refs.menuIconHome.innerHTML = this.homeSVG;
         this.$refs.menuIconResume.innerHTML = this.resumeSVG;
+      },
+      menuClose() {
+        this.soundClip = this.$refs.menuAudioClose;
+        this.soundClip.currentTime = 0;
+        this.soundClip.play();
       }
     },
     mounted() {
