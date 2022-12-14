@@ -26,9 +26,9 @@
 
     <main class="main">
       <section class="section-form">
-        <form ref="contactMeForm" class="contact-me-form" method="POST" @submit.prevent="handleSubmit" name="Contact Me" data-netlify="true" netlify-honeypot="bot-field">
-          <fieldset>
-            <ul>
+        <form ref="contactMeForm" class="contact-me-form" method="POST" @submit.prevent="handleSubmit" name="Contact Me" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <fieldset class="fieldset">
+            <ul class="ul">
               <li>
                 <input type="hidden" name="form-name" value="Contact Me">
               </li>
@@ -37,27 +37,27 @@
               </li>
               <li class="input-wrapper bot-field">
                 <input type="text" name="bot-field">
-                <label for="bot-field">Don’t fill this out if you’re human.</label>
+                <label for="bot-field" class="label">Don’t fill this out if you’re human.</label>
               </li>
               <li ref="firstNameParent" class="input-wrapper">
-                <input ref="firstNameInput" v-model="formValues.firstNameValue" id="first-name" class="invalid" type="text" name="First Name" placeholder="First name" aria-labelledby="contact-me-form first-name" tabindex="1">
-                <span ref="firstNameError" class="error-message">firstName error message goes here</span>
-                <label for="first-name">First Name</label>
+                <input ref="firstNameInput" v-model="formValues.firstNameValue" id="first-name" class="input" type="text" name="First Name" placeholder="First name" aria-labelledby="contact-me-form first-name" tabindex="1">
+                <span ref="firstNameError" class="error-message"></span>
+                <label for="first-name" class="label">First Name</label>
               </li>
               <li ref="lastNameParent" class="input-wrapper">
-                <input ref="lastNameInput" v-model="formValues.lastNameValue" id="last-name" class="invalid" ype="text" name="Last Name" placeholder="Last name" aria-labelledby="contact-me-form last-name" tabindex="2">
-                <span ref="lastNameError" class="error-message">lastName error message goes here</span>
-                <label for="last-name">Last Name</label>
+                <input ref="lastNameInput" v-model="formValues.lastNameValue" id="last-name" class="input" type="text" name="Last Name" placeholder="Last name" aria-labelledby="contact-me-form last-name" tabindex="2">
+                <span ref="lastNameError" class="error-message"></span>
+                <label for="last-name" class="label">Last Name</label>
               </li>
               <li ref="emailParent" class="input-wrapper">
-                <input ref="emailInput" v-model="formValues.emailValue" id="email" class="invalid" type="email" name="Email Address" placeholder="Email address" aria-labelledby="contact-me-form email" tabindex="3">
-                <span ref="emailError" class="error-message">email error message goes here</span>
-                <label for="email">Email Address</label>
+                <input ref="emailInput" v-model="formValues.emailValue" id="email" class="input" type="email" name="Email Address" placeholder="Email address" aria-labelledby="contact-me-form email" tabindex="3">
+                <span ref="emailError" class="error-message"></span>
+                <label for="email" class="label">Email Address</label>
               </li>
               <li ref="messageParent" class="input-wrapper">
-                <textarea ref="messageInput" v-model="formValues.messageValue" id="message" class="invalid" name="Message" cols="70" rows="10" placeholder="Message" aria-labelledby="contact-me-form message" tabindex="4"></textarea>
-                <span ref="messageError" class="error-message message">message error message goes here</span>
-                <label for="message">Message</label>
+                <textarea ref="messageInput" v-model="formValues.messageValue" id="message" class="textarea" name="Message" cols="70" rows="10" placeholder="Message" aria-labelledby="contact-me-form message" tabindex="4"></textarea>
+                <span ref="messageError" class="error-message message"></span>
+                <label for="message" class="label">Message</label>
               </li>
             </ul>
           </fieldset>
@@ -101,6 +101,14 @@
     },
     methods: {
       handleReset() {
+        this.$refs.firstNameParent.classList.remove(`invalid`);
+        this.$refs.firstNameParent.children[1].textContent = ``;
+        this.$refs.lastNameParent.classList.remove(`invalid`);
+        this.$refs.lastNameParent.children[1].textContent = ``;
+        this.$refs.emailParent.classList.remove(`invalid`);
+        this.$refs.emailParent.children[1].textContent = ``;
+        this.$refs.messageParent.classList.remove(`invalid`);
+        this.$refs.messageParent.children[1].textContent = ``;
         this.setFocus();
       },
       handleSubmit(event) {
@@ -117,6 +125,7 @@
         console.log(`isFormValid = ${this.isFormValid}`);
 
         if (this.isFormValid) {
+          console.log(`isFormValid = ${this.isFormValid}`);
           this.$refs.contactMeForm.submit();
         }
       },
@@ -131,7 +140,7 @@
         return this.emailRegex.test(emailValue);
       },
       isRequired(inputValue) {
-        return inputValue === '' ? false : true;
+        return inputValue === `` ? false : true;
       },
       loadIcons() {
         this.$refs.formClearButtonSpan.innerHTML = this.clearIcon;
@@ -141,21 +150,21 @@
         this.$refs.firstNameInput.focus();
       },
       showError(input, message) {
-        const inputParent = input.parentElement;
+        const inputWrapper = input.parentElement;
 
-        inputParent.classList.remove(`valid`);
-        inputParent.classList.add(`invalid`);
+        inputWrapper.classList.remove(`valid`);
+        inputWrapper.classList.add(`invalid`);
 
-        const errorMessageSpan = inputParent.children[1];
+        const errorMessageSpan = inputWrapper.children[1];
         errorMessageSpan.textContent = message;
       },
       showSuccess(input) {
-        const inputParent = input.parentElement;
+        const inputWrapper = input.parentElement;
 
-        inputParent.classList.remove(`invalid`);
-        inputParent.classList.add(`valid`);
+        inputWrapper.classList.remove(`invalid`);
+        inputWrapper.classList.add(`valid`);
 
-        const errorMessageSpan = inputParent.children[1];
+        const errorMessageSpan = inputWrapper.children[1];
         errorMessageSpan.textContent = ``;
       },
       validateEmail() {
@@ -166,7 +175,7 @@
         if (!this.isRequired(emailValue)) {
           this.showError(emailInput, `Please enter your email address.`);
         } else if (!this.isEmailFormatted(emailValue)) {
-          this.showError(emailInput, `Please enter a valid email address (i.e. john.doe@example.com`);
+          this.showError(emailInput, `Please enter a valid email address (i.e. john.doe@example.com)`);
         } else {
           this.showSuccess(emailInput);
           return isValid = true;
@@ -224,94 +233,23 @@
 </script>
 
 <style scoped lang="scss">
-  fieldset {
-    border: none;
-    margin-top: 1.5rem;
-  }
-
-  input,
-  textarea {
-    background-color: var(--color-slate-200);
-    border-bottom: .4rem solid transparent;
-    border-radius: var(--border-radius-small);
-    color: var(--color-slate-800);
-    display: block;
-    font-family: inherit;
-    font-size: 1.5rem;
-    font-weight: var(--font-weight-semi-bold);
-    letter-spacing: var(--letter-spacing-wide);
-    margin: 1rem 0 0.75rem;
-    padding: 1.4rem 1.5rem 1rem;
-    transition: all .5s;
-    width: 100%;
-
-    &:focus {
-      background-color: var(--color-white);
-      border-color: var(--color-indigo-700);
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
-      color: var(--color-black);
-      outline: none;
-    }
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &.invalid {
-      border-color: var(--color-rose-500);
-    }
-
-    &::placeholder {
-      color: var(--color-slate-900);
-      opacity: .4;
-    }
-
-    &:placeholder-shown ~ label {
-      opacity: 0;
-      transform: translateY(-4rem);
-      visibility: hidden;
-    }
-  }
-
-  label {
-    display: block;
-    color: var(--color-indigo-600);
-    font-size: var(--font-size-xxsmall);
-    font-weight: var(--font-weight-xbold);
-    letter-spacing: var(--letter-spacing-wide);
-    padding: .25rem 0 0 1.5rem;
-    transition: all 0.3s;
-  }
-
-  textarea {
-    resize: none;
-  }
-
-  ul {
-    font-size: 1.5rem;
-    list-style-type: none;
-  }
-
   .button-wrapper {
     display: flex;
     gap: 2rem;
     justify-content: space-between;
+    margin-top: 1rem;
 
-    @media (max-width: 740px) {
+    @media (max-width: 800px) {
       flex-direction: column-reverse;
 
       .form-clear-button {
-        margin-top: 1rem;
+        margin-top: .5rem;
       }
     }
-  }
 
-  .error {
-    color: var(--color-rose-500);
-    font-size: 1.5rem;
-    margin-top: 6rem;
-    text-align: center;
-    display: none;
+    @media (max-width: 500px) {
+      margin-top: 0;
+    }
   }
 
   .error-message {
@@ -324,36 +262,25 @@
     position: absolute;
     top: 5.8rem;
     transition: all 0.3s;
-    // visibility: hidden;
 
     &.message {
-      // right: 50rem;
       top: 23.75rem;
     }
-  }
 
-  .error-visible {
-    display: block;
-  }
+    @media (max-width: 800px) {
+      left: 1.5rem;
+      right: unset;
+      top: 8rem;
 
-  .input-wrapper {
-    position: relative;
-
-    &:not(:last-of-type) {
-      margin-bottom: 2rem;
+      &.message {
+        top: 26rem;
+      }
     }
   }
 
-  .input-wrapper.bot-field {
-    display: none;
-  }
-
-  .input-wrapper span.email.show {
-    visibility: visible;
-  }
-
-  .input-wrapper span.name.show {
-    visibility: visible;
+  .fieldset {
+    border: none;
+    margin-top: 1.5rem;
   }
 
   .form-clear-button,
@@ -370,7 +297,6 @@
     height: 4.6rem;
     justify-content: center;
     letter-spacing: var(--letter-spacing-xxwide);
-    margin-top: 2rem;
     transition: all 0.5s ease-out;
     width: 100%;
 
@@ -434,6 +360,99 @@
     border: var(--border-indigo);
   }
 
+  .input,
+  .textarea {
+    background-color: var(--color-slate-200);
+    border-bottom: .4rem solid transparent;
+    border-radius: var(--border-radius-small);
+    color: var(--color-slate-800);
+    display: block;
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-semi-bold);
+    letter-spacing: var(--letter-spacing-wide);
+    margin: 1rem 0 0.75rem;
+    padding: 1.4rem 1.5rem 1rem;
+    transition: all .5s;
+    width: 100%;
+
+    &:focus {
+      background-color: var(--color-white);
+      border-color: var(--color-indigo-700);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+      color: var(--color-black);
+      outline: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::placeholder {
+      color: var(--color-slate-900);
+      opacity: .4;
+    }
+
+    &:placeholder-shown ~ label {
+      opacity: 0;
+      transform: translateY(-4rem);
+      visibility: hidden;
+    }
+  }
+
+  .input-wrapper {
+    margin-bottom: 3rem;
+    position: relative;
+
+    &.invalid input,
+    &.invalid textarea {
+      border-color: var(--color-rose-500);
+    }
+
+    &.valid input,
+    &.valid textarea {
+      border-color: transparent;
+    }
+
+    &.valid .error-message {
+      visibility: hidden;
+    }
+
+    &.inValid .error-message {
+      visibility: visible;
+    }
+
+    @media (max-width: 800px) {
+      margin-bottom: 4rem;
+
+      &.message {
+        top: 26rem;
+      }
+    }
+
+    @media (max-width: 560px) {
+      margin-bottom: 6rem;
+
+      &.message {
+        top: 30rem;
+      }
+    }
+  }
+
+  .input-wrapper.bot-field {
+    display: none;
+  }
+
+  .label {
+    display: block;
+    color: var(--color-indigo-600);
+    font-size: var(--font-size-xxsmall);
+    font-weight: var(--font-weight-xbold);
+    letter-spacing: var(--letter-spacing-wide);
+    padding: .25rem 0 0 1.5rem;
+    transition: all 0.3s;
+  }
+
   .main {
     display:flex;
     padding-bottom: 15rem;
@@ -445,7 +464,6 @@
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-light);
     margin-bottom: 1.5rem;
-    overflow: hidden;
     padding: 2rem 6rem 4rem;
     position: relative;
     width: 75%;
@@ -465,5 +483,14 @@
       padding: 2rem 4rem 4rem;
       width: 100%;
     }
-}
+  }
+
+  .textarea {
+    resize: none;
+  }
+
+  .ul {
+    font-size: 1.5rem;
+    list-style-type: none;
+  }
 </style>
