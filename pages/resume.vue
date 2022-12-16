@@ -160,12 +160,12 @@
     },
     methods: {
       backToTopObserverCallback(entries) {
-        const backToTopButton = document.querySelector('.resume-back-to-top-button');
+        const backToTopButton = document.querySelector(`.resume-back-to-top-button`);
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            backToTopButton.classList.add('resume-show-button');
+            backToTopButton.classList.add(`resume-show-button`);
           } else {
-            backToTopButton.classList.remove('resume-show-button');
+            backToTopButton.classList.remove(`resume-show-button`);
           }
         });
       },
@@ -174,7 +174,7 @@
           rootMargin: '1000px'
         }
         let backToTopObserver = new IntersectionObserver(this.backToTopObserverCallback, observerOptions);
-        backToTopObserver.observe(document.querySelector('.back-to-top-observer-target'));
+        backToTopObserver.observe(document.querySelector(`.back-to-top-observer-target`));
       },
       initialize() {
         this.loadPage();
@@ -187,19 +187,19 @@
         this.$refs.resumeDownloadButtonIcon.innerHTML = this.resumeDownloadSVG;
       },
       loadPage() {
-        document.addEventListener('scroll', this.handleScroll);
-        document.querySelector('.resume-back-to-top-button')
-          .addEventListener('click', this.scrollToTop);
+        document.addEventListener(`scroll`, this.handleScroll);
+        document.querySelector(`.resume-back-to-top-button`)
+          .addEventListener(`click`, this.scrollToTop);
       },
       scrollToTop() {
         document.documentElement.scrollTo({
           top: 0,
-          behavior: 'smooth'
+          behavior: `smooth`
         });
       },
       showScrollDownProgress() {
-        window.addEventListener('scroll', () => {
-          const scrollProgressBarFill = document.querySelector('.resume-scroll-progress-bar-fill');
+        window.addEventListener(`scroll`, () => {
+          const scrollProgressBarFill = document.querySelector(`.resume-scroll-progress-bar-fill`);
           let percentScrolled = 100;
           let scrollable = document.documentElement.scrollHeight - window.innerHeight;
           let scrolled = window.scrollY;
