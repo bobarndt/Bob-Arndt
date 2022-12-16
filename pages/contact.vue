@@ -122,10 +122,7 @@
           this.isEmailValid &&
           this.isMessageValid;
 
-        console.log(`isFormValid = ${this.isFormValid}`);
-
         if (this.isFormValid) {
-          console.log(`isFormValid = ${this.isFormValid}`);
           this.$refs.contactMeForm.submit();
         }
       },
@@ -224,7 +221,7 @@
         }
 
         return isValid;
-      },
+      }
     },
     mounted() {
       this.initialize();
