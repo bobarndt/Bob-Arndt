@@ -1,5 +1,5 @@
 <template>
-  <div ref="menuWrapper" class="header-wrapper">
+  <div class="header-wrapper">
     <header class="header">
       <a class="header-logo" href="/" @click="playSound"></a>
 
@@ -66,15 +66,15 @@
       loadTheme() {
         this.headerIconThemeSwitch = this.$refs.headerIconThemeSwitch;
 
-        this.storedTheme = localStorage.getItem('bob-arndt-theme');
+        this.storedTheme = localStorage.getItem(`bob-arndt-theme`);
 
         this.systemTheme = window
-          .matchMedia('(prefers-color-scheme: dark)')
-          .matches ? 'dark' : 'light';
+          .matchMedia(`(prefers-color-scheme: dark)`)
+          .matches ? `dark` : `light`;
 
         this.preferredTheme = this.storedTheme || this.systemTheme;
 
-        if (this.preferredTheme === 'light') {
+        if (this.preferredTheme === `light`) {
           this.headerIconThemeSwitch.innerHTML = this.moonSVG;
           this.audio = this.$refs.headerThemeSwitchAudioLight;
         } else {
@@ -82,50 +82,49 @@
           this.audio = this.$refs.headerThemeSwitchAudioDark;
         }
 
-        this.root = document.querySelector(':root');
-        this.root.setAttribute('color-scheme', this.preferredTheme);
+        this.root = document.querySelector(`:root`);
+        this.root.setAttribute(`color-scheme`, this.preferredTheme);
 
-        localStorage.setItem('bob-arndt-theme', this.preferredTheme);
+        localStorage.setItem(`bob-arndt-theme`, this.preferredTheme);
       },
       playSound() {
-        this.soundClip = this.$refs.headerLinkAudio;
-        this.soundClip.currentTime = 0;
-        this.soundClip.play();
+        this.audio = this.$refs.headerLinkAudio;
+        this.audio.currentTime = 0;
+        this.audio.play();
       },
       switchTheme() {
-        if (this.preferredTheme === 'light') {
-          this.preferredTheme = 'dark';
+        if (this.preferredTheme === `light`) {
+          this.preferredTheme = `dark`;
           this.headerIconThemeSwitch.innerHTML = this.sunSVG;
           this.audio = this.$refs.headerThemeSwitchAudioLight;
         } else {
-          this.preferredTheme = 'light';
+          this.preferredTheme = `light`;
           this.headerIconThemeSwitch.innerHTML = this.moonSVG;
           this.audio = this.$refs.headerThemeSwitchAudioDark;
         }
 
-        this.root.setAttribute('color-scheme', this.preferredTheme);
-        localStorage.setItem('bob-arndt-theme', this.preferredTheme);
+        this.root.setAttribute(`color-scheme`, this.preferredTheme);
+        localStorage.setItem(`bob-arndt-theme`, this.preferredTheme);
 
         this.audio.currentTime = 0;
         this.audio.play();
       },
       toggleHamburgerState() {
         this.$refs.hamburger
-          .addEventListener('click', event => {
-            event.currentTarget.classList.toggle('is-active');
+          .addEventListener(`click`, event => {
+            event.currentTarget.classList.toggle(`is-active`);
           })
       },
       toggleMenuDisplay() {
-        const menu = document.querySelector('.menu-wrapper');
-        console.log(`menu: ${menu}`);
+        const menu = document.querySelector(`.menu-wrapper`);
 
-        if (!menu.classList.contains('menu-hidden')) {
+        if (!menu.classList.contains(`menu-hidden`)) {
           this.audio = this.$refs.headerAudioClose;
         } else {
           this.audio = this.$refs.headerAudioOpen;
         }
 
-        menu.classList.toggle('menu-hidden');
+        menu.classList.toggle(`menu-hidden`);
 
         this.audio.currentTime = 0;
         this.audio.play();
