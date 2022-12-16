@@ -166,8 +166,6 @@
   </div><!-- End .page-wrapper div -->
 </template>
 
-<script></script>
-
 <style scoped lang="scss">
   .heading {
     color: var(--color-main-text);
