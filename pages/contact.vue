@@ -404,6 +404,7 @@
     &.invalid input,
     &.invalid textarea {
       border-color: var(--color-rose-500);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
     }
 
     &.valid input,
