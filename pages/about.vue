@@ -23,16 +23,19 @@
     </div><!-- End .hero div -->
 
     <main class="main">
-      <section>
+      <p>No biography. Just random "stuff" that means "stuff" to me.</p>
+      <section class="composition-wrapper">
         <div class="composition">
-          <a href="https://www.youtube.com/watch?v=p8zamUoteG4&list=OLAK5uy_lE2wWe8dAGFUlGyKn0olTL8EVOZADTe-Q" target="_blank"><img src="/images/slipknot.min.jpg" alt="The End, So Far - Slipknot" height="200" width="200" class="composition__photo composition__photo--p1"></a>
-          <a href="https://www.youtube.com/watch?v=A7Er5TsQrGg&list=OLAK5uy_nDOHLgoRy4ZQLlz4F1xXuaIFxWjyDxbME" target="_blank"><img src="/images/duran-duran.min.jpg" alt="All You Need Is Now - Duran Duran" height="200" width="200" class="composition__photo composition__photo--p2"></a>
-          <a href="https://www.youtube.com/watch?v=ho8iswvcNHU&list=OLAK5uy_lKdzXMXzdHU-LWNcx3HgaFLTiiRAjWKmE&index=1" target="_blank"><img src="/images/joe-jackson.min.jpg" alt="Fool - Joe Jackson" height="200" width="200" class="composition__photo composition__photo--p3"></a>
+          <a class="photo joe-jackson" href="https://www.youtube.com/watch?v=ho8iswvcNHU&list=OLAK5uy_lKdzXMXzdHU-LWNcx3HgaFLTiiRAjWKmE&index=1" target="_blank"><img src="/images/joe-jackson.min.jpg" alt="Fool - Joe Jackson" height="250" width="250"></a>
+          <a class="photo duran-duran" href="https://www.youtube.com/watch?v=A7Er5TsQrGg&list=OLAK5uy_nDOHLgoRy4ZQLlz4F1xXuaIFxWjyDxbME" target="_blank"><img src="/images/duran-duran.min.jpg" alt="All You Need Is Now - Duran Duran" height="250" width="250"></a>
+          <a class="photo slipknot" href="https://www.youtube.com/watch?v=p8zamUoteG4&list=OLAK5uy_lE2wWe8dAGFUlGyKn0olTL8EVOZADTe-Q" target="_blank"><img src="/images/slipknot.min.jpg" alt="The End, So Far - Slipknot" height="250" width="250"></a>
         </div>
       </section>
 
-      <section>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/gGIap2_tmng?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <section class="video-container">
+        <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gGIap2_tmng?controls=0" title="Mike Leach on wedding planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
       </section>
 
       <!-- <section>
@@ -51,9 +54,50 @@
 </template>
 
 <style scoped lang="scss">
-  img {
-    max-width: 100%;
-    height: auto;
+  .composition-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+  }
+
+  .composition {
+    height: 50rem;
+    position: relative;
+    width: 50rem;
+
+    &:hover &.photo:not(:hover) {
+      transform: scale(.90);
+    }
+
+    .photo {
+      box-shadow: var(--box-shadow-low);
+      outline-offset: 1rem;
+      position: absolute;
+      transition: all .6s;
+      width: 25rem;
+
+      &.duran-duran {
+        left: 0;
+        top: -2rem;
+      }
+
+      &.joe-jackson {
+        right: 0;
+        top: 2rem;
+      }
+
+      &.slipknot {
+        left: 20%;
+        top: 10rem;
+      }
+
+      &:hover {
+        box-shadow: var(--box-shadow-high);
+        outline: 1rem solid var(--color-photo-outline);
+        transform: scale(1.10) translateY(-.5rem);
+        z-index: 20;
+      }
+    }
   }
 
   .flag {
@@ -118,6 +162,32 @@
       &:last-of-type {
         margin-bottom: 7rem;
       }
+    }
+  }
+
+  .video-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+  }
+
+  .video {
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 80%;
+
+    @media (max-width: 640px) {
+      width: 100%;
+    }
+
+    iframe {
+      box-shadow: var(--box-shadow-soft);
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
     }
   }
 </style>
