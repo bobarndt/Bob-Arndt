@@ -11,8 +11,7 @@
   --color-header-theme-switch: var(--color-azure-400);
   --color-header-theme-switch-hover: var(--color-amber-400);
   --color-home-skills-text: var(--color-slate-200);
-  --color-home-skills-title: var(--color-indigo-600);
-  --color-home-tech-stack-border: var(--color-indigo-500);
+  --color-home-skills-title: var(--color-indigo-500);
   --color-link: var(--color-azure-400);
   --color-link-external-icon: var(--color-azure-400);
   --color-link-overlay: var(--color-rose-600);
@@ -30,6 +29,7 @@
   --color-resume-progress-bar-background: var(--color-slate-400);
   --color-resume-progress-bar-fill: var(--color-azure-400);
   --color-resume-section-divider: var(--color-indigo-500);
+  --color-tech-stack: var(--color-indigo-600);
   --filter-header-link-icon-shadow: var(--filter-shadow-dark);
   --header-logo-background-image: url('/images/Arndt-logo-white.svg');
 }
@@ -45,8 +45,7 @@
   --color-header-theme-switch: var(--color-azure-600);
   --color-header-theme-switch-hover: var(--color-slate-900);
   --color-home-skills-text: var(--color-slate-200);
-  --color-home-skills-title: var(--color-indigo-900);
-  --color-home-tech-stack-border: var(--color-indigo-800);
+  --color-home-skills-title: var(--color-indigo-800);
   --color-link: var(--color-indigo-800);
   --color-link-external-icon: var(--color-indigo-800);
   --color-link-overlay: var(--color-rose-600);
@@ -64,6 +63,7 @@
   --color-resume-progress-bar-background: var(--color-azure-400);
   --color-resume-progress-bar-fill: var(--color-indigo-600);
   --color-resume-section-divider: var(--color-indigo-800);
+  --color-tech-stack: var(--color-indigo-800);
   --filter-header-link-icon-shadow: var(--filter-shadow-light);
   --header-logo-background-image: url('/images/Arndt-logo-indigo.svg');
 }
