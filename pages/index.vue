@@ -251,7 +251,7 @@
   .home-skills-grid {
     background-color: var(--color-slate-900);
     border-radius: var(--border-radius-large);
-    box-shadow: var(--box-shadow-medium);
+    box-shadow: var(--box-shadow-skills);
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -315,7 +315,7 @@
     background-color: var(--color-indigo-300);
     border: .3rem solid var(--color-home-tech-stack-border);
     border-radius: var(--border-radius-small);
-    box-shadow: var(--shadow-elevation-high);
+    box-shadow: var(--box-shadow-low);
     margin: 0 auto 4rem;
 
     p {

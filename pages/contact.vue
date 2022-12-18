@@ -300,7 +300,7 @@
     &:focus,
     &:hover {
       background-color: var(--color-indigo-900);
-      box-shadow: var(--box-shadow-light);
+      box-shadow: var(--box-shadow-medium);
       color: var(--color-white);
       outline: none;
 
@@ -460,7 +460,7 @@
   .section-form {
     background-image: linear-gradient(to bottom right, var(--color-slate-300), var(--color-slate-400));
     border-radius: var(--border-radius-large);
-    box-shadow: var(--box-shadow-light);
+    box-shadow: var(--box-shadow-form);
     margin-bottom: 1.5rem;
     padding: 2rem 6rem 4rem;
     position: relative;

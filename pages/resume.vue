@@ -393,7 +393,7 @@
     &:focus,
     &:hover {
       background-color: var(--color-resume-download-button-hover);
-      box-shadow: var(--box-shadow-light);
+      box-shadow: var(--box-shadow-medium);
       color: var(--color-white);
       outline: none;
 
