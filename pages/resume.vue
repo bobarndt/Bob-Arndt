@@ -160,25 +160,24 @@
     },
     methods: {
       backToTopObserverCallback(entries) {
-        const backToTopButton = document.querySelector(`.resume-back-to-top-button`);
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            backToTopButton.classList.add(`resume-show-button`);
+            this.$refs.resumeBackToTopButton.classList.add(`resume-show-button`);
           } else {
-            backToTopButton.classList.remove(`resume-show-button`);
+            this.$refs.resumeBackToTopButton.classList.remove(`resume-show-button`);
           }
         });
       },
       handleScroll() {
         const observerOptions = {
-          rootMargin: '1000px'
+          rootMargin: `1000px`
         }
         let backToTopObserver = new IntersectionObserver(this.backToTopObserverCallback, observerOptions);
         backToTopObserver.observe(document.querySelector(`.back-to-top-observer-target`));
       },
       initialize() {
-        this.loadPage();
         this.loadIcons();
+        this.loadPage();
         this.showScrollDownProgress();
       },
       loadIcons() {
@@ -188,8 +187,7 @@
       },
       loadPage() {
         document.addEventListener(`scroll`, this.handleScroll);
-        document.querySelector(`.resume-back-to-top-button`)
-          .addEventListener(`click`, this.scrollToTop);
+        this.$refs.resumeBackToTopButton.addEventListener(`click`, this.scrollToTop);
       },
       scrollToTop() {
         document.documentElement.scrollTo({
