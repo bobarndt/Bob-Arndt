@@ -3,20 +3,20 @@
     <header class="header">
       <a class="header-logo" href="/" @click="playSound"></a>
 
-      <a ref="headerIconHome" class="header-link-icon home" href="/" @click="playSound"></a>
+      <a ref="headerIconHome" class="header-link-icon home" href="/" @click="playSound" content="Back to Homepage" v-tippy></a>
 
-      <a ref="headerIconLinkedIn" class="header-link-icon" href="https://www.linkedin.com/in/bob-arndt/" @click="playSound" target="_blank"></a>
+      <a ref="headerIconLinkedIn" class="header-link-icon" href="https://www.linkedin.com/in/bob-arndt/" @click="playSound" target="_blank" content="View LinkedIn Profile" v-tippy></a>
 
-      <a ref="headerIconGithub" class="header-link-icon" href="https://github.com/bobarndt/Bob-Arndt" @click="playSound" target="_blank"></a>
+      <a ref="headerIconGithub" class="header-link-icon" href="https://github.com/bobarndt/Bob-Arndt" @click="playSound" target="_blank" content="View Code on GitHub" v-tippy></a>
 
-      <div ref="hamburger" class="hamburger" role="switch" aria-label="menu" @click="toggleMenuDisplay">
+      <div ref="hamburger" class="hamburger" role="switch" aria-label="menu" @click="toggleMenuDisplay" content="Open Menu" v-tippy>
         <div class="hamburger-container">
           <div class="hamburger-inner"></div>
           <div class="hamburger-hidden"></div>
         </div>
       </div>
 
-      <button ref="headerIconThemeSwitch" class="header-theme-switch" @click="switchTheme" role="switch" aria-label="light/dark mode"></button>
+      <button ref="headerIconThemeSwitch" class="header-theme-switch" @click="switchTheme" role="switch" aria-label="light/dark mode" content="Light/Dark Theme" v-tippy></button>
     </header>
 
     <audio ref="headerAudioOpen" class="header-link-audio-open" src="/audio/menu-open.mp3"></audio>
