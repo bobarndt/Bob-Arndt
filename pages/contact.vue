@@ -26,7 +26,7 @@
 
     <main class="main">
       <section class="section-form">
-        <form ref="contactMeForm" class="contact-me-form" method="POST" @submit.prevent="handleSubmit" name="Contact Me" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <form ref="contactMeForm" class="contact-me-form" action="/success" method="POST" @submit.prevent="handleSubmit" name="Contact Me" data-netlify="true" netlify-honeypot="bot-field" novalidate>
           <fieldset class="fieldset">
             <ul class="ul">
               <li>
