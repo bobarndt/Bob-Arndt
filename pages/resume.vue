@@ -466,7 +466,7 @@
 
   .resume-scroll-progress-bar {
     background-color: var(--color-resume-progress-bar-background);
-    height: .5rem;
+    height: .75rem;
     position: sticky;
     top: 6.4rem;
     z-index: 20;
