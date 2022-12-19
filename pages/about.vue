@@ -23,7 +23,8 @@
     </div><!-- End .hero div -->
 
     <main class="main">
-      <p>No biography. Just random "stuff" that means "stuff" to me.</p>
+      <h2 class="subtitle">No autobiography. Just random "stuff" that means "stuff" to me.</h2>
+      <h3 class="subtitle">What I'm Listening To</h3>
       <section class="composition-wrapper">
         <div class="composition">
           <a class="photo joe-jackson" href="https://www.youtube.com/watch?v=ho8iswvcNHU&list=OLAK5uy_lKdzXMXzdHU-LWNcx3HgaFLTiiRAjWKmE&index=1" target="_blank"><img src="/images/joe-jackson.min.jpg" alt="Fool - Joe Jackson" height="250" width="250"></a>
@@ -34,7 +35,7 @@
 
       <section class="video-container">
         <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/gGIap2_tmng?controls=0" title="Mike Leach on wedding planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gGIap2_tmng?rel=0&iv_load_policy=3&fs=0&disablekb=1" title="Mike Leach on wedding planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
         </div>
       </section>
 
@@ -62,6 +63,7 @@
 
   .composition {
     height: 50rem;
+    margin-top: 6rem;;
     position: relative;
     width: 50rem;
 
