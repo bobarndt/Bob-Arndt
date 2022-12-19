@@ -3,7 +3,7 @@
     <header class="header">
       <a class="header-logo" href="/" @click="playSound"></a>
 
-      <a ref="headerIconHome" class="header-link-icon home" href="/" @click="playSound" content="Back to Homepage" v-tippy></a>
+      <a ref="headerIconHome" class="header-link-icon home" href="/" @click="playSound" content="Go to Homepage" v-tippy></a>
 
       <a ref="headerIconLinkedIn" class="header-link-icon" href="https://www.linkedin.com/in/bob-arndt/" @click="playSound" target="_blank" content="View LinkedIn Profile" v-tippy></a>
 
