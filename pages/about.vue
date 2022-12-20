@@ -58,17 +58,16 @@
   .composition-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 6rem;
+    margin-top: 12rem;
   }
 
   .composition {
     height: 50rem;
-    margin-top: 6rem;;
     position: relative;
     width: 50rem;
 
-    &:hover &.photo:not(:hover) {
-      transform: scale(.90);
+    &:hover .photo:not(:hover) {
+      transform: scale(.95);
     }
 
     .photo {
@@ -95,8 +94,8 @@
 
       &:hover {
         box-shadow: var(--box-shadow-high);
-        outline: 1rem solid var(--color-photo-outline);
-        transform: scale(1.10) translateY(-.5rem);
+        outline: 1.25rem solid var(--color-photo-outline);
+        transform: scale(1.05) translateY(-.5rem);
         z-index: 20;
       }
     }
