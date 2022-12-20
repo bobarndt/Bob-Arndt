@@ -4,19 +4,21 @@
 
 :root {
   --backdrop-blur: .4rem;
+
+  --background-image-gradient: linear-gradient(to bottom right, var(--color-slate-300), var(--color-slate-400));
+
   --border-radius-large: 2.4rem;
   --border-radius-medium: 1.25rem;
   --border-radius-small: .75rem;
   --border-rose: 1px solid var(--color-rose-700);
   --border-indigo: 1px solid var(--color-indigo-500);
 
-  --box-shadow-form: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   --box-shadow-header: .25rem 0 1rem var(--color-black);
   --box-shadow-hero-title-wrapper: 1.25rem 1.25rem 1.5rem var(--color-black);
   --box-shadow-high: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   --box-shadow-low: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   --box-shadow-medium: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  --box-shadow-skills: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  --box-shadow-section-background: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   --box-shadow-soft: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
   --filter-shadow-light: drop-shadow(.25rem .25rem .25rem hsla(0deg, 0%, 0%, 0.4));

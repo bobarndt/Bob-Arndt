@@ -249,9 +249,9 @@
   }
 
   .home-skills-grid {
-    background-color: var(--color-slate-900);
+    background-image: var(--color-home-skills-grid-background-image);
     border-radius: var(--border-radius-large);
-    box-shadow: var(--box-shadow-skills);
+    box-shadow: var(--box-shadow-section-background);
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -273,6 +273,7 @@
     border-radius: 1.5rem;
     color: var(--color-home-skills-text);
     display: flex;
+    filter: var(--filter-shadow-light);
     height: 10rem;
     justify-content: center;
     padding: 2rem;
@@ -280,6 +281,7 @@
   }
 
   .home-skills-item-caption {
+    color: var(--color-home-skills-item-caption);
     display: inline-block;
     font-size: var(--font-size-xsmall);
     font-weight: var(--font-weight-bold);
@@ -289,7 +291,6 @@
 
   .home-skills-item-wrapper {
     align-items: center;
-    color: var(--color-home-skills-text);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -443,4 +444,31 @@
       }
     }
   }
+
+  .section-form {
+    background-image: linear-gradient(to bottom right, var(--color-slate-300), var(--color-slate-400));
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow-section-background);
+    margin-bottom: 1.5rem;
+    padding: 2rem 6rem 4rem;
+    position: relative;
+    width: 75%;
+
+    ::selection {
+      background-color: var(--color-indigo-600);
+      color: var(--color-white);
+    }
+
+    @media (max-width: 1000px) {
+      margin-bottom: 1rem;
+      width: 90%;
+    }
+
+    @media (max-width: 700px) {
+      margin-bottom: .5rem;
+      padding: 2rem 4rem 4rem;
+      width: 100%;
+    }
+  }
+
 </style>

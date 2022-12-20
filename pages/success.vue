@@ -87,9 +87,9 @@
 
   .section-form {
     align-items: center;
-    background-image: linear-gradient(to bottom right, var(--color-slate-300), var(--color-slate-400));
+    background-image: var(--background-image-gradient);
     border-radius: var(--border-radius-large);
-    box-shadow: var(--box-shadow-form);
+    box-shadow: var(--box-shadow-section-background);
     display: flex;
     justify-content: center;
     padding: 4rem 6rem 4rem;
