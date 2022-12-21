@@ -32,7 +32,7 @@
     </div>
 
     <main class="main">
-      <section class="heading">Software development professional with over 20 years industry experience blending strong creative and technical skills. 15 years in the design and development of web sites and web applications for corporate, institutional, professional and individual clients. Adept designer with the skills to fashion clear and compelling user experiences. Strengths encompass both coding and graphic design resulting in function-rich, responsive, visually appealing sites that convey substance and professionalism.</section>
+      <section class="professional-profile">Software development professional with over 20 years industry experience blending strong creative and technical skills. 15 years in the design and development of web sites and web applications for corporate, institutional, professional and individual clients. Adept designer with the skills to fashion clear and compelling user experiences. Strengths encompass both coding and graphic design resulting in function-rich, responsive, visually appealing sites that convey substance and professionalism.</section>
 
       <section class="home-skills-wrapper">
         <h2 class="home-skills-title">My Skills</h2>
@@ -130,7 +130,15 @@
         </div>
       </section>
 
-      <p class="main-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+      <p class="main-text">Since beginning my journey as a freelance designer over 11 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.</p>
+
+      <p class="main-text">You can also call me a product designer, experience designer, interaction, UI, UX or by any other market defined function-title. I'm also a multi-disciplinary maker with over 10 years of experiences in wide range of design disciplines, manager, advisor, entrepreneur, front-end developer, music enthusiast, traveler, photographer and more.</p>
+
+      <p class="main-text">I don’t like to define myself by the work I’ve done. I define myself by the work I want to do. Skills can be taught, personality is inherent. I prefer to keep learning, continue challenging myself, and do interesting things that matter.</p>
+
+      <p class="main-text">Fueled by high energy levels and boundless enthusiasm, I’m easily inspired and more then willing to follow my fascinations wherever they take me. I’m passionate, expressive, multi-talented spirit with a natural ability to entertain and inspire. I’m never satisfied to just come up with ideas. Instead I have an almost impulsive need to act on them.</p>
+
+      <p class="main-text">I specialize in creating sites for individuals and small businesses. You shouldn’t have to settle for cheap solutions or generic templates. I provide custom designs at afforable prices. Frequently your website is the first impression your customers will get, so make sure it’s a good one. Since my time is split between a few different things, I’m not able to take on every project I’d like to, but I'm always looking for fun work. Take a look at my portfolio below, if you think I’d be a good match send me an email.</p>
 
       <section class="home-tech-stack desktop">
         <p>Built with Nuxt 3, Vue 3, Sass and Vite in VSCode. Deployed on Netlify. No React. No Tailwind. No gradients. No apology.</p>
@@ -167,17 +175,6 @@
 </template>
 
 <style scoped lang="scss">
-  .heading {
-    color: var(--color-main-text);
-    font-size: var(--font-size-medium);
-    font-style: var(--font-style-italic);
-    font-weight: var(--font-weight-semi-bold);
-    letter-spacing: var(--letter-spacing-xwide);
-    line-height: var(--line-height-tall);
-    margin-bottom: 4rem;
-    padding: 0 .5rem;
-  }
-
   .hero-title-overlay {
     span:nth-child(1) {
       animation: hero-title-fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
@@ -252,7 +249,7 @@
     background-image: var(--color-home-skills-grid-background-image);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
-    padding: 2rem;
+    padding: 2rem 2rem 2.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -294,7 +291,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 3rem 3rem 0 3rem;
+    padding: 1.5rem 3rem;
 
     @media (max-width: 400px) {
       padding: 2rem 2rem 0 2rem;
@@ -445,30 +442,13 @@
     }
   }
 
-  .section-form {
-    background-image: linear-gradient(to bottom right, var(--color-slate-300), var(--color-slate-400));
-    border-radius: var(--border-radius-large);
-    box-shadow: var(--box-shadow-section-background);
-    margin-bottom: 1.5rem;
-    padding: 2rem 6rem 4rem;
-    position: relative;
-    width: 75%;
-
-    ::selection {
-      background-color: var(--color-indigo-600);
-      color: var(--color-white);
-    }
-
-    @media (max-width: 1000px) {
-      margin-bottom: 1rem;
-      width: 90%;
-    }
-
-    @media (max-width: 700px) {
-      margin-bottom: .5rem;
-      padding: 2rem 4rem 4rem;
-      width: 100%;
-    }
+  .professional-profile {
+    color: var(--color-main-text);
+    font-size: var(--font-size-large);
+    font-style: var(--font-style-italic);
+    font-weight: var(--font-weight-semi-bold);
+    letter-spacing: var(--letter-spacing-xwide);
+    line-height: var(--line-height-tall);
+    margin: 0 2rem 4rem;
   }
-
 </style>

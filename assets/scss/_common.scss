@@ -90,13 +90,18 @@ a {
   font-size: var(--font-size-medium);
   letter-spacing: var(--letter-spacing-normal);
   line-height: 3.4rem;
+  margin: 0 2rem 0;
+
+  &:first-of-type {
+    margin-top: 5rem;
+  }
 
   &:not(:first-of-type) {
-    margin-top: 2.4rem;
+    margin-top: 2rem;
   }
 
   &:last-of-type {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
 }
 
