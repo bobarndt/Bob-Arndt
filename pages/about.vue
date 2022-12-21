@@ -26,26 +26,26 @@
       <section class="composition">
         <div class="composition-wrapper">
           <div class="composition-inner">
-            <a class="album joe-jackson" href="https://www.youtube.com/watch?v=ho8iswvcNHU&list=OLAK5uy_lKdzXMXzdHU-LWNcx3HgaFLTiiRAjWKmE&index=1" target="_blank"><img src="/images/joe-jackson.min.jpg" alt="Fool - Joe Jackson" height="250" width="250"></a>
-            <a class="album duran-duran" href="https://www.youtube.com/watch?v=A7Er5TsQrGg&list=OLAK5uy_nDOHLgoRy4ZQLlz4F1xXuaIFxWjyDxbME" target="_blank"><img src="/images/duran-duran.min.jpg" alt="All You Need Is Now - Duran Duran" height="250" width="250"></a>
-            <a class="album slipknot" href="https://www.youtube.com/watch?v=p8zamUoteG4&list=OLAK5uy_lE2wWe8dAGFUlGyKn0olTL8EVOZADTe-Q" target="_blank"><img src="/images/slipknot.min.jpg" alt="The End, So Far - Slipknot" height="250" width="250"></a>
+            <a class="album joe-jackson" href="https://www.youtube.com/watch?v=ho8iswvcNHU&list=OLAK5uy_lKdzXMXzdHU-LWNcx3HgaFLTiiRAjWKmE&index=1" @mouseover="switchCaption(`joejackson`)" @mouseout="loadDefaultCaption" target="_blank"><img src="/images/joe-jackson.min.jpg" alt="Fool - Joe Jackson" height="250" width="250"></a>
+            <a class="album duran-duran" href="https://www.youtube.com/watch?v=A7Er5TsQrGg&list=OLAK5uy_nDOHLgoRy4ZQLlz4F1xXuaIFxWjyDxbME" @mouseover="switchCaption(`duranduran`)" @mouseout="loadDefaultCaption" target="_blank"><img src="/images/duran-duran.min.jpg" alt="All You Need Is Now - Duran Duran" height="250" width="250"></a>
+            <a class="album slipknot" href="https://www.youtube.com/watch?v=p8zamUoteG4&list=OLAK5uy_lE2wWe8dAGFUlGyKn0olTL8EVOZADTe-Q" @mouseover="switchCaption(`slipknot`)" @mouseout="loadDefaultCaption" target="_blank"><img src="/images/slipknot.min.jpg" alt="The End, So Far - Slipknot" height="250" width="250"></a>
           </div>
         </div>
-        <div ref="compositionCaption" class="composition-caption">The End, So Far is the seventh studio album by American heavy metal band Slipknot, released on September 30, 2022, by Roadrunner Records. This is the band's final album to be released through Roadrunner, whom the band signed with in 1998.</div>
+        <div ref="compositionCaption" class="composition-caption"></div>
       </section>
 
-      <section class="video-wrapper">
+      <!-- <section class="video-wrapper">
         <div class="video">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/gGIap2_tmng?rel=0&iv_load_policy=3&fs=0&disablekb=1" title="Mike Leach on wedding planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
         </div>
-      </section>
+      </section> -->
 
-      <section class="flag-wrapper">
+      <!-- <section class="flag-wrapper">
         <figure class="flag-caption">
           <img class="flag" src="/images/flag.min.png" alt="American Flag">
           <figcaption>"I pledge allegiance to the flag of the United States of America, and to the republic for which it stands, one nation under God, indivisible, with liberty and justice for all."</figcaption>
         </figure>
-      </section>
+      </section> -->
 
       <section>
         <p class="main-text">No Facebook. No Instagram. No Twitter. No pre-natal murder. No climate change. No foreign invasion. No scamdemic. No COVID. No vaccination. No mask. No Fauci. No Gates. No WHO. No cancel. No woke. No LGBT. No Antifa. No Stalinism. No Democrats. No Joe. No Nancy. No Chuck. No Bernie. No Hillary. No Beto. No ACLU. No UN. No FBI. No DOJ. No CRT. No BLM. No CNN. No MSM. No NPR. No PBS. No NFL. No NBA. No MLB. No ESPN. No Amazon. No Starbucks. No Disney. No apology.</p>
@@ -60,20 +60,26 @@
   export default {
     data() {
       return {
-        captionSlipknot: `The End, So Far is the seventh studio album by American heavy metal band Slipknot, released on September 30, 2022, by Roadrunner Records. This is the band's final album to be released through Roadrunner, whom the band signed with in 1998.`,
-        captionDuranDuran: `All You Need Is Now is the thirteenth studio album by English new wave band Duran Duran. Produced by Mark Ronson, a truncated version of the album was released digitally on 21 December 2010.`,
-        captionJoeJackson: `Fool is the 20th studio album by British singer-songwriter Joe Jackson. Recorded the day after the end of his Fast Forward tour at the Tonic Room Studios in Boise, Idaho. Jackson had decided to record the album in whichever city the tour finished, which happened to be Boise after a performance at the Egyptian Theatre.`,
+        innerHTMLSlipknot: `The End, So Far is the seventh studio album by American heavy metal band Slipknot, released on September 30, 2022, by Roadrunner Records. This is the band's final album to be released through Roadrunner, whom the band signed with in 1998. Click the album cover to listen on YouTube.`,
+        innerHTMLDuranDuran: `All You Need Is Now is the thirteenth studio album by English new wave band Duran Duran. Produced by Mark Ronson, a truncated version of the album was released digitally on 21 December 2010.  Click the album cover to listen on YouTube.`,
+        innerHTMLJoeJackson: `Fool is the 20th studio album by British singer-songwriter Joe Jackson. Recorded the day after the end of his Fast Forward tour at the Tonic Room Studios in Boise, Idaho. Jackson had decided to record the album in whichever city the tour finished, which happened to be Boise after a performance at the Egyptian Theatre.  Click the album cover to listen on YouTube.`,
       }
     },
     methods: {
       initialize() {
-        // loadCaption();
+        this.loadDefaultCaption();
       },
-      loadCaption() {
-
+      loadDefaultCaption() {
+        this.$refs.compositionCaption.innerHTML = this.innerHTMLSlipknot;
       },
-      switchCaption() {
-
+      switchCaption(artist) {
+        if (artist === 'joejackson') {
+          this.$refs.compositionCaption.innerHTML = this.innerHTMLJoeJackson;
+        } else if (artist === 'duranduran') {
+          this.$refs.compositionCaption.innerHTML = this.innerHTMLDuranDuran;
+        } else {
+          this.$refs.compositionCaption.innerHTML = this.innerHTMLSlipknot;
+        }
       }
     },
     mounted() {
@@ -100,7 +106,7 @@
     font-weight: var(--font-weight-black);
     letter-spacing: .075rem;
     line-height: 2;
-    margin: 0 4rem;
+    // margin: 0 2rem;
   }
 
   .composition-inner {
