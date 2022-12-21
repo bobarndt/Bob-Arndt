@@ -23,28 +23,35 @@
     </div><!-- End .hero div -->
 
     <main class="main">
-      <section class="section-composition">
+      <section class="composition">
         <div class="composition-wrapper">
-          <div class="composition">
-            <a class="photo joe-jackson" href="https://www.youtube.com/watch?v=ho8iswvcNHU&list=OLAK5uy_lKdzXMXzdHU-LWNcx3HgaFLTiiRAjWKmE&index=1" target="_blank"><img src="/images/joe-jackson.min.jpg" alt="Fool - Joe Jackson" height="250" width="250"></a>
-            <a class="photo duran-duran" href="https://www.youtube.com/watch?v=A7Er5TsQrGg&list=OLAK5uy_nDOHLgoRy4ZQLlz4F1xXuaIFxWjyDxbME" target="_blank"><img src="/images/duran-duran.min.jpg" alt="All You Need Is Now - Duran Duran" height="250" width="250"></a>
-            <a class="photo slipknot" href="https://www.youtube.com/watch?v=p8zamUoteG4&list=OLAK5uy_lE2wWe8dAGFUlGyKn0olTL8EVOZADTe-Q" target="_blank"><img src="/images/slipknot.min.jpg" alt="The End, So Far - Slipknot" height="250" width="250"></a>
+          <div class="composition-inner">
+            <a class="album joe-jackson" href="https://www.youtube.com/watch?v=ho8iswvcNHU&list=OLAK5uy_lKdzXMXzdHU-LWNcx3HgaFLTiiRAjWKmE&index=1" target="_blank"><img src="/images/joe-jackson.min.jpg" alt="Fool - Joe Jackson" height="250" width="250"></a>
+            <a class="album duran-duran" href="https://www.youtube.com/watch?v=A7Er5TsQrGg&list=OLAK5uy_nDOHLgoRy4ZQLlz4F1xXuaIFxWjyDxbME" target="_blank"><img src="/images/duran-duran.min.jpg" alt="All You Need Is Now - Duran Duran" height="250" width="250"></a>
+            <a class="album slipknot" href="https://www.youtube.com/watch?v=p8zamUoteG4&list=OLAK5uy_lE2wWe8dAGFUlGyKn0olTL8EVOZADTe-Q" target="_blank"><img src="/images/slipknot.min.jpg" alt="The End, So Far - Slipknot" height="250" width="250"></a>
           </div>
         </div>
         <div ref="compositionCaption" class="composition-caption">The End, So Far is the seventh studio album by American heavy metal band Slipknot, released on September 30, 2022, by Roadrunner Records. This is the band's final album to be released through Roadrunner, whom the band signed with in 1998.</div>
       </section>
 
-      <section class="video-container">
+      <section class="video-wrapper">
         <div class="video">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/gGIap2_tmng?rel=0&iv_load_policy=3&fs=0&disablekb=1" title="Mike Leach on wedding planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
         </div>
+      </section>
+
+      <section class="flag-wrapper">
+        <figure class="flag-caption">
+          <img class="flag" src="/images/flag.min.png" alt="American Flag">
+          <figcaption>"I pledge allegiance to the flag of the United States of America, and to the republic for which it stands, one nation under God, indivisible, with liberty and justice for all."</figcaption>
+        </figure>
       </section>
 
       <section>
         <p class="main-text">No Facebook. No Instagram. No Twitter. No pre-natal murder. No climate change. No foreign invasion. No scamdemic. No COVID. No vaccination. No mask. No Fauci. No Gates. No WHO. No cancel. No woke. No LGBT. No Antifa. No Stalinism. No Democrats. No Joe. No Nancy. No Chuck. No Bernie. No Hillary. No Beto. No ACLU. No UN. No FBI. No DOJ. No CRT. No BLM. No CNN. No MSM. No NPR. No PBS. No NFL. No NBA. No MLB. No ESPN. No Amazon. No Starbucks. No Disney. No apology.</p>
         <p class="main-text">Ultra MAGA. NRA. Re-fund the police. Finish the wall. No compromise. DeSantis 2024. God bless America. No apology.</p>
       </section>
-      
+
     </main>
   </div>
 </template>
@@ -77,19 +84,39 @@
 
 <style scoped lang="scss">
   .composition {
+    background-image: var(--background-image-gradient);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow-section-background);
+    margin-bottom: 6rem;
+    padding: 2rem 6rem 4rem;
+    position: relative;
+    width: 100%;
+  }
+
+  .composition-caption {
+    color: var(--color-indigo-800);
+    font-size: var(--font-size-medium);
+    font-style: italic;
+    font-weight: var(--font-weight-black);
+    letter-spacing: .075rem;
+    line-height: 2;
+    margin: 0 4rem;
+  }
+
+  .composition-inner {
     height: 40rem;
     position: relative;
     width: 50rem;
 
-    &:hover .photo:not(:hover) {
+    &:hover .album:not(:hover) {
       transform: scale(.95);
     }
 
-    .photo {
+    .album {
       box-shadow: var(--box-shadow-low);
       outline-offset: 1rem;
       position: absolute;
-      transition: all .6s;
+      transition: all .8s;
       width: 25rem;
 
       &.duran-duran {
@@ -109,21 +136,11 @@
 
       &:hover {
         box-shadow: var(--box-shadow-high);
-        outline: 1.25rem solid var(--color-photo-outline);
+        outline: 1.25rem solid var(--color-album-outline);
         transform: scale(1.05) translateY(-.5rem);
         z-index: 20;
       }
     }
-  }
-
-  .composition-caption {
-    color: var(--color-indigo-800);
-    font-size: var(--font-size-medium);
-    font-style: italic;
-    font-weight: var(--font-weight-black);
-    letter-spacing: .075rem;
-    line-height: 2;
-    margin: 0 4rem;
   }
 
   .composition-wrapper {
@@ -147,8 +164,13 @@
     font-size: var(--font-size-xxlarge);
     font-style: italic;
     font-weight: var(--font-weight-black);
-    letter-spacing: .075rem;
-    line-height: 2;
+    letter-spacing: var(--letter-spacing-tight);
+    line-height: var(--line-height-xtall);
+    text-shadow: var(--text-shadow);
+  }
+
+  .flag-wrapper {
+
   }
 
   .hero-title-overlay {
@@ -197,40 +219,36 @@
     }
   }
 
-  .section-composition {
-    background-image: var(--background-image-gradient);
-    border-radius: var(--border-radius-large);
-    box-shadow: var(--box-shadow-section-background);
-    margin-bottom: 1.5rem;
-    padding: 2rem 6rem 4rem;
-    position: relative;
-    width: 100%;
-  }
-
-
-  .video-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10rem;
-  }
-
   .video {
     height: 0;
+    margin: 4rem 0 2.5rem;
     padding-bottom: 56.25%;
     position: relative;
-    width: 80%;
+    width: 100%;
 
     @media (max-width: 640px) {
       width: 100%;
     }
 
     iframe {
-      box-shadow: var(--box-shadow-soft);
+      box-shadow: var(--box-shadow-section-background);
       height: 100%;
       left: 0;
       position: absolute;
       top: 0;
       width: 100%;
     }
+  }
+
+  .video-wrapper {
+    background-image: var(--background-image-gradient);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow-section-background);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem;
+    padding: 2rem 6rem 4rem;
+    position: relative;
+    width: 100%;
   }
 </style>
