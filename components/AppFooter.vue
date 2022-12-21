@@ -15,8 +15,6 @@
   </footer>
 </template>
 
-<script></script>
-
 <style scoped lang="scss">
   .footer-copyright {
     color: var(--color-footer-text);
@@ -90,12 +88,12 @@
   }
 
   .footer-row-wrapper-bottom {
-    background-color: var(--color-footer-row-background-bottom);
+    background-color: var(--color-indigo-900);
     width: var(--width-full);
   }
 
   .footer-row-wrapper-top {
-    background-color: var(--color-footer-row-background-top);
+    background-color: var(--color-slate-400);
     width: var(--width-full);
   }
 
