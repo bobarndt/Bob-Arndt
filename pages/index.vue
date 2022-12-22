@@ -138,6 +138,8 @@
 
       <p class="main-text">Fueled by high energy levels and boundless enthusiasm, I’m easily inspired and more then willing to follow my fascinations wherever they take me. I’m passionate, expressive, multi-talented spirit with a natural ability to entertain and inspire. I’m never satisfied to just come up with ideas. Instead I have an almost impulsive need to act on them.</p>
 
+      <p class="main-text">My abundant energy fuels me in the pursuit of many interests, hobbies, areas of study and artistic endeavors. I’m a fast learner, able to pick up new skills and juggle different projects and roles with relative ease.</p>
+
       <p class="main-text">I specialize in creating sites for individuals and small businesses. You shouldn’t have to settle for cheap solutions or generic templates. I provide custom designs at afforable prices. Frequently your website is the first impression your customers will get, so make sure it’s a good one. Since my time is split between a few different things, I’m not able to take on every project I’d like to, but I'm always looking for fun work. Take a look at my portfolio below, if you think I’d be a good match send me an email.</p>
 
       <section class="home-tech-stack desktop">
@@ -320,9 +322,9 @@
 
     p {
       color: var(--color-slate-300);
-      font-size: var(--font-size-xxsmall);
+      font-size: var(--font-size-xsmall);
       font-weight: var(--font-weight-xbold);
-      letter-spacing: var(--letter-spacing-xxwide);
+      letter-spacing: var(--letter-spacing-xwide);
       padding: 1.25rem 0;
     }
 

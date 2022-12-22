@@ -22,8 +22,11 @@
         </div>
     </div><!-- End .hero div -->
 
+    <h2 class="subtitle">No autobiography. Just random "stuff" that means "stuff" to me.</h2>
+
     <main class="main">
       <section class="composition">
+        <h2 class="home-skills-title">What I'm Listening To</h2>
         <div class="composition-wrapper">
           <div class="composition-inner">
             <a class="album joe-jackson" href="https://www.youtube.com/watch?v=ho8iswvcNHU&list=OLAK5uy_lKdzXMXzdHU-LWNcx3HgaFLTiiRAjWKmE&index=1" @mouseover="switchCaption(`joejackson`)" @mouseout="loadDefaultCaption" target="_blank"><img src="/images/joe-jackson.min.jpg" alt="Fool - Joe Jackson" height="250" width="250"></a>
@@ -34,23 +37,17 @@
         <div ref="compositionCaption" class="composition-caption"></div>
       </section>
 
-      <!-- <section class="video-wrapper">
-        <div class="video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/gGIap2_tmng?rel=0&iv_load_policy=3&fs=0&disablekb=1" title="Mike Leach on wedding planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-        </div>
-      </section> -->
-
-      <!-- <section class="flag-wrapper">
-        <figure class="flag-caption">
-          <img class="flag" src="/images/flag.min.png" alt="American Flag">
-          <figcaption>"I pledge allegiance to the flag of the United States of America, and to the republic for which it stands, one nation under God, indivisible, with liberty and justice for all."</figcaption>
-        </figure>
-      </section> -->
-
       <section>
         <p class="main-text">No Facebook. No Instagram. No Twitter. No pre-natal murder. No climate change. No foreign invasion. No scamdemic. No COVID. No vaccination. No mask. No Fauci. No Gates. No WHO. No cancel. No woke. No LGBT. No Antifa. No Stalinism. No Democrats. No Joe. No Nancy. No Chuck. No Bernie. No Hillary. No Beto. No ACLU. No UN. No FBI. No DOJ. No CRT. No BLM. No CNN. No MSM. No NPR. No PBS. No NFL. No NBA. No MLB. No ESPN. No Amazon. No Starbucks. No Disney. No apology.</p>
-        <p class="main-text">Ultra MAGA. NRA. Re-fund the police. Finish the wall. No compromise. DeSantis 2024. God bless America. No apology.</p>
+        <p class="main-text">Ultra MAGA. Pro NRA. Pro fund the police. Blue Lives Matter. Pro finish the wall. No compromise. DeSantis 2024. God bless America. No apology.</p>
       </section>
+
+      <a class="cta-button-link" href="https://rearndt.netlify.app" target="_blank">
+        <button class="cta-button">
+          <span ref="ctaButtonIcon" class="cta-button-icon"></span>
+          <span class="cta-button-text">Visit My First Personal Website From 2003</span>
+        </button>
+      </a>
 
     </main>
   </div>
@@ -60,17 +57,23 @@
   export default {
     data() {
       return {
+        externalLinkSVG: `<svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 0 24 24" width="14px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>`,
         innerHTMLSlipknot: `The End, So Far is the seventh studio album by American heavy metal band Slipknot, released on September 30, 2022, by Roadrunner Records. This is the band's final album to be released through Roadrunner, whom the band signed with in 1998. Click the album cover to listen on YouTube.`,
         innerHTMLDuranDuran: `All You Need Is Now is the thirteenth studio album by English new wave band Duran Duran. Produced by Mark Ronson, a truncated version of the album was released digitally on 21 December 2010.  Click the album cover to listen on YouTube.`,
         innerHTMLJoeJackson: `Fool is the 20th studio album by British singer-songwriter Joe Jackson. Recorded the day after the end of his Fast Forward tour at the Tonic Room Studios in Boise, Idaho. Jackson had decided to record the album in whichever city the tour finished, which happened to be Boise after a performance at the Egyptian Theatre.  Click the album cover to listen on YouTube.`,
+        websiteSVG: `<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/><rect fill="none" height="24" width="24"/><rect fill="none" height="24" width="24"/></g><g><g/><path d="M20,4H4C2.9,4,2.01,4.9,2.01,6L2,18c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M4,9h10.5v3.5H4V9z M4,14.5 h10.5V18L4,18V14.5z M20,18l-3.5,0V9H20V18z"/></g></svg>`,
       }
     },
     methods: {
       initialize() {
         this.loadDefaultCaption();
+        this.loadIcons();
       },
       loadDefaultCaption() {
         this.$refs.compositionCaption.innerHTML = this.innerHTMLSlipknot;
+      },
+      loadIcons() {
+        this.$refs.ctaButtonIcon.innerHTML = this.websiteSVG;
       },
       switchCaption(artist) {
         if (artist === 'joejackson') {
@@ -93,6 +96,7 @@
     background-image: var(--background-image-gradient);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
+    height: 63rem;
     margin-bottom: 6rem;
     padding: 2rem 6rem 4rem;
     position: relative;
@@ -106,7 +110,6 @@
     font-weight: var(--font-weight-black);
     letter-spacing: .075rem;
     line-height: 2;
-    // margin: 0 2rem;
   }
 
   .composition-inner {

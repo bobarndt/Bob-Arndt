@@ -136,10 +136,10 @@
           </div>
         </section>
 
-        <a class="resume-download-button-link" href="/Bob-Arndt-resume.pdf" target="_blank">
-          <button class="resume-download-button">
-            <span ref="resumeDownloadButtonIcon" class="resume-download-button-icon"></span>
-            <span class="resume-download-button-text">Download Resume</span>
+        <a class="cta-button-link" href="/Bob-Arndt-resume.pdf" target="_blank">
+          <button class="cta-button">
+            <span ref="resumeDownloadButtonIcon" class="cta-button-icon"></span>
+            <span class="cta-button-text">Download Resume</span>
           </button>
         </a>
 
@@ -369,45 +369,6 @@
   .resume-college {
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-bold);
-  }
-
-  .resume-download-button {
-    align-items: center;
-    background-color: var(--color-resume-download-button);
-    border-radius: var(--border-radius-small);
-    color: var(--color-slate-400);
-    cursor: pointer;
-    display: flex;
-    font-size: var(--font-size-xsmall);
-    font-weight: 800;
-    gap: 2rem;
-    height: 4.6rem;
-    justify-content: center;
-    letter-spacing: var(--letter-spacing-xxwide);
-    margin-bottom: 3rem;
-    transition: all 0.5s ease-out;
-    width: var(--width-full);
-
-    &:focus,
-    &:hover {
-      background-color: var(--color-resume-download-button-hover);
-      box-shadow: var(--box-shadow-medium);
-      color: var(--color-white);
-      outline: none;
-
-      .resume-download-button-icon {
-        animation: pulse-icon-download-resume 2s linear 2;
-      }
-    }
-
-    @media (max-width: 640px) {
-      margin-bottom: 6rem;
-    }
-  }
-
-  .resume-download-button-link {
-    outline: none;
-    text-decoration: none;
   }
 
   .resume-degree,

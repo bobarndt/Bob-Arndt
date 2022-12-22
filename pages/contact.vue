@@ -252,16 +252,16 @@
   .error-message {
     color: var(--color-rose-600);
     display: block;
-    font-size: var(--font-size-xxsmall);
+    font-size: var(--font-size-xsmall);
     font-weight: var(--font-weight-xbold);
-    letter-spacing: var(--letter-spacing-wide);
+    letter-spacing: var(--letter-spacing-xwide);
     right: 1.5rem;
     position: absolute;
-    top: 5.8rem;
+    top: 6rem;
     transition: all 0.3s;
 
     &.message {
-      top: 23.75rem;
+      top: 23.95rem;
     }
 
     @media (max-width: 800px) {
@@ -293,7 +293,7 @@
     gap: 2rem;
     height: 4.6rem;
     justify-content: center;
-    letter-spacing: var(--letter-spacing-xxwide);
+    letter-spacing: var(--letter-spacing-xwide);
     transition: all 0.5s ease-out;
     width: 100%;
 

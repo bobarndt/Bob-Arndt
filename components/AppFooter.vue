@@ -31,7 +31,7 @@
   .footer-personal-description {
     color: var(--color-slate-700);
     display: inline-block;
-    font-size: var(--font-size-xxsmall);
+    font-size: var(--font-size-xsmall);
     font-weight: var(--font-weight-xbold);
     letter-spacing: var(--letter-spacing-xwide);
     margin-left: 4.5rem;
@@ -44,7 +44,7 @@
   .footer-personal-name {
     color: var(--color-indigo-800);
     display: inline-block;
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-large);
     font-weight: var(--font-weight-xbold);
     letter-spacing: var(--letter-spacing-xwide);
     margin-left: 19rem;
