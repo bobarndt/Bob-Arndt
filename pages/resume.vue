@@ -136,10 +136,10 @@
           </div>
         </section>
 
-        <a class="cta-button-link" href="/Bob-Arndt-resume.pdf" target="_blank">
+        <a href="/Bob-Arndt-resume.pdf" target="_blank">
           <button class="cta-button">
             <span ref="resumeDownloadButtonIcon" class="cta-button-icon"></span>
-            <span class="cta-button-text">Download Resume</span>
+            <span class="cta-button-text" data-content="Download Resume">Download Resume</span>
           </button>
         </a>
 
@@ -402,10 +402,6 @@
     color: var(--color-main-text);
     padding: 3.2rem 3.2rem 12rem;
     width: var(--width-full);
-
-    @media (max-width: 665px) {
-      padding-bottom: 9rem;
-    }
   }
 
   .resume-profile-text {

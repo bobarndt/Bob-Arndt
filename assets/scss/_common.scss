@@ -50,14 +50,11 @@ a {
   color: var(--color-slate-400);
   cursor: pointer;
   display: flex;
-  font-size: var(--font-size-xsmall);
-  font-weight: 800;
   gap: 2rem;
   height: 4.6rem;
   justify-content: center;
-  letter-spacing: var(--letter-spacing-xwide);
-  margin-bottom: 3rem;
-  transition: all 0.5s ease-out;
+  margin-bottom: 3.5rem;
+  transition: clip-path 275ms ease;
   width: var(--width-full);
 
   &:focus,
@@ -67,19 +64,45 @@ a {
     color: var(--color-white);
     outline: none;
 
-    .cta-button-icon {
-      animation: pulse-icon-download-resume 2s linear 2;
+    span.cta-button-text::before,
+    span.cta-button-text::before {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
   }
 
-  @media (max-width: 640px) {
-    margin-bottom: 6rem;
+  &:hover .cta-button-icon {
+    animation: pulse-icon-menu 2s linear 2;
+    color: var(--color-white);
+  }
+
+  @media (max-width: 460px) {
+    gap: 1rem;
   }
 }
 
-.cta-button-link {
-  outline: none;
+.cta-button-text {
+  color: var(--color-slate-400);
+  display: inline-block;
+  font-size: var(--font-size-xsmall);
+  font-weight: var(--font-weight-xbold);
+  letter-spacing: var(--letter-spacing-xwide);
   text-decoration: none;
+
+  &::before {
+    content: attr(data-content);
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+    color: var(--color-menu-link-overlay);
+    letter-spacing: var(--letter-spacing-xwide);
+    position: absolute;
+    text-decoration: underline;
+    text-decoration-color: var(--color-menu-link-overlay);
+    transition: clip-path 350ms ease;
+  }
+
+  @media (max-width: 460px) {
+    font-size: var(--font-size-xxsmall);
+    gap: .5rem;
+  }
 }
 
 .external-link-icon {
@@ -140,7 +163,7 @@ a {
   }
 
   &:last-of-type {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
   }
 }
 

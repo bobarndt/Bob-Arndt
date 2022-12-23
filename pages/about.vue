@@ -39,13 +39,13 @@
 
       <section>
         <p class="main-text">No Facebook. No Instagram. No Twitter. No pre-natal murder. No climate change. No foreign invasion. No scamdemic. No COVID. No vaccination. No mask. No Fauci. No Gates. No WHO. No cancel. No woke. No LGBT. No Antifa. No Stalinism. No Democrats. No Joe. No Nancy. No Chuck. No Bernie. No Hillary. No Beto. No ACLU. No UN. No FBI. No DOJ. No CRT. No BLM. No CNN. No MSM. No NPR. No PBS. No NFL. No NBA. No MLB. No ESPN. No Amazon. No Starbucks. No Disney. No apology.</p>
-        <p class="main-text">Ultra MAGA. Pro NRA. Pro fund the police. Blue Lives Matter. Pro finish the wall. No compromise. DeSantis 2024. God bless America. No apology.</p>
+        <p class="main-text">Pro MAGA. Ultra MAGA. Pro life. Pro NRA. Pro fund the police. Pro Blue Lives Matter. Pro finish the wall. Pro Black Lives (that don't matter) Matter. No compromise. DeSantis 2024. God bless America. No apology.</p>
       </section>
 
-      <a class="cta-button-link" href="https://rearndt.netlify.app" target="_blank">
+      <a href="https://rearndt.netlify.app" target="_blank">
         <button class="cta-button">
           <span ref="ctaButtonIcon" class="cta-button-icon"></span>
-          <span class="cta-button-text">Visit My First Personal Website From 2003</span>
+          <span class="cta-button-text" data-content="View My Personal Website From 2003">View My Personal Website From 2003</span>
         </button>
       </a>
 
@@ -220,13 +220,13 @@
     border: var(--border-indigo);
   }
 
-  .main-text {
-    @media (max-width: 640px) {
-      &:last-of-type {
-        margin-bottom: 7rem;
-      }
-    }
-  }
+  // .main-text {
+  //   @media (max-width: 640px) {
+  //     &:last-of-type {
+  //       margin-bottom: 4rem;
+  //     }
+  //   }
+  // }
 
   .video {
     height: 0;
