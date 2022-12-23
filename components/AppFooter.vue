@@ -36,7 +36,7 @@
     letter-spacing: var(--letter-spacing-xwide);
     margin-left: 4.5rem;
 
-    @media (max-width: 665px) {
+    @media (max-width: 700px) {
       display: none;
     }
   }
