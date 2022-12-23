@@ -138,8 +138,8 @@
     text-decoration: none;
     transition: clip-path 275ms ease;
 
-    &:hover span.menu-link-text::before,
-    &:focus span.menu-link-text::before {
+    &:focus span.menu-link-text::before,
+    &:hover span.menu-link-text::before {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
@@ -147,7 +147,6 @@
       animation: pulse-icon-menu 2s linear 2;
       color: var(--color-white);
     }
-
   }
 
   .menu-link-text {

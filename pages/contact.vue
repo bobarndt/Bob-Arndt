@@ -63,12 +63,12 @@
           </fieldset>
 
           <div class="button-wrapper">
-            <button ref="formClearButton" type="reset" class="form-clear-button" name="clear-button" tabindex="6" role="button" @click="handleReset">
-              <span ref="formClearButtonSpan" class="form-clear-button-icon"></span>
+            <button ref="formClearButton" type="reset" class="form-button-clear" name="clear-button" tabindex="6" role="button" @click="handleReset">
+              <span ref="formClearButtonSpan" class="form-button-clear-icon"></span>
               <span>Clear</span>
             </button>
-            <button ref="formSendButton" type="submit" class="form-send-button" name="send-button" tabindex="5" role="button">
-              <span ref="formSendButtonSpan" class="form-send-button-icon"></span>
+            <button ref="formSendButton" type="submit" class="form-button-send" name="send-button" tabindex="5" role="button">
+              <span ref="formSendButtonSpan" class="form-button-send-icon"></span>
               <span>Send</span>
             </button>
           </div>
@@ -239,7 +239,7 @@
     @media (max-width: 800px) {
       flex-direction: column-reverse;
 
-      .form-clear-button {
+      .form-button-clear {
         margin-top: .5rem;
       }
     }
@@ -280,8 +280,8 @@
     margin-top: 1.5rem;
   }
 
-  .form-clear-button,
-  .form-send-button {
+  .form-button-clear,
+  .form-button-send {
     align-items: center;
     background-color: var(--color-indigo-700);
     border-radius: var(--border-radius-small);
@@ -304,8 +304,8 @@
       color: var(--color-white);
       outline: none;
 
-      .form-clear-button-icon,
-      .form-send-button-icon {
+      .form-button-clear-icon,
+      .form-button-send-icon {
         animation: pulse-icon-download-resume 2s linear 2;
       }
     }

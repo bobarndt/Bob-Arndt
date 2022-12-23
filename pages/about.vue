@@ -39,7 +39,7 @@
 
       <section>
         <p class="main-text">No Facebook. No Instagram. No Twitter. No pre-natal murder. No climate change. No foreign invasion. No scamdemic. No COVID. No vaccination. No mask. No Fauci. No Gates. No WHO. No cancel. No woke. No LGBT. No Antifa. No Stalinism. No Democrats. No Joe. No Nancy. No Chuck. No Bernie. No Hillary. No Beto. No ACLU. No UN. No FBI. No DOJ. No CRT. No BLM. No CNN. No MSM. No NPR. No PBS. No NFL. No NBA. No MLB. No ESPN. No Amazon. No Starbucks. No Disney. No apology.</p>
-        <p class="main-text">Pro MAGA. Ultra MAGA. Pro life. Pro NRA. Pro fund the police. Pro Blue Lives Matter. Pro finish the wall. Pro Black Lives (that don't matter) Matter. No compromise. DeSantis 2024. God bless America. No apology.</p>
+        <p class="main-text">Pro life. Pro America. Pro MAGA. Pro border wall. Pro NRA. Pro re-fund the police. Pro Blue Lives Matter. Pro Black Lives (that don't matter) Matter. No compromise. DeSantis 2024. God bless America. No apology.</p>
       </section>
 
       <a href="https://rearndt.netlify.app" target="_blank">
@@ -219,14 +219,6 @@
   .hero-title-wrapper {
     border: var(--border-indigo);
   }
-
-  // .main-text {
-  //   @media (max-width: 640px) {
-  //     &:last-of-type {
-  //       margin-bottom: 4rem;
-  //     }
-  //   }
-  // }
 
   .video {
     height: 0;
