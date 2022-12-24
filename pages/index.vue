@@ -251,10 +251,10 @@
     background-image: var(--color-home-skills-grid-background-image);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
-    padding: 2rem 2rem 2.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 2rem 2rem 2.5rem;
 
     @media (max-width: 425px) {
       padding-left: 1rem;
@@ -301,7 +301,7 @@
   }
 
   .home-skills-title {
-    color: var(--color-home-skills-title);
+    color: var(--color-section-title);
     font-size: 3rem;
     margin-bottom: 2rem;
     text-align: center;

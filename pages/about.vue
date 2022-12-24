@@ -22,22 +22,44 @@
         </div>
     </div><!-- End .hero div -->
 
-    <h2 class="subtitle">No autobiography. Just random "stuff" that means "stuff" to me.</h2>
+    <h2 class="subtitle">No autobiography. Just "stuff" that means "stuff" to me.</h2>
 
     <main class="main">
-      <section class="composition">
-        <h2 class="home-skills-title">What I'm Listening To</h2>
-        <div class="composition-wrapper">
+      <h2 class="section-title">What I'm Listening To</h2>
+      <section class="composition-wrapper">
+        <div class="composition">
           <div class="composition-inner">
             <a class="album joe-jackson" href="https://www.youtube.com/watch?v=ho8iswvcNHU&list=OLAK5uy_lKdzXMXzdHU-LWNcx3HgaFLTiiRAjWKmE&index=1" @mouseover="switchCaption(`joejackson`)" @mouseout="loadDefaultCaption" target="_blank"><img src="/images/joe-jackson.min.jpg" alt="Fool - Joe Jackson" height="250" width="250"></a>
             <a class="album duran-duran" href="https://www.youtube.com/watch?v=A7Er5TsQrGg&list=OLAK5uy_nDOHLgoRy4ZQLlz4F1xXuaIFxWjyDxbME" @mouseover="switchCaption(`duranduran`)" @mouseout="loadDefaultCaption" target="_blank"><img src="/images/duran-duran.min.jpg" alt="All You Need Is Now - Duran Duran" height="250" width="250"></a>
             <a class="album slipknot" href="https://www.youtube.com/watch?v=p8zamUoteG4&list=OLAK5uy_lE2wWe8dAGFUlGyKn0olTL8EVOZADTe-Q" @mouseover="switchCaption(`slipknot`)" @mouseout="loadDefaultCaption" target="_blank"><img src="/images/slipknot.min.jpg" alt="The End, So Far - Slipknot" height="250" width="250"></a>
           </div>
         </div>
-        <div ref="compositionCaption" class="composition-caption"></div>
+        <div ref="compositionCaption" class="section-about-composition-caption"></div>
       </section>
 
-      <section>
+      <h2 class="section-title">Too Funny To Not Share</h2>
+      <section class="video-wrapper">
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/gGIap2_tmng?rel=0&iv_load_policy=3&fs=0&disablekb=1" title="Mike Leach on wedding planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        <div ref="videoCaption" class="section-about-video-caption"><p>Wedding planning advice from an unlikely source, Mike Leach (March 9, 1961 – December 12, 2022), head football coach at Mississippi State</p>
+          <p>&ldquo;He truly did invest in other people. And it's a great reminder for us all. Rest in peace, my friend. There will never be another one like you.&rdquo; ~ Lincoln Riley, head football coach at the University of Southern California</p>
+        </div>
+      </section>
+
+      <h2 class="section-title">I Pledge Allegiance . . .</h2>
+      <section class="pledge-wrapper">
+        <p class="pledge-text">I pledge allegiance to the flag of the United States of America, and to the republic for which it stands, one nation under God, indivisible, with liberty and justice for all.</p>
+      </section>
+
+      <h2 class="section-title">The Truth About &ldquo;Democracy&rdquo;</h2>
+      <section class="beliefs-wrapper">
+        <p class="main-text">&ldquo;A democracy cannot exist as a permanent form of government. It can only exist until the voters discover that they can vote themselves largesse from the public treasury. From that moment on, the majority always votes for the candidates promising the most benefits from the public treasury with the result that a democracy always collapses over loose fiscal policy, always followed by a dictatorship. The average age of the world's greatest civilizations has been 200 years. These nations have progressed through this sequence: From bondage to spiritual faith; From spiritual faith to great courage; From courage to liberty; From liberty to abundance; From abundance to selfishness; From selfishness to apathy; From apathy to dependence; From dependence back into bondage.&rdquo; ~ Alexander Tytler</p>
+        <p class="main-text">&ldquo;This [the U.S. Constitution] is likely to be administered for a course of years and then end in despotism . . . when the people shall become so corrupted as to need despotic government, being incapable of any other.&rdquo; ~ Benjamin Franklin</p>
+      </section>
+
+      <h2 class="section-title">What I Believe</h2>
+      <section class="beliefs-wrapper">
         <p class="main-text">No Facebook. No Instagram. No Twitter. No pre-natal murder. No climate change. No foreign invasion. No scamdemic. No COVID. No vaccination. No mask. No Fauci. No Gates. No WHO. No cancel. No woke. No LGBT. No Antifa. No Stalinism. No Democrats. No Joe. No Nancy. No Chuck. No Bernie. No Hillary. No Beto. No ACLU. No UN. No FBI. No DOJ. No UAW. No CRT. No BLM. No CNN. No MSM. No NPR. No PBS. No NFL. No NBA. No MLB. No ESPN. No Amazon. No Starbucks. No Disney. No apology.</p>
         <p class="main-text">Pro life. Pro America. Pro MAGA. Pro border wall. Pro NRA. Pro re-fund the police. Pro Blue Lives Matter. Pro Black Lives (that don't matter) Matter. No compromise. DeSantis 2024. God bless America. No apology.</p>
       </section>
@@ -92,25 +114,20 @@
 </script>
 
 <style scoped lang="scss">
-  .composition {
-    background-image: var(--background-image-gradient);
+
+.beliefs-wrapper {
+    background-image: var(--color-about-section-background-image);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
-    min-height: 63rem;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
     padding: 2rem 6rem 4rem;
-    position: relative;
     width: 100%;
   }
 
-  .composition-caption {
-    color: var(--color-indigo-800);
-    font-size: var(--font-size-medium);
-    font-style: italic;
-    font-weight: var(--font-weight-black);
-    letter-spacing: .075rem;
-    line-height: 2;
-
+  .composition {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
   }
 
   .composition-inner {
@@ -146,7 +163,7 @@
 
       &:hover {
         box-shadow: var(--box-shadow-high);
-        outline: 1.25rem solid var(--color-album-outline);
+        outline: 1.25rem solid var(--color-about-album-outline);
         transform: scale(1.05) translateY(-.5rem);
         z-index: 20;
       }
@@ -154,9 +171,14 @@
   }
 
   .composition-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 6rem;
+    background-image: var(--color-about-section-background-image);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow-section-background);
+    min-height: 63rem;
+    margin-bottom: 8rem;
+    padding: 2rem 6rem 4rem;
+    position: relative;
+    width: 100%;
   }
 
   .flag {
@@ -221,6 +243,46 @@
     border: var(--border-indigo);
   }
 
+  .pledge-wrapper {
+    background-image: url('/images/flag.min.png'), var(--color-about-section-background-image);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow-section-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 63rem;
+    margin-bottom: 8rem;
+    padding: 2rem 6rem 4rem;
+    position: relative;
+    width: 100%;
+  }
+
+  .section-about-composition-caption {
+    color: var(--color-about-section-composition-caption);
+    font-size: var(--font-size-medium);
+    font-style: italic;
+    font-weight: var(--font-weight-black);
+    letter-spacing: var(--letter-spacing-xwide);
+    line-height: var(--line-height-tall);
+  }
+
+  .section-about-video-caption p {
+    color: var(--color-about-section-video-caption);
+    font-size: var(--font-size-medium);
+    font-style: italic;
+    font-weight: var(--font-weight-black);
+    letter-spacing: var(--letter-spacing-xwide);
+    line-height: var(--line-height-tall);
+    padding: 1.25rem 0;
+  }
+
+  .section-title {
+    color: var(--color-section-title);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
   .video {
     height: 0;
     margin: 4rem 0 2.5rem;
@@ -233,6 +295,7 @@
     }
 
     iframe {
+      border-radius: var(--border-radius-large);
       box-shadow: var(--box-shadow-section-background);
       height: 100%;
       left: 0;
@@ -243,12 +306,14 @@
   }
 
   .video-wrapper {
-    background-image: var(--background-image-gradient);
+    background-image: var(--color-about-section-background-image);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom: 6rem;
+    min-height: 63rem;
+    margin-bottom: 8rem;
     padding: 2rem 6rem 4rem;
     position: relative;
     width: 100%;
