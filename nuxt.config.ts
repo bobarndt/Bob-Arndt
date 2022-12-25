@@ -15,6 +15,9 @@ export default defineNuxtConfig({
           content: `bobarndt.com is the personal website of front end web developer Bob Arndt of Dallas, Texas, USA, and was developed using JavaScript, HTML5, CSS3, Nuxt3, Vue3, Sass and Vite in VSCode and deployed on Netlify.`
         },
       ],
+      noscript: [
+        { children: `Your browser does not support JavaScript!` }
+      ],
       script: [],
       title: `Bob Arndt | Web design and development professional in Dallas, Texas, USA`
     }
