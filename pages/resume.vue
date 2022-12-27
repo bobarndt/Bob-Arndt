@@ -1,4 +1,8 @@
 <template>
+  <Head>
+    <Title>Bob Arndt | Professional Resume</Title>
+  </Head>
+
   <div class="page-wrapper"><!-- Begin .page-wrapper div -->
 
     <button ref="resumeBackToTopButton" class="resume-back-to-top-button" content="Back to Top" v-tippy></button>

@@ -1,4 +1,8 @@
 <template>
+  <Head>
+    <Title>Bob Arndt | About Me</Title>
+  </Head>
+
   <div class="page-wrapper">
     <div class="hero-wrapper"><!-- Begin .hero div -->
       <div class="hero-animated-background-image">
