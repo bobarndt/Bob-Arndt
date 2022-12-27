@@ -28,6 +28,8 @@
 </template>
 
 <script>
+import { unheadVueComposablesImports } from '@unhead/vue';
+
   export default {
     data() {
       return {
@@ -40,7 +42,14 @@
     },
     methods: {
       highlightCurrentMenuItem() {
-        const pageNameFromURL = location.pathname.substring(1) || `home`;
+        let pageNameFromURL = ``;
+        let rawURL = location.pathname.slice(1).trim();
+
+        if (rawURL.endsWith(`/`)) {
+          rawURL = rawURL.slice(0, rawURL.length -1);
+        }
+
+        pageNameFromURL = rawURL || `home`;
 
         let menuItems = document.querySelectorAll(`.menu-item`);
         menuItems = new Array(...menuItems);
