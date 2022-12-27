@@ -22,6 +22,7 @@
   --box-shadow-soft: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
   --filter-shadow-light: drop-shadow(.25rem .25rem .25rem hsla(0deg, 0%, 0%, 0.4));
+  --filter-shadow-medium: drop-shadow(.4rem .4rem .4rem hsla(0deg, 0%, 0%, 0.4));
   --filter-shadow-dark: drop-shadow(.25rem .25rem .25rem hsla(0deg, 0%, 0%, 1));
 
   --font-family-sans: 'Proxima Nova', Arial, Helvetica, sans-serif;
@@ -32,6 +33,7 @@
   --font-size-xxsmall: 1.25rem;
   --font-size-xsmall: 1.4rem;
   --font-size-small: 1.5rem;
+  --font-size-jumbo: 5rem;
   --font-size-medium: 1.6rem;
   --font-size-large: 1.75rem;
   --font-size-xlarge: 2rem;

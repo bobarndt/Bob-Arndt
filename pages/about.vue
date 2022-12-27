@@ -119,7 +119,7 @@
 
 <style scoped lang="scss">
 
-.beliefs-wrapper {
+  .beliefs-wrapper {
     background-image: var(--color-about-section-background-image);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
