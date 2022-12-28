@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <Title>Bob Arndt | Professional Resume</Title>
+    <Title>Bob Arndt | Resume</Title>
   </Head>
 
   <div class="page-wrapper"><!-- Begin .page-wrapper div -->
