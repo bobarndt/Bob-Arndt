@@ -1,18 +1,18 @@
 /*! _hamburger.scss */
 
 $hamburger-background-color: transparent;
-$hamburger-border-radius: 4px;
-$hamburger-height: 20px;
+$hamburger-border-radius: .4rem;
+$hamburger-height: 2rem;
 $hamburger-hover-line-color: var(--color-rose-600);
-$hamburger-initial-opposition: 5px;
+$hamburger-initial-opposition: .5rem;
 $hamburger-line-color: var(--color-header-hamburger-icon);
-$hamburger-line-height: 2px;
-$hamburger-padding: 15px;
+$hamburger-line-height: .2rem;
+$hamburger-padding: 1.5rem;
 $hamburger-transition-function: ease;
 $hamburger-transition-opacity: 0;
 $hamburger-transition-time: 0.4s;
-$hamburger-vertical-gap: 7px;
-$hamburger-width: 24px;
+$hamburger-vertical-gap: .7rem;
+$hamburger-width: 2.4rem;
 $hamburger-hide-distance: $hamburger-width + $hamburger-padding;
 
 @mixin line-props {
