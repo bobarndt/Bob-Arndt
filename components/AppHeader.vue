@@ -5,9 +5,9 @@
 
       <a ref="headerIconHome" class="header-link-icon home" href="/" @click="playSound" content="Go to Homepage" v-tippy></a>
 
-      <a ref="headerIconLinkedIn" class="header-link-icon" href="https://www.linkedin.com/in/bob-arndt/" @click="playSound" target="_blank" content="View LinkedIn Profile" v-tippy></a>
+      <a ref="headerIconLinkedIn" class="header-link-icon linkedin" href="https://www.linkedin.com/in/bob-arndt/" @click="playSound" target="_blank" content="View LinkedIn Profile" v-tippy></a>
 
-      <a ref="headerIconGithub" class="header-link-icon" href="https://github.com/bobarndt/Bob-Arndt" @click="playSound" target="_blank" content="View Code on GitHub" v-tippy></a>
+      <a ref="headerIconGithub" class="header-link-icon github" href="https://github.com/bobarndt/Bob-Arndt" @click="playSound" target="_blank" content="View Code on GitHub" v-tippy></a>
 
       <div ref="hamburger" class="hamburger" role="switch" aria-label="menu" @click="toggleMenuDisplay" content="Open Menu" v-tippy>
         <div class="hamburger-container">
@@ -165,21 +165,54 @@
       outline: none;
     }
 
-    &:last-of-type {
+    &.github {
       margin-right: 2rem;
     }
 
-    @media only screen and (min-width: 441px) and (max-width: 640px) {
-      margin-right: 2rem;
+    @media only screen and (min-width: 451px) and (max-width: 500px) {
+      &.home,
+      &.linkedin {
+        margin-right: 2.5rem;
+      }
 
-      &:last-of-type {
-        margin-right: .4rem;
+      &.github {
+        margin-right: 1rem;
       }
     }
 
-    @media only screen and (max-width: 440px) {
+    @media only screen and (min-width: 431px) and (max-width: 450px) {
+      &.home,
+      &.linkedin {
+        margin-right: 2rem;
+      }
+
+      &.github {
+        margin-right: .5rem;
+      }
+    }
+
+    @media only screen and (min-width: 411px) and (max-width: 430px) {
+      &.home,
+      &.linkedin {
+        margin-right: 1.5rem;
+      }
+
+      &.github {
+        margin-right: 0;
+      }
+    }
+
+    @media only screen and (max-width: 410px) {
+      &.github {
+        margin-right: 0;
+      }
+
       &.home {
         display: none;
+      }
+      
+      &.linkedin {
+        margin-right: 1.5rem;
       }
     }
   }
