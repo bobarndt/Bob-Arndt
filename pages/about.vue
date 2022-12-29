@@ -53,6 +53,7 @@
 
       <h2 class="section-title">I Pledge Allegiance . . .</h2>
       <section class="pledge-wrapper">
+        <div class="flag-overlay"></div>
         <p class="pledge-text">I pledge allegiance to the flag of the United States of America, and to the republic for which it stands, one nation under God, indivisible, with liberty and justice for all.</p>
       </section>
 
@@ -185,15 +186,6 @@
     width: 100%;
   }
 
-  .flag {
-    block-size: auto;
-    filter: drop-shadow(1rem 1rem .6rem hsla(0deg, 0%, 0%, 0.3));
-    max-inline-size: 100%;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-  }
-
   .flag-caption {
     color: var(--color-pledge-text);
     font-family: var(--font-family-serif);
@@ -203,10 +195,6 @@
     letter-spacing: var(--letter-spacing-tight);
     line-height: var(--line-height-xtall);
     text-shadow: var(--text-shadow);
-  }
-
-  .flag-wrapper {
-
   }
 
   .hero-title-overlay {
@@ -247,16 +235,53 @@
     border: var(--border-indigo);
   }
 
+  .pledge-text {
+    color: var(--color-slate-500);
+    font-family: var(--font-family-serif);
+    font-size: var(--font-size-xxxlarge);
+    font-style: italic;
+    font-weight: var(--font-weight-xbold);
+    letter-spacing: var(--letter-spacing-xwide);
+    line-height: var(--line-height-tall);
+    margin-right: 6rem;
+    width: 50%;
+
+    @media only screen and (min-width: 1101px) and (max-width: 1140px) {
+      margin: 0 5rem 0 2rem;
+    }
+
+    @media only screen and (min-width: 1076px) and (max-width: 1100px) {
+      margin: 0 4rem 0 2rem;
+    }
+
+    @media only screen and (min-width: 1041px) and (max-width: 1075px) {
+      margin: 0 3.5rem 0 1.5rem;
+    }
+
+    @media only screen and (min-width: 1031px) and (max-width: 1040px) {
+      margin: 0 3.25rem 0 1.25rem;
+    }
+
+    @media only screen and (min-width: 1011px) and (max-width: 1030px) {
+      margin: 0 2.75rem 0 .75rem;
+    }
+
+    @media only screen and (min-width: 900px) and (max-width: 1010px) {
+      font-size: var(--font-size-xxlarge);
+      // margin: 0 2.75rem 0 .75rem;
+    }
+  }
+
   .pledge-wrapper {
-    background-image: url('/images/flag.min.png'), var(--color-about-section-background-image);
+    align-items: center;
+    background-image: url('/images/American-flag.min.jpg');
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     min-height: 63rem;
     margin-bottom: 8rem;
-    padding: 2rem 6rem 4rem;
+    overflow: hidden;
     position: relative;
     width: 100%;
   }
@@ -294,7 +319,7 @@
     position: relative;
     width: 100%;
 
-    @media (max-width: 640px) {
+    @media only screen and (max-width: 640px) {
       width: 100%;
     }
 
