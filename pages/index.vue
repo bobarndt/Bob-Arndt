@@ -256,12 +256,12 @@
     justify-content: space-between;
     padding: 2rem 2rem 2.5rem;
 
-    @media (max-width: 425px) {
+    @media only screen and (min-width: 406px) and (max-width: 425px) {
       padding-left: 1rem;
       padding-right: 1rem;
     }
 
-    @media (max-width: 405px) {
+    @media only screen and (max-width: 405px) {
       padding-left: .5rem;
       padding-right: .5rem;
     }
@@ -295,7 +295,7 @@
     justify-content: flex-start;
     padding: 1.5rem 3rem;
 
-    @media (max-width: 400px) {
+    @media only screen and (max-width: 400px) {
       padding: 2rem 2rem 0 2rem;
     }
   }
@@ -336,7 +336,7 @@
       display: none;
     }
 
-    @media (max-width: 980px) {
+    @media only screen and (min-width: 641px) and (max-width: 960px) {
       /* show tablet */
       &.desktop,
       &.small-tablet,
@@ -359,7 +359,7 @@
       }
     }
 
-    @media (max-width: 640px) {
+    @media only screen and (min-width: 491px) and (max-width: 640px) {
       /* show small tablet */
       &.desktop,
       &.tablet,
@@ -386,7 +386,7 @@
       }
     }
 
-    @media (max-width: 490px) {
+    @media only screen and (min-width: 451px) and (max-width: 490px) {
       /* show phone */
       &.desktop,
       &.tablet,
@@ -414,7 +414,7 @@
       }
     }
 
-    @media (max-width: 450px) {
+    @media only screen and (max-width: 450px) {
       /* show small phone */
       &.desktop,
       &.tablet,

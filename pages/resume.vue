@@ -454,7 +454,7 @@
   .resume-section-flex-container {
     display: flex;
 
-    @media (max-width: 640px) {
+    @media only screen and (max-width: 640px) {
       flex-direction: column;
     }
   }

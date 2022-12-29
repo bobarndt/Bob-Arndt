@@ -95,12 +95,12 @@
     padding: 4rem 6rem 4rem;
     width: 100%;
 
-    @media (max-width: 1000px) {
+    @media only screen and (min-width: 701px) and (max-width: 1000px) {
       margin-bottom: 1rem;
       width: 90%;
     }
 
-    @media (max-width: 700px) {
+    @media only screen and (max-width: 700px) {
       margin-bottom: .5rem;
       padding: 2rem 4rem 4rem;
       width: 100%;

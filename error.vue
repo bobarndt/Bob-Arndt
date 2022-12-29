@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <Title>Bob Arndt | Something's Wrong</Title>
+    <Title>Bob Arndt | Something's Wrong!</Title>
   </Head>
 
   <div id="app-wrapper">
@@ -71,14 +71,6 @@
       animation: pulse-icon-menu 2s linear 2;
       color: var(--color-white);
     }
-
-    @media (max-width: 640px) {
-      // width: 75%;
-    }
-
-    @media (max-width: 460px) {
-      gap: 1rem;
-    }
   }
 
   .error-button-text {
@@ -100,7 +92,7 @@
       transition: clip-path 350ms ease;
     }
 
-    @media (max-width: 460px) {
+    @media only screen and (max-width: 460px) {
       font-size: var(--font-size-xxsmall);
       gap: .5rem;
     }

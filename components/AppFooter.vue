@@ -9,7 +9,7 @@
     <div class="footer-row-wrapper-bottom">
       <div class="footer-row-bottom">
       <div class="footer-photo-wrapper"></div>
-      <span class="footer-copyright">© 2022-23 REAlizations, Inc. All rights reserved.</span>
+      <span class="footer-copyright">© 2023 REAlizations, Inc. All rights reserved.</span>
       </div>
     </div>
   </footer>
@@ -23,7 +23,7 @@
     letter-spacing: var(--letter-spacing-xwide);
     margin-right: 3.2rem;
 
-    @media (max-width: 665px) {
+    @media only screen and (max-width: 665px) {
       margin-right: 1rem;
     }
   }
@@ -36,7 +36,7 @@
     letter-spacing: var(--letter-spacing-xwide);
     margin-left: 4.5rem;
 
-    @media (max-width: 700px) {
+    @media only screen and (max-width: 700px) {
       display: none;
     }
   }
@@ -49,7 +49,7 @@
     letter-spacing: var(--letter-spacing-xwide);
     margin-left: 19rem;
 
-    @media (max-width: 665px) {
+    @media only screen and (max-width: 665px) {
       margin-left: 21.5rem;
     }
   }
@@ -104,7 +104,7 @@
     width: var(--width-full);
     z-index: 10;
 
-    @media (max-width: 440px) {
+    @media only screen and (max-width: 440px) {
       height: 8rem;
     }
   }

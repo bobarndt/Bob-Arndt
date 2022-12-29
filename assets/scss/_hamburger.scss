@@ -34,7 +34,7 @@ $hamburger-hide-distance: $hamburger-width + $hamburger-padding;
   overflow: hidden;
   padding: $hamburger-padding;
 
-  @media (max-width: 640px) {
+  @media only screen and (max-width: 640px) {
     margin-right: 1rem;
   }
 

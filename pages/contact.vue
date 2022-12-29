@@ -240,7 +240,7 @@
     justify-content: space-between;
     margin-top: 1rem;
 
-    @media (max-width: 800px) {
+    @media only screen and (min-width: 501px) and (max-width: 800px) {
       flex-direction: column-reverse;
 
       .form-button-clear {
@@ -248,7 +248,7 @@
       }
     }
 
-    @media (max-width: 500px) {
+    @media only screen and (max-width: 500px) {
       margin-top: 0;
     }
   }
@@ -268,7 +268,7 @@
       top: 23.95rem;
     }
 
-    @media (max-width: 800px) {
+    @media only screen and (max-width: 800px) {
       left: 1.5rem;
       right: unset;
       top: 8rem;
@@ -424,7 +424,7 @@
       visibility: visible;
     }
 
-    @media (max-width: 800px) {
+    @media only screen and (min-width: 561px) and (max-width: 800px) {
       margin-bottom: 4rem;
 
       &.message {
@@ -432,7 +432,7 @@
       }
     }
 
-    @media (max-width: 560px) {
+    @media only screen and (max-width: 560px) {
       margin-bottom: 6rem;
 
       &.message {
@@ -475,12 +475,12 @@
       color: var(--color-white);
     }
 
-    @media (max-width: 1000px) {
+    @media only screen and (min-width: 701px) and (max-width: 1000px) {
       margin-bottom: 1rem;
       width: 90%;
     }
 
-    @media (max-width: 700px) {
+    @media only screen and (max-width: 700px) {
       margin-bottom: .5rem;
       padding: 2rem 4rem 4rem;
       width: 100%;

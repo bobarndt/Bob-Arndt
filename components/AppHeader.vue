@@ -169,7 +169,7 @@
       margin-right: 2rem;
     }
 
-    @media (max-width: 640px) {
+    @media only screen and (min-width: 441px) and (max-width: 640px) {
       margin-right: 2rem;
 
       &:last-of-type {
@@ -177,7 +177,7 @@
       }
     }
 
-    @media (max-width: 440px) {
+    @media only screen and (max-width: 440px) {
       &.home {
         display: none;
       }
