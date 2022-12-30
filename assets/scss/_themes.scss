@@ -2,6 +2,7 @@
 
 [color-scheme="dark"] {
   --background-image-about-section: none;
+  --background-image-contact-form: none;
   --background-image-error-section: none;
   --background-image-header-logo: url('/images/Arndt-logo-white.svg');
   --background-image-home-skills-grid: none;
@@ -9,6 +10,7 @@
   --color-about-album-outline: var(--color-indigo-600);
   --color-about-section-composition-caption: var(--color-slate-200);
   --color-about-section-video-caption: var(--color-slate-200);
+  --color-contact-form-input-label: var(--color-slate-200);
   --color-cta-button: var(--color-indigo-600);
   --color-cta-button-hover: var(--color-indigo-800);
   --color-cta-button-text: var(--color-slate-400);
@@ -49,6 +51,7 @@
 
 [color-scheme="light"] {
   --background-image-about-section: var(--background-image-gradient);
+  --background-image-contact-form: var(--background-image-gradient);
   --background-image-error-section: var(--background-image-gradient);
   --background-image-header-logo: url('/images/Arndt-logo-indigo.svg');
   --background-image-home-skills-grid: var(--background-image-gradient);
@@ -56,6 +59,7 @@
   --color-about-album-outline: var(--color-indigo-800);
   --color-about-section-composition-caption: var(--color-indigo-800);
   --color-about-section-video-caption: var(--color-indigo-800);
+  --color-contact-form-input-label: var(--color-indigo-600);
   --color-cta-button: var(--color-indigo-800);
   --color-cta-button-hover: var(--color-indigo-900);
   --color-cta-button-text: var(--color-slate-400);

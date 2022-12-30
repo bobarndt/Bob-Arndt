@@ -287,7 +287,7 @@
   .form-button-clear,
   .form-button-send {
     align-items: center;
-    background-color: var(--color-indigo-700);
+    background-color: var(--color-cta-button);
     border-radius: var(--border-radius-small);
     color: var(--color-slate-400);
     cursor: pointer;
@@ -303,7 +303,7 @@
 
     &:focus,
     &:hover {
-      background-color: var(--color-indigo-900);
+      background-color: var(--color-cta-button-hover);
       box-shadow: var(--box-shadow-medium);
       color: var(--color-white);
       outline: none;
@@ -363,7 +363,7 @@
 
   .input,
   .textarea {
-    background-color: var(--color-slate-200);
+    background-color: var(--color-slate-300);
     border-bottom: .4rem solid transparent;
     border-radius: var(--border-radius-small);
     color: var(--color-slate-800);
@@ -447,7 +447,7 @@
 
   .label {
     display: block;
-    color: var(--color-indigo-600);
+    color: var(--color-contact-form-input-label);
     font-size: var(--font-size-xxsmall);
     font-weight: var(--font-weight-xbold);
     letter-spacing: var(--letter-spacing-wide);
@@ -462,7 +462,7 @@
   }
 
   .section-form {
-    background-image: var(--background-image-gradient);
+    background-image: var(--background-image-contact-form);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
     margin-bottom: 1.5rem;
