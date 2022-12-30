@@ -489,6 +489,10 @@
 
   .textarea {
     resize: none;
+
+    @media only screen and (max-width: 405px) {
+      margin-top: 8rem;
+    }
   }
 
   .ul {
