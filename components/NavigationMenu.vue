@@ -187,13 +187,17 @@ import { unheadVueComposablesImports } from '@unhead/vue';
     bottom: 0;
     display: grid;
     left: 0;
+    opacity: 1;
     place-items: center;
     position: fixed;
     right: 0;
     top: 0;
+    transform: scale(1);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   }
 
   .menu-hidden {
-    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
   }
 </style>
