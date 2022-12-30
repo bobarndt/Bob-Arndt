@@ -130,17 +130,17 @@
         </div>
       </section>
 
-      <p class="main-text">Since beginning my journey as a freelance designer over 11 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.</p>
+      <p class="home-text">Since beginning my journey as a freelance designer over 11 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.</p>
 
-      <p class="main-text">You can also call me a product designer, experience designer, interaction, UI, UX or by any other market defined function-title. I'm also a multi-disciplinary maker with over 10 years of experiences in wide range of design disciplines, manager, advisor, entrepreneur, front-end developer, music enthusiast, traveler, photographer and more.</p>
+      <p class="home-text">You can also call me a product designer, experience designer, interaction, UI, UX or by any other market defined function-title. I'm also a multi-disciplinary maker with over 10 years of experiences in wide range of design disciplines, manager, advisor, entrepreneur, front-end developer, music enthusiast, traveler, photographer and more.</p>
 
-      <p class="main-text">I don’t like to define myself by the work I’ve done. I define myself by the work I want to do. Skills can be taught, personality is inherent. I prefer to keep learning, continue challenging myself, and do interesting things that matter.</p>
+      <p class="home-text">I don’t like to define myself by the work I’ve done. I define myself by the work I want to do. Skills can be taught, personality is inherent. I prefer to keep learning, continue challenging myself, and do interesting things that matter.</p>
 
-      <p class="main-text">Fueled by high energy levels and boundless enthusiasm, I’m easily inspired and more then willing to follow my fascinations wherever they take me. I’m passionate, expressive, multi-talented spirit with a natural ability to entertain and inspire. I’m never satisfied to just come up with ideas. Instead I have an almost impulsive need to act on them.</p>
+      <p class="home-text">Fueled by high energy levels and boundless enthusiasm, I’m easily inspired and more then willing to follow my fascinations wherever they take me. I’m passionate, expressive, multi-talented spirit with a natural ability to entertain and inspire. I’m never satisfied to just come up with ideas. Instead I have an almost impulsive need to act on them.</p>
 
-      <p class="main-text">My abundant energy fuels me in the pursuit of many interests, hobbies, areas of study and artistic endeavors. I’m a fast learner, able to pick up new skills and juggle different projects and roles with relative ease.</p>
+      <p class="home-text">My abundant energy fuels me in the pursuit of many interests, hobbies, areas of study and artistic endeavors. I’m a fast learner, able to pick up new skills and juggle different projects and roles with relative ease.</p>
 
-      <p class="main-text">I specialize in creating sites for individuals and small businesses. You shouldn’t have to settle for cheap solutions or generic templates. I provide custom designs at afforable prices. Frequently your website is the first impression your customers will get, so make sure it’s a good one. Since my time is split between a few different things, I’m not able to take on every project I’d like to, but I'm always looking for fun work. Take a look at my portfolio below, if you think I’d be a good match send me an email.</p>
+      <p class="home-text">I specialize in creating sites for individuals and small businesses. You shouldn’t have to settle for cheap solutions or generic templates. I provide custom designs at afforable prices. Frequently your website is the first impression your customers will get, so make sure it’s a good one. Since my time is split between a few different things, I’m not able to take on every project I’d like to, but I'm always looking for fun work. Take a look at my portfolio below, if you think I’d be a good match send me an email.</p>
 
       <section class="home-tech-stack desktop">
         <p>Built with Nuxt 3, Vue 3, Sass and Vite in VSCode. Deployed on Netlify. No React. No Tailwind. No gradients. No apology.</p>
@@ -311,6 +311,38 @@
     margin-bottom: 4rem;
   }
 
+  .home-text {
+    color: var(--color-home-text);
+    font-size: var(--font-size-large);
+    letter-spacing: var(--letter-spacing-wide);
+    line-height: 3.4rem;
+    margin: 0 7.5rem;
+
+    &:first-of-type {
+      margin-top: 5rem;
+    }
+
+    &:not(:first-of-type) {
+      margin-top: 2rem;
+    }
+
+    &:last-of-type {
+      margin-bottom: 3rem;
+    }
+
+    @media only screen and (min-width: 671px) and (max-width: 960px) {
+      margin: 0 5rem 0;
+    }
+
+    @media only screen and (min-width: 501px) and (max-width: 670px) {
+      margin: 0 2.5rem 0;
+    }
+
+    @media only screen and (max-width: 500px) {
+      margin: 0 1rem 0;
+    }
+  }
+
   .home-tech-stack {
     align-items: center;
     background-color: var(--color-tech-stack);
@@ -445,12 +477,24 @@
   }
 
   .professional-profile {
-    color: var(--color-main-text);
+    color: var(--color-home-text);
     font-size: var(--font-size-large);
     font-style: var(--font-style-italic);
     font-weight: var(--font-weight-semi-bold);
     letter-spacing: var(--letter-spacing-xwide);
     line-height: var(--line-height-tall);
-    margin: 0 2rem 4rem;
+    margin: 0 7.5rem 4rem;
+
+    @media only screen and (min-width: 671px) and (max-width: 960px) {
+      margin: 0 5rem 4rem;
+    }
+
+    @media only screen and (min-width: 501px) and (max-width: 670px) {
+      margin: 0 2.5rem 4rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+      margin: 0 1rem 4rem;
+    }
   }
 </style>
