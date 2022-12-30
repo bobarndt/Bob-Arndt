@@ -210,7 +210,7 @@
       &.home {
         display: none;
       }
-      
+
       &.linkedin {
         margin-right: 1.5rem;
       }
@@ -218,7 +218,7 @@
   }
 
   .header-logo {
-    background-image: var(--header-logo-background-image);
+    background-image: var(--background-image-header-logo);
     height: 4.2rem;
     margin-right: auto;
     width: 12rem;

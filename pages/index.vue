@@ -248,7 +248,7 @@
   }
 
   .home-skills-grid {
-    background-image: var(--color-home-skills-grid-background-image);
+    background-image: var(--background-image-home-skills-grid);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
     display: flex;

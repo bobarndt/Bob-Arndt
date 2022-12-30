@@ -121,7 +121,7 @@
 
   .beliefs-wrapper,
   .democracy-wrapper {
-    background-image: var(--color-about-section-background-image);
+    background-image: var(--background-image-about-section);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
     margin-bottom: 8rem;
@@ -180,7 +180,7 @@
   }
 
   .composition-wrapper {
-    background-image: var(--color-about-section-background-image);
+    background-image: var(--background-image-about-section);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
     min-height: 63rem;
@@ -311,7 +311,7 @@
 
   .pledge-wrapper {
     align-items: center;
-    background-image: url('/images/American-flag.min.jpg'), var(--background-image-gradient);
+    background-image: url('/images/American-flag.min.jpg'), var(--background-image-pledge-wrapper);
     background-size: cover;
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
@@ -431,7 +431,7 @@
   }
 
   .video-wrapper {
-    background-image: var(--color-about-section-background-image);
+    background-image: var(--background-image-about-section);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
     display: flex;

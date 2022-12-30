@@ -142,7 +142,7 @@
   }
 
   .error-wrapper {
-    background-image: var(--color-error-section-background-image);
+    background-image: var(--background-image-error-section);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
     display: flex;
