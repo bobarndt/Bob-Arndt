@@ -346,7 +346,7 @@
       }
       &.tablet {
         display: block;
-        margin: 0 auto 4rem;
+        margin: 0 auto 3rem;
         text-align: center;
 
         p {
@@ -369,7 +369,7 @@
       }
       &.small-tablet {
         display: block;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
         text-align: center;
 
         p {
@@ -396,7 +396,7 @@
       }
       &.phone {
         display: block;
-        margin-bottom: 8rem;
+        margin-bottom: 3rem;
         text-align: center;
 
         p {
@@ -424,7 +424,7 @@
       }
       &.small-phone {
         display: block;
-        margin-bottom: 8rem;
+        margin-bottom: 3rem;
         text-align: center;
 
         p {
