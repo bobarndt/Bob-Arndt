@@ -231,80 +231,42 @@
   .pledge-text {
     color: var(--color-slate-500);
     font-family: var(--font-family-serif);
-    font-size: var(--font-size-xxxlarge);
+    font-size: var(--font-size-xxxxlarge);
     font-style: italic;
     font-weight: var(--font-weight-xbold);
-    letter-spacing: var(--letter-spacing-xwide);
+    letter-spacing: var(--letter-spacing-wide);
     line-height: var(--line-height-tall);
-    margin-right: 6rem;
+    margin-right: 8rem;
     width: 50%;
 
-    @media only screen and (min-width: 1101px) and (max-width: 1140px) {
-      margin: 0 5rem 0 2rem;
-    }
-
-    @media only screen and (min-width: 1076px) and (max-width: 1100px) {
-      margin: 0 4rem 0 2rem;
-    }
-
-    @media only screen and (min-width: 1041px) and (max-width: 1075px) {
-      margin: 0 3.5rem 0 1.5rem;
-    }
-
-    @media only screen and (min-width: 1031px) and (max-width: 1040px) {
-      margin: 0 3.25rem 0 1.25rem;
-    }
-
-    @media only screen and (min-width: 1011px) and (max-width: 1030px) {
-      margin: 0 2.75rem 0 .75rem;
-    }
-
-    @media only screen and (min-width: 931px) and (max-width: 1010px) {
-      font-size: var(--font-size-xxlarge);
-      line-height: var(--line-height-xtall);
-      margin: 0 2rem;
-    }
-
-    @media only screen and (min-width: 901px) and (max-width: 930px) {
-      font-size: var(--font-size-xxlarge);
-      line-height: var(--line-height-xxtall);
-      margin: 0 2.5rem;
-      width: 45%;
-    }
-
-    @media only screen and (min-width: 861px) and (max-width: 900px) {
-      font-size: var(--font-size-xxlarge);
-      line-height: var(--line-height-xxtall);
-      margin: 0 3rem 0 0;
-      width: 43%;
-    }
-
-    @media only screen and (min-width: 831px) and (max-width: 860px) {
-      font-size: var(--font-size-xxlarge);
-      line-height: var(--line-height-xxtall);
-      margin: 0 2.5rem;
-      width: 40%;
-    }
-
-    @media only screen and (min-width: 801px) and (max-width: 830px) {
-      font-size: var(--font-size-xxlarge);
-      line-height: var(--line-height-xtall);
-      margin: 0 2rem;
-      width: 40%;
-    }
-
-    @media only screen and (min-width: 766px) and (max-width: 800px) {
-      font-size: var(--font-size-xxlarge);
+    // iPad Pro 12"
+    @media only screen and (min-width: 846px) and (max-width: 1030px) {
+      font-size: var(--font-size-xxxxlarge);
+      font-weight: var(--font-weight-xbold);
+      letter-spacing: var(--letter-spacing-normal);
       line-height: var(--line-height-tall);
-      margin: 0 3rem 0 0;
-      width: 35%;
+      margin: 0 3.5rem 3rem;
+      width: 50%;
     }
 
-    @media only screen and (max-width: 765px) {
+    // iPad Pro portrait
+    // iPhone 12 Pro landscape
+    @media only screen and (min-width: 400px) and (max-width: 845px) {
       font-size: var(--font-size-xxlarge);
-      line-height: var(--line-height-tall);
-      // margin: 40rem 4rem 6rem;
-      margin: 4rem 3rem;
+      font-weight: var(--font-weight-xbold);
+      letter-spacing: var(--letter-spacing-normal);
+      line-height: var(--line-height-base);
+      margin: 0 3.5rem 3rem;
+      width: 80%;
+    }
+
+    // iPhone 12 Pro portrait
+    @media only screen and (min-width: 375px) and (max-width: 390px) {
+      font-size: var(--font-size-xxlarge);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: var(--letter-spacing-normal);
+      line-height: var(--line-height-base);
+      margin: 0 0 3rem 0;
       width: 80%;
     }
   }
@@ -323,7 +285,7 @@
     position: relative;
     width: 100%;
 
-    @media only screen and (max-width: 765px) {
+    @media only screen and (max-width: 845px) {
       background-size: contain;
       flex-direction: column;
       justify-content: flex-end;
