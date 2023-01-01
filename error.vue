@@ -130,7 +130,7 @@
       color: var(--color-error-message);
       font-family: var(--font-family-sans);
       font-size: var(--font-size-xxlarge);
-      font-style: italic;
+      font-style: var(--font-style-italic);
       font-weight: var(--font-weight-black);
       letter-spacing: var(--letter-spacing-xxwide);
       line-height: var(--line-height-xtall);

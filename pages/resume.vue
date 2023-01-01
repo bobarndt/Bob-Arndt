@@ -379,7 +379,7 @@
   .resume-employer {
     color: var(--color-resume-employer);
     font-size: var(--font-size-large);
-    font-style: italic;
+    font-style: var(--font-style-italic);
     font-weight: var(--font-weight-black);
     padding-bottom: 1.4rem;
   }

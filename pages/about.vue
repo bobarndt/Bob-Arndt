@@ -194,7 +194,7 @@
   .composition-caption {
     color: var(--color-about-section-composition-caption);
     font-size: var(--font-size-medium);
-    font-style: italic;
+    font-style: var(-font-style-italic);
     font-weight: var(--font-weight-black);
     letter-spacing: var(--letter-spacing-xwide);
     line-height: var(--line-height-tall);
@@ -306,7 +306,7 @@
     color: var(--color-slate-500);
     font-family: var(--font-family-serif);
     font-size: var(--font-size-xxxxlarge);
-    font-style: italic;
+    font-style: var(-font-style-italic);
     font-weight: var(--font-weight-xbold);
     letter-spacing: var(--letter-spacing-wide);
     line-height: var(--line-height-tall);
