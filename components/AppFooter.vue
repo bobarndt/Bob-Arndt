@@ -57,7 +57,7 @@
   .footer-photo-wrapper {
     background-blend-mode: luminosity;
     background-color: var(--color-indigo-300);
-    background-image: url('/images/rea.min.jpg');
+    background-image: url('/images/rea-02.min.jpg');
     border-radius: 50%;
     bottom: 1rem;
     box-shadow: var(--box-shadow-high);
