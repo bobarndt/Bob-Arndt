@@ -30,15 +30,15 @@
 
     <main class="main">
       <h2 class="section-title">What I'm Listening To</h2>
-      <section class="composition-wrapper">
-        <div class="composition">
-          <div class="composition-inner">
+      <section class="music-wrapper">
+        <div class="music">
+          <div class="music-inner">
             <a class="album joe-jackson" href="https://www.youtube.com/watch?v=ho8iswvcNHU&list=OLAK5uy_lKdzXMXzdHU-LWNcx3HgaFLTiiRAjWKmE&index=1" @mouseover="switchCaption(`joejackson`)" @mouseout="loadDefaultCaption" target="_blank"><img src="/images/joe-jackson.min.jpg" alt="Fool - Joe Jackson" height="250" width="250"></a>
             <a class="album duran-duran" href="https://www.youtube.com/watch?v=A7Er5TsQrGg&list=OLAK5uy_nDOHLgoRy4ZQLlz4F1xXuaIFxWjyDxbME" @mouseover="switchCaption(`duranduran`)" @mouseout="loadDefaultCaption" target="_blank"><img src="/images/duran-duran.min.jpg" alt="All You Need Is Now - Duran Duran" height="250" width="250"></a>
             <a class="album slipknot" href="https://www.youtube.com/watch?v=p8zamUoteG4&list=OLAK5uy_lE2wWe8dAGFUlGyKn0olTL8EVOZADTe-Q" @mouseover="switchCaption(`slipknot`)" @mouseout="loadDefaultCaption" target="_blank"><img src="/images/slipknot.min.jpg" alt="The End, So Far - Slipknot" height="250" width="250"></a>
           </div>
         </div>
-        <div ref="compositionCaption" class="composition-caption"></div>
+        <div ref="compositionCaption" class="music-caption"></div>
       </section>
 
       <h2 class="section-title">Too Funny To Not Share</h2>
@@ -185,22 +185,60 @@
     margin-bottom: 5rem;
   }
 
-  .composition {
+  .hero-title-overlay {
+    span:nth-child(1) {
+      animation: hero-title-fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(2) {
+      animation: hero-title-fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(3) {
+      animation: hero-title-fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(4) {
+      animation: hero-title-fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(5) {
+      animation: hero-title-fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(6) {
+      animation: hero-title-fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(7) {
+      animation: hero-title-fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(8) {
+      animation: hero-title-fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+  }
+
+  .hero-title-wrapper {
+    border: var(--border-indigo);
+  }
+
+  .music {
     display: flex;
     justify-content: center;
     margin-top: 6rem;
   }
 
-  .composition-caption {
-    color: var(--color-about-section-composition-caption);
+  .music-caption {
+    color: var(--color-about-section-music-caption);
     font-size: var(--font-size-medium);
-    font-style: var(-font-style-italic);
-    font-weight: var(--font-weight-black);
+    font-style: var(--font-style-italic);
+    font-weight: var(--font-weight-bold);
     letter-spacing: var(--letter-spacing-xwide);
     line-height: var(--line-height-tall);
   }
 
-  .composition-inner {
+  .music-inner {
     height: 40rem;
     position: relative;
     width: 50rem;
@@ -240,7 +278,7 @@
     }
   }
 
-  .composition-wrapper {
+  .music-wrapper {
     background-image: var(--background-image-about-section);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
@@ -264,49 +302,11 @@
     }
   }
 
-  .hero-title-overlay {
-    span:nth-child(1) {
-      animation: hero-title-fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(2) {
-      animation: hero-title-fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(3) {
-      animation: hero-title-fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(4) {
-      animation: hero-title-fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(5) {
-      animation: hero-title-fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(6) {
-      animation: hero-title-fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(7) {
-      animation: hero-title-fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(8) {
-      animation: hero-title-fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-  }
-
-  .hero-title-wrapper {
-    border: var(--border-indigo);
-  }
-
   .pledge-text {
     color: var(--color-slate-500);
     font-family: var(--font-family-serif);
     font-size: var(--font-size-xxxxlarge);
-    font-style: var(-font-style-italic);
+    font-style: var(--font-style-italic);
     font-weight: var(--font-weight-xbold);
     letter-spacing: var(--letter-spacing-wide);
     line-height: var(--line-height-tall);
@@ -398,8 +398,8 @@
   .video-caption p {
     color: var(--color-about-section-video-caption);
     font-size: var(--font-size-medium);
-    font-style: italic;
-    font-weight: var(--font-weight-black);
+    font-style: var(--font-style-italic);
+    font-weight: var(--font-weight-bold);
     letter-spacing: var(--letter-spacing-xwide);
     line-height: var(--line-height-tall);
     padding: 1.25rem 2rem .25rem;
