@@ -410,6 +410,7 @@
 
       &:last-of-type {
         padding-bottom: 4rem;
+        padding-top: 2rem;
       }
     }
   }
