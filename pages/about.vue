@@ -26,8 +26,6 @@
         </div>
     </div><!-- End .hero div -->
 
-    <h2 class="subtitle">No autobiography. Just "stuff" that means "stuff" to me.</h2>
-
     <main class="main">
       <h2 class="section-title">What I'm Listening To</h2>
       <section class="music-wrapper">
@@ -227,6 +225,11 @@
     display: flex;
     justify-content: center;
     margin-top: 6rem;
+
+    @media only screen and (max-width: 460px) {
+      padding-bottom: 4rem;
+      margin-top: 0;
+    }
   }
 
   .music-caption {
@@ -236,6 +239,11 @@
     font-weight: var(--font-weight-bold);
     letter-spacing: var(--letter-spacing-xwide);
     line-height: var(--line-height-tall);
+    padding: 1.25rem 2rem .25rem;
+
+    @media only screen and (max-width: 800px) {
+      padding: 1.25rem 0 0;
+    }
   }
 
   .music-inner {
@@ -276,6 +284,29 @@
         z-index: 20;
       }
     }
+
+    @media only screen and (min-width: 461px) and (max-width: 660px) {
+      height: 32rem;
+
+      .album {
+        width: 18rem;
+      }
+    }
+
+    @media only screen and (max-width: 460px) {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 64rem;
+      justify-content: flex-start;
+      position: static;
+
+      .album {
+        margin-top: 4rem;
+        position: static;
+        width: 17.5rem;
+      }
+    }
   }
 
   .music-wrapper {
@@ -287,19 +318,6 @@
     padding: 2rem 6rem 4rem;
     position: relative;
     width: 100%;
-
-    // iPad Pro 12" | 1024px wide
-    @media only screen and (min-width: 846px) and (max-width: 1030px) {
-    }
-
-    // iPad Pro 11" portrait | 1194px wide
-    // iPhone 12 Pro landscape | 844px wide
-    @media only screen and (min-width: 400px) and (max-width: 845px) {
-    }
-
-    // iPhone 12 Pro portrait | 390px wide
-    @media only screen and (min-width: 375px) and (max-width: 390px) {
-    }
   }
 
   .pledge-text {
@@ -404,7 +422,6 @@
     line-height: var(--line-height-tall);
     padding: 1.25rem 2rem .25rem;
 
-    // iPhone 12 Pro portrait | 390px wide
     @media only screen and (max-width: 800px) {
       padding: 1.25rem 4rem 0;
 
@@ -424,7 +441,6 @@
     padding: 2rem 6rem 4rem;
     width: 100%;
 
-    // iPhone 12 Pro portrait | 390px wide
     @media only screen and (max-width: 800px) {
       min-height: none;
       padding: 0 0 0;

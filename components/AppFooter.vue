@@ -102,7 +102,7 @@
     height: 8rem;
     position: fixed;
     width: var(--width-full);
-    z-index: 10;
+    z-index: 40;
 
     @media only screen and (max-width: 440px) {
       height: 8rem;
