@@ -32,10 +32,13 @@
     </div>
 
     <main class="main">
-      <section class="professional-profile">Front end web development professional with over 20 years industry experience blending strong creative and technical skills. 15 years in the design and development of web sites and web applications for corporate, institutional, professional and individual clients. Adept designer with the skills to fashion clear and compelling user experiences. Strengths encompass both coding and graphic design resulting in function-rich, responsive, visually appealing sites that convey substance and professionalism.</section>
+      <h2 class="section-title first">Professional Profile</h2>
+      <section class="section-wrapper">
+        <p class="profile-text">Front end web development professional with over 20 years industry experience blending strong creative and technical skills. 15 years in the design and development of web sites and web applications for corporate, institutional, professional and individual clients. Adept designer with the skills to fashion clear and compelling user experiences. Strengths encompass both coding and graphic design resulting in function-rich, responsive, visually appealing sites that convey substance and professionalism.</p>
+      </section>
 
       <section class="home-skills-wrapper">
-        <h2 class="home-skills-title">My Skills</h2>
+        <h2 class="section-title">My Skills</h2>
         <div class="home-skills-grid">
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
@@ -130,20 +133,20 @@
         </div>
       </section>
 
-      <h2 class="section-title">What I Believe</h2>
-      <section class="front-end-dev-wrapper">
-        <p class="home-text">Web Development is one of the most coveted fields in today’s tech-savvy world. As the internet spreads its roots in every corner of the world, the need for highly interactive and responsive websites is ever-increasing. Web Development comprises two primary components, front-end development, and back-end development. While front-end development deals with a website’s visual aspects, back-end development is associated with its behind-the-scene workings. Although both front-end and back-end come with their fair share of challenges, the ones associated with the former are somewhat peculiar.</p>
-        <p class="home-text">Since front-end developers deal with a website’s aesthetic elements, they shoulder additional burdens that the back-end developers are exempt from. Apart from being visually appealing, a website should also be highly interactive and responsive. To become a formidable front-end developer, you need to constantly brush up on your programming skills. One of the most effective ways of improving your programming prowess is to solve front-end challenges.</p>
+      <h2 class="section-title">The Front End Web Developer</h2>
+      <section class="section-wrapper last">
+        <p class="section-text">Web Development is one of the most coveted fields in today’s tech-savvy world. As the internet spreads its roots in every corner of the world, the need for highly interactive and responsive websites is ever-increasing. Web Development comprises two primary components, front-end development, and back-end development. While front-end development deals with a website’s visual aspects, back-end development is associated with its behind-the-scene workings. Although both front-end and back-end come with their fair share of challenges, the ones associated with the former are somewhat peculiar.</p>
+        <p class="section-text">Since front-end developers deal with a website’s aesthetic elements, they shoulder additional burdens that the back-end developers are exempt from. Apart from being visually appealing, a website should also be highly interactive and responsive. To become a formidable front-end developer, you need to constantly brush up on your programming skills. One of the most effective ways of improving your programming prowess is to solve front-end challenges.</p>
 
-        <p class="home-text">The biggest challenge faced in front-end designing is evaluation of end-user requirements and optimizing the design accordingly. End users are diverse and so are their requirements. Designers deal with HTML, JavaScript, CSS, and Flash in creating visuals of a web page.</p>
+        <p class="section-text">The biggest challenge faced in front-end designing is evaluation of end-user requirements and optimizing the design accordingly. End users are diverse and so are their requirements. Designers deal with HTML, JavaScript, CSS, and Flash in creating visuals of a web page.</p>
 
-        <p class="home-text">Problems for front-end designers are multi-faceted. There are different aspects and dimensions that need to be dealt with while designing a responsive webpage. When it comes to site design and functionality, designers often put emphasis on visual aesthetic over developers working at the backend. Demands of visitors had changed over the years and so did website designing. In the competitive situation, front-end designing has become imperative in deciding about success of a website or digital product.</p>
+        <p class="section-text">Problems for front-end designers are multi-faceted. There are different aspects and dimensions that need to be dealt with while designing a responsive webpage. When it comes to site design and functionality, designers often put emphasis on visual aesthetic over developers working at the backend. Demands of visitors had changed over the years and so did website designing. In the competitive situation, front-end designing has become imperative in deciding about success of a website or digital product.</p>
 
-        <p class="home-text">The current trend followed in site designing is User Centric Design (UCD) but following the guidelines as they are isn't an assurance of great design. Despite following the principles of front-end designing most digital products have mediocre or poor design that fail to evoke user interest.</p>
+        <p class="section-text">The current trend followed in site designing is User Centric Design (UCD) but following the guidelines as they are isn't an assurance of great design. Despite following the principles of front-end designing most digital products have mediocre or poor design that fail to evoke user interest.</p>
 
-        <p class="home-text">The tussle between backend engineers and front-end designers is a common story in every development unit. While engineers focus on solving programming issues, designers focus on creating design that would be responsive. It is therefore, important that the designing team own the design.</p>
+        <p class="section-text">The tussle between backend engineers and front-end designers is a common story in every development unit. While engineers focus on solving programming issues, designers focus on creating design that would be responsive. It is therefore, important that the designing team own the design.</p>
 
-        <p class="home-text">Varied user base is another challenge that front-end designers need to address. As a matter of fact, users can now access digital products on their desktops, tablets and even, smartphones. Difficulties arising because of varied screen sizes, device features and input mechanism. Designers are required to design keeping these aspects in mind.</p>
+        <p class="section-text">Varied user base is another challenge that front-end designers need to address. As a matter of fact, users can now access digital products on their desktops, tablets and even, smartphones. Difficulties arising because of varied screen sizes, device features and input mechanism. Designers are required to design keeping these aspects in mind.</p>
       </section>
 
       <section class="home-tech-stack desktop">
@@ -181,10 +184,6 @@
 </template>
 
 <style scoped lang="scss">
-  .front-end-dev-wrapper {
-
-  }
-
   .hero-title-overlay {
     span:nth-child(1) {
       animation: hero-title-fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
@@ -308,47 +307,8 @@
     }
   }
 
-  .home-skills-title {
-    color: var(--color-section-title);
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
   .home-skills-wrapper {
-    margin-bottom: 4rem;
-  }
-
-  .home-text {
-    color: var(--color-home-text);
-    font-size: var(--font-size-large);
-    letter-spacing: var(--letter-spacing-wide);
-    line-height: 3.4rem;
-    margin: 0 7.5rem;
-
-    &:first-of-type {
-      margin-top: 5rem;
-    }
-
-    &:not(:first-of-type) {
-      margin-top: 2rem;
-    }
-
-    &:last-of-type {
-      margin-bottom: 3rem;
-    }
-
-    @media only screen and (min-width: 671px) and (max-width: 960px) {
-      margin: 0 5rem 0;
-    }
-
-    @media only screen and (min-width: 501px) and (max-width: 670px) {
-      margin: 0 2.5rem 0;
-    }
-
-    @media only screen and (max-width: 500px) {
-      margin: 0 1rem 0;
-    }
+    margin-bottom: 8rem;
   }
 
   .home-tech-stack {
@@ -484,25 +444,57 @@
     }
   }
 
-  .professional-profile {
-    color: var(--color-home-text);
+  .profile-text {
+    color: var(--color-section-text);
     font-size: var(--font-size-large);
     font-style: var(--font-style-italic);
     font-weight: var(--font-weight-semi-bold);
     letter-spacing: var(--letter-spacing-xwide);
     line-height: var(--line-height-tall);
-    margin: 0 7.5rem 4rem;
+    margin: 3rem 2rem 0 2rem;
 
-    @media only screen and (min-width: 671px) and (max-width: 960px) {
-      margin: 0 5rem 4rem;
+    &:not(:first-of-type) {
+      margin-top: 2.5rem;
     }
 
-    @media only screen and (min-width: 501px) and (max-width: 670px) {
-      margin: 0 2.5rem 4rem;
+    &:last-of-type {
+      margin-bottom: 1rem;
     }
 
-    @media only screen and (max-width: 500px) {
-      margin: 0 1rem 4rem;
+    @media only screen and (min-width: 461px) and (max-width: 600px) {
+      margin: 2rem 1rem 0;
+
+      &:not(:first-of-type) {
+        margin-top: 2.5rem;
+      }
+
+      &:last-of-type {
+        margin-bottom: 1rem;
+      }
+    }
+
+    @media only screen and (min-width: 401px) and (max-width: 460px) {
+      margin: 1.5rem .5rem 0;
+
+      &:not(:first-of-type) {
+        margin-top: 2.5rem;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @media only screen and (max-width: 400px) {
+      margin: 1rem 0 0;
+
+      &:not(:first-of-type) {
+        margin-top: 2.5rem;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 </style>

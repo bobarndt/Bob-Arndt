@@ -27,7 +27,7 @@
     </div><!-- End .hero div -->
 
     <main class="main">
-      <h2 class="section-title">What I'm Listening To</h2>
+      <h2 class="section-title first">What I'm Listening To</h2>
       <section class="music-wrapper">
         <div class="music">
           <div class="music-inner">
@@ -55,15 +55,15 @@
       </section>
 
       <h2 class="section-title">The Truth About &ldquo;Democracy&rdquo;</h2>
-      <section class="democracy-wrapper">
-        <p class="democracy-text">&ldquo;A democracy cannot exist as a permanent form of government. It can only exist until the voters discover that they can vote themselves largesse from the public treasury. From that moment on, the majority always votes for the candidates promising the most benefits from the public treasury with the result that a democracy always collapses over loose fiscal policy, always followed by a dictatorship. The average age of the world's greatest civilizations has been 200 years. These nations have progressed through this sequence: From bondage to spiritual faith; From spiritual faith to great courage; From courage to liberty; From liberty to abundance; From abundance to selfishness; From selfishness to apathy; From apathy to dependence; From dependence back into bondage.&rdquo; ~ Alexander Tytler</p>
-        <p class="democracy-text">&ldquo;This [the U.S. Constitution] is likely to be administered for a course of years and then end in despotism . . . when the people shall become so corrupted as to need despotic government, being incapable of any other.&rdquo; ~ Benjamin Franklin</p>
+      <section class="section-wrapper">
+        <p class="section-text">&ldquo;A democracy cannot exist as a permanent form of government. It can only exist until the voters discover that they can vote themselves largesse from the public treasury. From that moment on, the majority always votes for the candidates promising the most benefits from the public treasury with the result that a democracy always collapses over loose fiscal policy, always followed by a dictatorship. The average age of the world's greatest civilizations has been 200 years. These nations have progressed through this sequence: From bondage to spiritual faith; From spiritual faith to great courage; From courage to liberty; From liberty to abundance; From abundance to selfishness; From selfishness to apathy; From apathy to dependence; From dependence back into bondage.&rdquo; ~ Alexander Tytler</p>
+        <p class="section-text">&ldquo;This [the U.S. Constitution] is likely to be administered for a course of years and then end in despotism . . . when the people shall become so corrupted as to need despotic government, being incapable of any other.&rdquo; ~ Benjamin Franklin</p>
       </section>
 
       <h2 class="section-title">What I Believe</h2>
-      <section class="beliefs-wrapper">
-        <p class="beliefs-text">No Facebook. No Instagram. No Twitter. No pre-natal murder. No climate change. No foreign invasion. No scamdemic. No COVID. No vaccination. No mask. No Fauci. No Gates. No WHO. No cancel. No woke. No LGBT. No Antifa. No Stalinism. No Democrats. No Joe. No Nancy. No Chuck. No Bernie. No Hillary. No Beto. No ACLU. No UN. No FBI. No DOJ. No UAW. No CRT. No BLM. No CNN. No MSM. No NPR. No PBS. No NFL. No NBA. No MLB. No ESPN. No Amazon. No Starbucks. No Disney. No apology.</p>
-        <p class="beliefs-text">Pro life. Pro America. Pro MAGA. Pro border wall. Pro NRA. Pro re-fund the police. Pro Blue Lives Matter. Pro Black Lives (that don't matter) Matter. No compromise. DeSantis 2024. God bless America. No apology.</p>
+      <section class="section-wrapper last">
+        <p class="section-text">No Facebook. No Instagram. No Twitter. No pre-natal murder. No climate change. No foreign invasion. No scamdemic. No COVID. No vaccination. No mask. No Fauci. No Gates. No WHO. No cancel. No woke. No LGBT. No Antifa. No Stalinism. No Democrats. No Joe. No Nancy. No Chuck. No Bernie. No Hillary. No Beto. No ACLU. No UN. No FBI. No DOJ. No UAW. No CRT. No BLM. No CNN. No MSM. No NPR. No PBS. No NFL. No NBA. No MLB. No ESPN. No Amazon. No Starbucks. No Disney. No apology.</p>
+        <p class="section-text">Pro life. Pro America. Pro MAGA. Pro border wall. Pro NRA. Pro re-fund the police. Pro Blue Lives Matter. Pro Black Lives (that don't matter) Matter. No compromise. DeSantis 2024. God bless America. No apology.</p>
       </section>
 
       <a href="https://rearndt.netlify.app" target="_blank">
@@ -116,73 +116,6 @@
 </script>
 
 <style scoped lang="scss">
-  .beliefs-text,
-  .democracy-text {
-    color: var(--color-section-text);
-    font-size: var(--font-size-large);
-    letter-spacing: var(--letter-spacing-wide);
-    line-height: 3.4rem;
-    margin: 3rem 2rem 0 2rem;
-
-    &:not(:first-of-type) {
-      margin-top: 2.5rem;
-    }
-
-    &:last-of-type {
-      margin-bottom: 1rem;
-    }
-
-    @media only screen and (min-width: 461px) and (max-width: 600px) {
-      margin: 2rem 1rem 0;
-
-      &:not(:first-of-type) {
-        margin-top: 2.5rem;
-      }
-
-      &:last-of-type {
-        margin-bottom: 1rem;
-      }
-    }
-
-    @media only screen and (min-width: 401px) and (max-width: 460px) {
-      margin: 1.5rem .5rem 0;
-
-      &:not(:first-of-type) {
-        margin-top: 2.5rem;
-      }
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-    }
-
-    @media only screen and (max-width: 400px) {
-      margin: 1rem 0 0;
-
-      &:not(:first-of-type) {
-        margin-top: 2.5rem;
-      }
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  .beliefs-wrapper,
-  .democracy-wrapper {
-    background-image: var(--background-image-about-section);
-    border-radius: var(--border-radius-large);
-    box-shadow: var(--box-shadow-section-background);
-    margin-bottom: 8rem;
-    padding: 2rem 4rem 4rem;
-    width: 100%;
-  }
-
-  .beliefs-wrapper {
-    margin-bottom: 5rem;
-  }
-
   .hero-title-overlay {
     span:nth-child(1) {
       animation: hero-title-fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
@@ -313,7 +246,6 @@
     background-image: var(--background-image-about-section);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
-    min-height: 63rem;
     margin-bottom: 8rem;
     padding: 2rem 6rem 4rem;
     position: relative;
@@ -384,13 +316,6 @@
     }
   }
 
-  .section-title {
-    color: var(--color-section-title);
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
   .video {
     height: 0;
     margin: 4rem 0 3rem;
@@ -436,13 +361,11 @@
     background-image: var(--background-image-about-section);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
-    min-height: 63rem;
     margin-bottom: 8rem;
     padding: 2rem 6rem 4rem;
     width: 100%;
 
     @media only screen and (max-width: 800px) {
-      min-height: none;
       padding: 0 0 0;
     }
   }
