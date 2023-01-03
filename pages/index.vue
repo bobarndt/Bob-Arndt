@@ -138,13 +138,13 @@
 
       <h2 class="section-title">The Front End Web Developer</h2>
       <section class="section-wrapper last">
-        <h3 class="home-subtitle">What is a Front End Developer</h3>
+        <h3 class="subtitle">What is a Front End Developer?</h3>
         <p class="section-text">Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly. The challenge associated with front end development is that the tools and techniques used to create the front end of a website change constantly and so the developer needs to constantly be aware of how the field is developing.</p>
-        <h3 class="home-subtitle back-to-top-observer-target">Front End vs. Back End Development</h3>
+        <h3 class="subtitle back-to-top-observer-target">Front End vs. Back End Development</h3>
         <p class="section-text">The objective of designing a site is to ensure that when the users open up the site they see the information in a format that is easy to read and relevant. This is further complicated by the fact that users now use a large variety of devices with varying screen sizes and resolutions thus forcing the designer to take into consideration these aspects when designing the site. They need to ensure that their site comes up correctly in different browsers (cross-browser), different operating systems (cross-platform) and different devices (cross-device), which requires careful planning on the side of the developer.</p>
-        <h3 class="home-subtitle back-to-top-observer-target">Front End Developer vs Front End Designer</h3>
+        <h3 class="subtitle back-to-top-observer-target">Front End Developer vs Front End Designer</h3>
         <p class="section-text">Many people use the terms designer and developer interchangeably.</p>
-        <h3 class="home-subtitle">Unique Challenges of a Front End Developer</h3>
+        <h3 class="subtitle">Unique Challenges of a Front End Developer</h3>
         <p class="section-text">The objective of designing a site is to ensure that when the users open up the site they see the information in a format that is easy to read and relevant. This is further complicated by the fact that users now use a large variety of devices with varying screen sizes and resolutions thus forcing the designer to take into consideration these aspects when designing the site. They need to ensure that their site comes up correctly in different browsers (cross-browser), different operating systems (cross-platform) and different devices (cross-device), which requires careful planning on the side of the developer.</p>
       </section>
 
@@ -261,7 +261,7 @@
   }
 
   .home-skills-grid {
-    background-image: var(--background-image-home-skills-grid);
+    background-image: var(--background-image-section-wrapper);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
     display: flex;
@@ -315,16 +315,6 @@
 
   .home-skills-wrapper {
     margin-bottom: 8rem;
-  }
-
-  .home-subtitle {
-    color: var(--color-resume-employer);
-    font-size: var(--font-size-xlarge);
-    font-style: var(--font-style-italic);
-    font-weight: var(--font-weight-black);
-    margin: 3rem 2rem 0;
-    padding-bottom: 1.4rem;
-    padding-top: 3rem;
   }
 
   .home-tech-stack {
@@ -462,6 +452,10 @@
 
   .main {
     padding: 4rem 3.2rem 11rem;
+
+    @media only screen and (max-width: 600px) {
+      padding-bottom: 14rem;
+    }
   }
 
   .profile-text {

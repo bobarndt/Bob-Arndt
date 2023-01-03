@@ -214,7 +214,7 @@ a {
 }
 
 .section-wrapper {
-  background-image: var(--background-image-about-section);
+  background-image: var(--background-image-section-wrapper);
   border-radius: var(--border-radius-large);
   box-shadow: var(--box-shadow-section-background);
   margin-bottom: 8rem;
@@ -223,5 +223,25 @@ a {
 
   &.last {
     margin-bottom: 5rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 2rem 2rem 4rem;
+  }
+}
+
+.subtitle {
+  color: var(--color-subtitle);
+  font-size: var(--font-size-xlarge);
+  font-style: var(--font-style-italic);
+  font-weight: var(--font-weight-black);
+  margin: 4rem 2rem 1.5rem;
+
+  &:first-of-type {
+    margin-top: 3rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin: 4rem 2rem 1.5rem;
   }
 }
