@@ -253,7 +253,7 @@
   }
 
   .pledge-text {
-    color: var(--color-slate-500);
+    color: var(--color-slate-600);
     font-family: var(--font-family-serif);
     font-size: var(--font-size-xxxxlarge);
     font-style: var(--font-style-italic);
