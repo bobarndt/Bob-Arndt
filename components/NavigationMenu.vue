@@ -194,6 +194,7 @@ import { unheadVueComposablesImports } from '@unhead/vue';
     top: 0;
     transform: scale(1);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    z-index: 60;
   }
 
   .menu-hidden {

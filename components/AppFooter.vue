@@ -66,7 +66,7 @@
     overflow: hidden;
     position: absolute;
     width: 11rem;
-    z-index: 30;
+    z-index: 60;
   }
 
   .footer-row-bottom {
@@ -102,7 +102,7 @@
     height: 8rem;
     position: fixed;
     width: var(--width-full);
-    z-index: 40;
+    z-index: 60;
 
     @media only screen and (max-width: 440px) {
       height: 8rem;
