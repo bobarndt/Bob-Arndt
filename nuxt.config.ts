@@ -16,7 +16,7 @@ export default defineNuxtConfig({
         },
       ],
       noscript: [
-        { children: `Your browser does not support JavaScript!` }
+        { children: `Unfortunately, JavaScript is disabled in your browser. In order to view this site properly, please enable JavaScript.` }
       ],
       script: [],
       title: `Bob Arndt | Web design and development professional in Dallas, Texas, USA`
