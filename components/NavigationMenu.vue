@@ -28,8 +28,6 @@
 </template>
 
 <script>
-import { unheadVueComposablesImports } from '@unhead/vue';
-
   export default {
     data() {
       return {
