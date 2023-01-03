@@ -244,7 +244,7 @@
   }
 
   .music-wrapper {
-    background-image: var(--background-image-about-section);
+    background-image: var(--background-image-section-wrapper);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
     margin-bottom: 8rem;
@@ -359,7 +359,7 @@
   }
 
   .video-wrapper {
-    background-image: var(--background-image-about-section);
+    background-image: var(--background-image-section-wrapper);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
     margin-bottom: 8rem;
