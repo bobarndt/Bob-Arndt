@@ -185,6 +185,7 @@
 
 <style scoped lang="scss">
   .best-viewed {
+    color: var(--color-home-desktop-browser-text);
     font-size: var(--font-size-xsmall);
     text-align: center;
   }
