@@ -1,5 +1,8 @@
 <template>
   <div class="page-wrapper"><!-- Begin .page-wrapper div -->
+
+    <BackToTop />
+
     <div class="hero-wrapper">
       <div class="hero-animated-background-image">
         <img src="/images/macbook.min.jpg" alt="Bob Arndt | Web design and development professional in Dallas, Texas, USA">
@@ -135,18 +138,14 @@
 
       <h2 class="section-title">The Front End Web Developer</h2>
       <section class="section-wrapper last">
-        <p class="section-text">Web Development is one of the most coveted fields in today’s tech-savvy world. As the internet spreads its roots in every corner of the world, the need for highly interactive and responsive websites is ever-increasing. Web Development comprises two primary components, front-end development, and back-end development. While front-end development deals with a website’s visual aspects, back-end development is associated with its behind-the-scene workings. Although both front-end and back-end come with their fair share of challenges, the ones associated with the former are somewhat peculiar.</p>
-        <p class="section-text">Since front-end developers deal with a website’s aesthetic elements, they shoulder additional burdens that the back-end developers are exempt from. Apart from being visually appealing, a website should also be highly interactive and responsive. To become a formidable front-end developer, you need to constantly brush up on your programming skills. One of the most effective ways of improving your programming prowess is to solve front-end challenges.</p>
-
-        <p class="section-text">The biggest challenge faced in front-end designing is evaluation of end-user requirements and optimizing the design accordingly. End users are diverse and so are their requirements. Designers deal with HTML, JavaScript, CSS, and Flash in creating visuals of a web page.</p>
-
-        <p class="section-text">Problems for front-end designers are multi-faceted. There are different aspects and dimensions that need to be dealt with while designing a responsive webpage. When it comes to site design and functionality, designers often put emphasis on visual aesthetic over developers working at the backend. Demands of visitors had changed over the years and so did website designing. In the competitive situation, front-end designing has become imperative in deciding about success of a website or digital product.</p>
-
-        <p class="section-text">The current trend followed in site designing is User Centric Design (UCD) but following the guidelines as they are isn't an assurance of great design. Despite following the principles of front-end designing most digital products have mediocre or poor design that fail to evoke user interest.</p>
-
-        <p class="section-text">The tussle between backend engineers and front-end designers is a common story in every development unit. While engineers focus on solving programming issues, designers focus on creating design that would be responsive. It is therefore, important that the designing team own the design.</p>
-
-        <p class="section-text">Varied user base is another challenge that front-end designers need to address. As a matter of fact, users can now access digital products on their desktops, tablets and even, smartphones. Difficulties arising because of varied screen sizes, device features and input mechanism. Designers are required to design keeping these aspects in mind.</p>
+        <h3 class="home-subtitle">What is a Front End Developer</h3>
+        <p class="section-text">Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly. The challenge associated with front end development is that the tools and techniques used to create the front end of a website change constantly and so the developer needs to constantly be aware of how the field is developing.</p>
+        <h3 class="home-subtitle back-to-top-observer-target">Front End vs. Back End Development</h3>
+        <p class="section-text">The objective of designing a site is to ensure that when the users open up the site they see the information in a format that is easy to read and relevant. This is further complicated by the fact that users now use a large variety of devices with varying screen sizes and resolutions thus forcing the designer to take into consideration these aspects when designing the site. They need to ensure that their site comes up correctly in different browsers (cross-browser), different operating systems (cross-platform) and different devices (cross-device), which requires careful planning on the side of the developer.</p>
+        <h3 class="home-subtitle back-to-top-observer-target">Front End Developer vs Front End Designer</h3>
+        <p class="section-text">Many people use the terms designer and developer interchangeably.</p>
+        <h3 class="home-subtitle">Unique Challenges of a Front End Developer</h3>
+        <p class="section-text">The objective of designing a site is to ensure that when the users open up the site they see the information in a format that is easy to read and relevant. This is further complicated by the fact that users now use a large variety of devices with varying screen sizes and resolutions thus forcing the designer to take into consideration these aspects when designing the site. They need to ensure that their site comes up correctly in different browsers (cross-browser), different operating systems (cross-platform) and different devices (cross-device), which requires careful planning on the side of the developer.</p>
       </section>
 
       <section class="home-tech-stack desktop">
@@ -179,11 +178,17 @@
         <p>No apology.</p>
       </section>
 
+      <p class="best-viewed">Best viewed on desktop browser.</p>
     </main>
   </div><!-- End .page-wrapper div -->
 </template>
 
 <style scoped lang="scss">
+  .best-viewed {
+    font-size: var(--font-size-xsmall);
+    text-align: center;
+  }
+
   .hero-title-overlay {
     span:nth-child(1) {
       animation: hero-title-fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
@@ -309,6 +314,16 @@
 
   .home-skills-wrapper {
     margin-bottom: 8rem;
+  }
+
+  .home-subtitle {
+    color: var(--color-resume-employer);
+    font-size: var(--font-size-xlarge);
+    font-style: var(--font-style-italic);
+    font-weight: var(--font-weight-black);
+    margin: 3rem 2rem 0;
+    padding-bottom: 1.4rem;
+    padding-top: 3rem;
   }
 
   .home-tech-stack {
@@ -444,6 +459,10 @@
     }
   }
 
+  .main {
+    padding: 4rem 3.2rem 11rem;
+  }
+
   .profile-text {
     color: var(--color-section-text);
     font-size: var(--font-size-large);
@@ -496,5 +515,9 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  .section-text {
+    margin: 0 2rem 0;
   }
 </style>

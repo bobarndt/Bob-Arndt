@@ -4,6 +4,7 @@
   </Head>
 
   <div class="page-wrapper">
+    <BackToTop />
     <div class="hero-wrapper"><!-- Begin .hero div -->
       <div class="hero-animated-background-image">
         <img src="/images/treeline.min.jpg" alt="Bob Arndt | Web design and development professional in Dallas, Texas, USA">
@@ -55,7 +56,7 @@
       </section>
 
       <h2 class="section-title">The Truth About &ldquo;Democracy&rdquo;</h2>
-      <section class="section-wrapper">
+      <section class="section-wrapper back-to-top-observer-target">
         <p class="section-text">&ldquo;A democracy cannot exist as a permanent form of government. It can only exist until the voters discover that they can vote themselves largesse from the public treasury. From that moment on, the majority always votes for the candidates promising the most benefits from the public treasury with the result that a democracy always collapses over loose fiscal policy, always followed by a dictatorship. The average age of the world's greatest civilizations has been 200 years. These nations have progressed through this sequence: From bondage to spiritual faith; From spiritual faith to great courage; From courage to liberty; From liberty to abundance; From abundance to selfishness; From selfishness to apathy; From apathy to dependence; From dependence back into bondage.&rdquo; ~ Alexander Tytler</p>
         <p class="section-text">&ldquo;This [the U.S. Constitution] is likely to be administered for a course of years and then end in despotism . . . when the people shall become so corrupted as to need despotic government, being incapable of any other.&rdquo; ~ Benjamin Franklin</p>
       </section>
