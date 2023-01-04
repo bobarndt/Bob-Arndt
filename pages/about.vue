@@ -29,7 +29,7 @@
 
     <main class="main">
       <h2 class="section-title first">What I'm Listening To</h2>
-      <section class="music-wrapper">
+      <section class="section-wrapper">
         <div class="music">
           <div class="music-inner">
             <a class="album joe-jackson" href="https://www.youtube.com/watch?v=ho8iswvcNHU&list=OLAK5uy_lKdzXMXzdHU-LWNcx3HgaFLTiiRAjWKmE&index=1" @mouseover="switchCaption(`joejackson`)" @mouseout="loadDefaultCaption" target="_blank"><img src="/images/joe-jackson.min.jpg" alt="Fool - Joe Jackson" height="250" width="250"></a>
@@ -85,7 +85,7 @@
         externalLinkSVG: `<svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 0 24 24" width="14px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>`,
         innerHTMLSlipknot: `<span style="color: hsl(330, 81%, 49%)">The End, So Far</span> is the seventh studio album by American heavy metal band <span  style="color: hsl(330, 81%, 49%)">Slipknot</span>, released on September 30, 2022, by Roadrunner Records. This is the band's final album to be released through Roadrunner, whom the band signed with in 1998. Click the album cover to listen on YouTube.`,
         innerHTMLDuranDuran: `<span  style="color: hsl(330, 81%, 49%)">All You Need Is Now</span> is the thirteenth studio album by English new wave band <span  style="color: hsl(330, 81%, 49%)">Duran Duran</span>. Produced by Mark Ronson, a truncated version of the album was released digitally on 21 December 2010.  Click the album cover to listen on YouTube.`,
-        innerHTMLJoeJackson: `<span  style="color: hsl(330, 81%, 49%)">Fool</span> is the 20th studio album by British singer-songwriter <span  style="color: hsl(330, 81%, 49%)">Joe Jackson</span>. Recorded the day after the end of his Fast Forward tour at the Tonic Room Studios in Boise, Idaho. Jackson had decided to record the album in whichever city the tour finished, which happened to be Boise after a performance at the Egyptian Theatre.  Click the album cover to listen on YouTube.`,
+        innerHTMLJoeJackson: `<span  style="color: hsl(330, 81%, 49%)">Fool</span> is the 20th studio album by British singer-songwriter <span  style="color: hsl(330, 81%, 49%)">Joe Jackson</span>. Recorded the day after the end of his Fast Forward tour at the Tonic Room Studios in Boise, Idaho. Click the album cover to listen on YouTube.`,
         websiteSVG: `<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/><rect fill="none" height="24" width="24"/><rect fill="none" height="24" width="24"/></g><g><g/><path d="M20,4H4C2.9,4,2.01,4.9,2.01,6L2,18c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M4,9h10.5v3.5H4V9z M4,14.5 h10.5V18L4,18V14.5z M20,18l-3.5,0V9H20V18z"/></g></svg>`,
       }
     },
@@ -243,16 +243,6 @@
     }
   }
 
-  .music-wrapper {
-    background-image: var(--background-image-section-wrapper);
-    border-radius: var(--border-radius-large);
-    box-shadow: var(--box-shadow-section-background);
-    margin-bottom: 8rem;
-    padding: 2rem 6rem 4rem;
-    position: relative;
-    width: 100%;
-  }
-
   .pledge-text {
     color: var(--color-slate-600);
     font-family: var(--font-family-serif);
@@ -314,6 +304,14 @@
       background-size: contain;
       flex-direction: column;
       justify-content: flex-end;
+    }
+  }
+
+  .section-wrapper {
+    min-height: 63rem;
+
+    @media only screen and (max-width: 1100px) {
+      min-height: 67rem;
     }
   }
 
