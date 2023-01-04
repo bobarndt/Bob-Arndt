@@ -29,7 +29,7 @@
 
     <main class="main">
       <h2 class="section-title first">What I'm Listening To</h2>
-      <section class="section-wrapper">
+      <section class="section-wrapper music-wrapper">
         <div class="music">
           <div class="music-inner">
             <a class="album joe-jackson" href="https://www.youtube.com/watch?v=ho8iswvcNHU&list=OLAK5uy_lKdzXMXzdHU-LWNcx3HgaFLTiiRAjWKmE&index=1" @mouseover="switchCaption(`joejackson`)" @mouseout="loadDefaultCaption" target="_blank"><img src="/images/joe-jackson.min.jpg" alt="Fool - Joe Jackson" height="250" width="250"></a>
@@ -243,6 +243,10 @@
     }
   }
 
+  .music-wrapper {
+
+  }
+
   .pledge-text {
     color: var(--color-slate-600);
     font-family: var(--font-family-serif);
@@ -307,7 +311,7 @@
     }
   }
 
-  .section-wrapper {
+  .music-wrapper {
     min-height: 63rem;
 
     @media only screen and (max-width: 1100px) {
@@ -347,7 +351,7 @@
     padding: 1.25rem 2rem .25rem;
 
     @media only screen and (max-width: 800px) {
-      padding: 1.25rem 4rem 0;
+      padding: 1.25rem 2rem 0;
 
       &:last-of-type {
         padding-bottom: 4rem;
