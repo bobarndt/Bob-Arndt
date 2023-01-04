@@ -27,6 +27,8 @@
         </div>
     </div><!-- End .hero div -->
 
+    <h2 class="subheader">No autobiography. Just "stuff" that means "stuff" to me.</h2>
+
     <main class="main">
       <h2 class="section-title first">What I'm Listening To</h2>
       <section class="section-wrapper music-wrapper">
@@ -244,10 +246,6 @@
     }
   }
 
-  .music-wrapper {
-
-  }
-
   .pledge-text {
     color: var(--color-slate-600);
     font-family: var(--font-family-serif);
@@ -317,6 +315,20 @@
 
     @media only screen and (max-width: 1100px) {
       min-height: 67rem;
+    }
+  }
+
+  .subheader {
+    color: var(--color-subheader);
+    font-size: var(--font-size-medium);
+    font-style: var(--font-style-italic);
+    font-weight: var(--font-weight-semi-bold);
+    letter-spacing: var(--letter-spacing-xwide);
+    margin: 3rem 0 0;
+    text-align: center;
+
+    @media only screen and (max-width: 500px) {
+      margin: 3rem 4rem 0;
     }
   }
 
