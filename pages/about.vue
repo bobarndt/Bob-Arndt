@@ -65,6 +65,7 @@
       <section class="section-wrapper last">
         <p class="section-text">No Facebook. No Instagram. No Twitter. No pre-natal murder. No climate change. No foreign invasion. No scamdemic. No COVID. No vaccination. No mask. No Fauci. No Gates. No WHO. No cancel. No woke. No LGBT. No Antifa. No Stalinism. No Democrats. No Joe. No Nancy. No Chuck. No Bernie. No Hillary. No Beto. No ACLU. No UN. No FBI. No DOJ. No UAW. No CRT. No BLM. No CNN. No MSM. No NPR. No PBS. No NFL. No NBA. No MLB. No ESPN. No Amazon. No Starbucks. No Disney. No apology.</p>
         <p class="section-text">Pro life. Pro America. Pro MAGA. Pro border wall. Pro NRA. Pro re-fund the police. Pro Blue Lives Matter. Pro Black Lives (that don't matter) Matter. No compromise. DeSantis 2024. God bless America. No apology.</p>
+        <p class="section-text">That being said, I make no effort to propagate my views in the workplace. As a professional in a business environment, I do not vocalize my opinions, and always maintain respect for the right of others who hold opposing beliefs. Nonetheless, on any occasion where others do not exercise the same restraint, I will not hesitate to challenge them in the same spirit. Coworkers have the right to work in an comfortable atmosphere. So do I.</p>
       </section>
 
       <a href="https://rearndt.netlify.app" target="_blank">
