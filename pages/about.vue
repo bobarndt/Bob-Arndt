@@ -27,9 +27,18 @@
         </div>
     </div><!-- End .hero div -->
 
-    <h2 class="subheader">No autobiography. Just "stuff" that means "stuff" to me.</h2>
-
     <main class="main">
+      <h2 class="section-title first">Pleased To Meet You</h2>
+      <section class="section-wrapper greeting">
+        <div class="about-me-greeting-wrapper">
+          <div class="about-me-greeting">
+            <h2 class="about-me-subheader">I'm Bob Arndt. Thanks for visiting my site.</h2>
+            <p class="about-me-text">This is no autobiography. Just &ldquo;stuff&rdquo; that means &ldquo;stuff&rdquo; to me.</p>
+            <p class="about-me-quote">&ldquo;My girlfriend called up and said &lsquo;come on over, nobody's home.&rsquo; So I went over to her house and sure enough, nobody was home!&rdquo; ~ Rodney Dangerfield</p>
+          </div>
+          <div class="about-me-photo"></div>
+        </div>
+      </section>
       <h2 class="section-title first">What I'm Listening To</h2>
       <section class="section-wrapper music-wrapper">
         <div class="music">
@@ -120,6 +129,59 @@
 </script>
 
 <style scoped lang="scss">
+
+  .about-me-greeting {
+    padding: 5rem 0 0 4rem;
+    width: 65%;
+  }
+
+  .about-me-greeting-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0;
+  }
+
+  .about-me-photo {
+    background-blend-mode: luminosity;
+    background-color: var(--color-indigo-300);
+    background-image: url('/images/rea-01.min.jpg');
+    background-size: cover;
+    border-radius: var(--border-radius-large);
+    height: 27.4rem;
+    width: 20rem;
+  }
+
+  .about-me-quote {
+    color: var(--color-indigo-600);
+    font-size: var(--font-size-xsmall);
+    font-style: var(--font-style-italic);
+    font-weight: var(--font-weight-semi-bold);
+    letter-spacing: var(--letter-spacing-xwide);
+    line-height: var(--line-height-base);
+    margin-top: 2rem;
+  }
+
+  .about-me-subheader {
+    color: var(--color-subheader);
+    font-size: var(--font-size-xlarge);
+    font-style: var(--font-style-italic);
+    font-weight: var(--font-weight-semi-bold);
+    letter-spacing: var(--letter-spacing-xwide);
+
+    // @media only screen and (max-width: 500px) {
+    //   margin: 3rem 4rem 0;
+    // }
+  }
+
+  .about-me-text {
+    color: var(--color-subheader);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-wide);
+    line-height: var(--line-height-xxxtall);
+    margin-top: 2rem;
+  }
+
   .hero-title-overlay {
     span:nth-child(1) {
       animation: hero-title-fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
@@ -318,18 +380,8 @@
     }
   }
 
-  .subheader {
-    color: var(--color-subheader);
-    font-size: var(--font-size-medium);
-    font-style: var(--font-style-italic);
-    font-weight: var(--font-weight-semi-bold);
-    letter-spacing: var(--letter-spacing-xwide);
-    margin: 3rem 0 0;
-    text-align: center;
-
-    @media only screen and (max-width: 500px) {
-      margin: 3rem 4rem 0;
-    }
+  .section-wrapper.greeting {
+    padding: 0 0 0;
   }
 
   .video {
