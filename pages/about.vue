@@ -170,9 +170,6 @@
     justify-content: space-between;
     padding: 0 0 0;
 
-    @media only screen and (min-width: 601px) and (max-width: 780px) {
-    }
-
     @media only screen and (max-width: 600px) {
       flex-direction: column-reverse;
     }
@@ -186,11 +183,9 @@
     background-size: cover;
     border-radius: var(--border-radius-large);
     height: 27.4rem;
-    // margin-top: 4rem;
     width: 20rem;
 
     @media only screen and (min-width: 601px) and (max-width: 780px) {
-      // margin-top: 0;
     }
 
     @media only screen and (max-width: 600px) {
@@ -214,10 +209,6 @@
     font-style: var(--font-style-italic);
     font-weight: var(--font-weight-semi-bold);
     letter-spacing: var(--letter-spacing-xwide);
-
-    // @media only screen and (max-width: 500px) {
-    //   margin: 3rem 4rem 0;
-    // }
   }
 
   .intro-text {
@@ -356,7 +347,7 @@
   }
 
   .pledge-text {
-    color: var(--color-slate-600);
+    color: var(--color-slate-700);
     font-family: var(--font-family-serif);
     font-size: var(--font-size-xxxxlarge);
     font-style: var(--font-style-italic);
@@ -368,6 +359,7 @@
 
     // iPad Pro 12" | 1024px wide
     @media only screen and (min-width: 846px) and (max-width: 1030px) {
+      color: var(--color-slate-800);
       font-size: var(--font-size-xxxxlarge);
       font-weight: var(--font-weight-xbold);
       letter-spacing: var(--letter-spacing-normal);
@@ -379,6 +371,7 @@
     // iPad Pro 11" portrait | 1194px wide
     // iPhone 12 Pro landscape | 844px wide
     @media only screen and (min-width: 401px) and (max-width: 845px) {
+      color: var(--color-pledge-text);
       font-size: var(--font-size-xxlarge);
       font-weight: var(--font-weight-xbold);
       letter-spacing: var(--letter-spacing-normal);
