@@ -30,13 +30,13 @@
     <main class="main">
       <h2 class="section-title first">Pleased To Meet You</h2>
       <section class="section-wrapper greeting">
-        <div class="about-me-greeting-wrapper">
-          <div class="about-me-greeting">
-            <h2 class="about-me-subheader">I'm Bob Arndt. Thanks for visiting my site.</h2>
-            <p class="about-me-text">This is no autobiography. Just &ldquo;stuff&rdquo; that means &ldquo;stuff&rdquo; to me.</p>
-            <p class="about-me-quote">&ldquo;My girlfriend called up and said &lsquo;come on over, nobody's home.&rsquo; So I went over to her house and sure enough, nobody was home!&rdquo; ~ Rodney Dangerfield</p>
+        <div class="intro-greeting-wrapper">
+          <div class="intro-greeting">
+            <h2 class="intro-subheader">I'm Bob Arndt. Thanks for visiting my site.</h2>
+            <p class="intro-text">This is no autobiography. Just &ldquo;stuff&rdquo; that means &ldquo;stuff&rdquo; to me.</p>
+            <p class="intro-quote">&ldquo;My girlfriend called up and said &lsquo;come on over, nobody's home.&rsquo; So I went over to her house and sure enough, nobody was home!&rdquo; ~ Rodney Dangerfield</p>
           </div>
-          <div class="about-me-photo"></div>
+          <div class="intro-photo"></div>
         </div>
       </section>
       <h2 class="section-title first">What I'm Listening To</h2>
@@ -130,29 +130,76 @@
 
 <style scoped lang="scss">
 
-  .about-me-greeting {
+  .intro-greeting {
     padding: 5rem 0 0 4rem;
     width: 65%;
+
+    @media only screen and (min-width: 1001px) {
+      padding: 7rem 0 0 4rem;
+      width: 70%;
+    }
+
+    @media only screen and (min-width: 811px) and (max-width: 1000px) {
+      padding: 6rem 0 0 3rem;
+      width: 65%;
+    }
+
+    @media only screen and (min-width: 781px) and (max-width: 810px) {
+      padding: 4rem 0 0 2rem;
+      width: 60%;
+    }
+
+    @media only screen and (min-width: 721px) and (max-width: 780px) {
+      padding: 3rem 0 0 2rem;
+      width: 60%;
+    }
+
+    @media only screen and (min-width: 601px) and (max-width: 720px) {
+      padding: 3rem 0 0 2rem;
+      width: 60%;
+    }
+
+    @media only screen and (max-width: 600px) {
+      padding: 2rem 2rem 3rem;
+      width: 100%;
+    }
   }
 
-  .about-me-greeting-wrapper {
+  .intro-greeting-wrapper {
     display: flex;
     justify-content: space-between;
     padding: 0 0 0;
+
+    @media only screen and (min-width: 601px) and (max-width: 780px) {
+    }
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column-reverse;
+    }
   }
 
-  .about-me-photo {
+  .intro-photo {
+    align-self: center;
     background-blend-mode: luminosity;
     background-color: var(--color-indigo-300);
     background-image: url('/images/rea-01.min.jpg');
     background-size: cover;
     border-radius: var(--border-radius-large);
     height: 27.4rem;
+    // margin-top: 4rem;
     width: 20rem;
+
+    @media only screen and (min-width: 601px) and (max-width: 780px) {
+      // margin-top: 0;
+    }
+
+    @media only screen and (max-width: 600px) {
+      margin-top: 2rem;
+    }
   }
 
-  .about-me-quote {
-    color: var(--color-indigo-600);
+  .intro-quote {
+    color: var(--color-intro-quote);
     font-size: var(--font-size-xsmall);
     font-style: var(--font-style-italic);
     font-weight: var(--font-weight-semi-bold);
@@ -161,7 +208,7 @@
     margin-top: 2rem;
   }
 
-  .about-me-subheader {
+  .intro-subheader {
     color: var(--color-subheader);
     font-size: var(--font-size-xlarge);
     font-style: var(--font-style-italic);
@@ -173,12 +220,12 @@
     // }
   }
 
-  .about-me-text {
+  .intro-text {
     color: var(--color-subheader);
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-normal);
     letter-spacing: var(--letter-spacing-wide);
-    line-height: var(--line-height-xxxtall);
+    line-height: var(--line-height-medium);
     margin-top: 2rem;
   }
 
