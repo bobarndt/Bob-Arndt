@@ -72,13 +72,6 @@
         <p class="section-text">&ldquo;This [the U.S. Constitution] is likely to be administered for a course of years and then end in despotism . . . when the people shall become so corrupted as to need despotic government, being incapable of any other.&rdquo; ~ Benjamin Franklin</p>
       </section>
 
-      <h2 class="section-title">What I Believe</h2>
-      <section class="section-wrapper last">
-        <p class="section-text">No Facebook. No Instagram. No Twitter. No pre-natal murder. No climate change. No foreign invasion. No scamdemic. No COVID. No vaccination. No mask. No Fauci. No Gates. No WHO. No cancel. No woke. No Antifa. No Stalinism. No Democrats. No Joe. No Nancy. No Chuck. No Bernie. No Hillary. No Beto. No money for Ukraine. No ACLU. No UN. No FBI. No DOJ. No UAW. No CRT. No BLM. No CNN. No MSM. No NPR. No PBS. No NFL. No NBA. No MLB. No ESPN. No Amazon. No Starbucks. No Ben & Jerry's. No Disney. No apology.</p>
-        <p class="section-text">Pro life. Pro America. Pro MAGA. Pro border wall. Pro ICE. Pro NRA. Pro re-fund the military. Pro re-fund the police. Pro Blue Lives Matter. Pro Black Lives (that don't matter) Matter. Pro Israel. Drain the swamp. DeSantis 2024. God bless America. No compromise. No apology.</p>
-        <p class="section-text">That being said, I make no effort to propagate my views in the workplace. As a professional in a business environment, I do not vocalize my opinions, and always maintain respect for the right of others who hold opposing beliefs. Nonetheless, on any occasion where others do not exercise the same restraint, I will not hesitate to challenge them in the same spirit. Coworkers have the right to work in an comfortable atmosphere. So do I.</p>
-      </section>
-
       <a href="https://rearndt.netlify.app" target="_blank">
         <button class="cta-button">
           <span ref="ctaButtonIcon" class="cta-button-icon"></span>
@@ -382,6 +375,7 @@
 
     // iPhone 12 Pro portrait | 390px wide
     @media only screen and (min-width: 375px) and (max-width: 400px) {
+      color: var(--color-pledge-text);
       font-size: var(--font-size-xxlarge);
       font-weight: var(--font-weight-bold);
       letter-spacing: var(--letter-spacing-normal);
@@ -405,10 +399,18 @@
     position: relative;
     width: 100%;
 
-    @media only screen and (max-width: 845px) {
+    @media only screen and (min-width: 651px) and (max-width: 845px) {
       background-size: contain;
       flex-direction: column;
       justify-content: flex-end;
+      min-height: 61rem;
+    }
+
+    @media only screen and (max-width: 650px) {
+      background-size: contain;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 60rem;
     }
   }
 
@@ -417,6 +419,13 @@
 
     @media only screen and (max-width: 1100px) {
       min-height: 67rem;
+    }
+  }
+
+  .section-wrapper {
+    @media only screen and (max-width: 600px) {
+      margin-bottom: 5rem;
+      padding: 2rem 2rem 2rem;
     }
   }
 
@@ -459,7 +468,7 @@
       padding: 1.25rem 2rem 0;
 
       &:last-of-type {
-        padding-bottom: 4rem;
+        padding-bottom: 3rem;
         padding-top: 2rem;
       }
     }
