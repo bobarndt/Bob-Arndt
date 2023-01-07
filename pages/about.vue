@@ -28,17 +28,19 @@
     </div><!-- End .hero div -->
 
     <main class="main">
+
       <h2 class="section-title first">Pleased To Meet You</h2>
       <section class="section-wrapper greeting">
         <div class="intro-greeting-wrapper">
           <div class="intro-greeting">
             <h2 class="intro-subheader">I'm Bob Arndt. Thanks for visiting my site.</h2>
-            <p class="intro-text">This is not my autobiography. Just &ldquo;stuff&rdquo; that means &ldquo;stuff&rdquo; to me.</p>
+            <p class="intro-text">This is not an autobiography. Just &ldquo;stuff&rdquo; worth sharing.</p>
             <p class="intro-quote">&ldquo;My girlfriend called up and said &lsquo;come on over, nobody's home.&rsquo; So I went over to her house and sure enough, nobody was home!&rdquo; ~ Rodney Dangerfield</p>
           </div>
           <div class="intro-photo" height="274" width="200"></div>
         </div>
       </section>
+
       <h2 class="section-title first">What I'm Listening To</h2>
       <section class="section-wrapper music-wrapper">
         <div class="music">
@@ -51,25 +53,43 @@
         <div ref="compositionCaption" class="music-caption"></div>
       </section>
 
+      <h2 class="section-title">The Greatest Ever</h2>
+      <section class="video-wrapper">
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/lCeebWgjrrU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div>
+          <p class="video-caption">Andrés Segovia, (born Feb. 21, 1893, Linares, Spain—died June 2, 1987, Madrid), Spanish musician acclaimed as the foremost guitarist of his time. He was the most important force in reestablishing the guitar as a concert instrument in the 20th century, chiefly through demonstrating its expressive and technical potential. He continued giving concert performances past the age of 90.</p>
+          <p class="video-caption">Segovia studied the piano and cello as a child but could not be diverted from his interest in the guitar, which was held in low repute at the time as an instrument fit only for playing in cafés. No competent teacher of the guitar was easily available, so Segovia taught himself, basing his technique largely on his own intuitions.</p>
+          <p class="citation">Britannica, The Editors of Encyclopaedia. "Andrés Segovia". Encyclopedia Britannica, 29 May. 2022, https://www.britannica.com/biography/Andres-Segovia. Accessed 6 January 2023.</p>
+        </div>
+      </section>
+
       <h2 class="section-title">Too Funny To Not Share</h2>
       <section class="video-wrapper">
         <div class="video">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/gGIap2_tmng?rel=0&iv_load_policy=3&fs=0&disablekb=1" title="Mike Leach on wedding planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
         </div>
-        <div ref="videoCaption" class="video-caption"><p>Wedding planning advice from an unlikely source, Mike Leach (March 9, 1961 – December 12, 2022), head football coach at Mississippi State</p>
-          <p>&ldquo;He truly did invest in other people. And it's a great reminder for us all. Rest in peace, my friend. There will never be another one like you.&rdquo; ~ Lincoln Riley, head football coach at the University of Southern California</p>
+        <div>
+          <p class="video-caption">Wedding planning advice from an unlikely source, Mike Leach (March 9, 1961 – December 12, 2022), head football coach at Mississippi State</p>
+          <p class="video-caption">&ldquo;He truly did invest in other people. And it's a great reminder for us all. Rest in peace, my friend. There will never be another one like you.&rdquo; ~ Lincoln Riley, head football coach at the University of Southern California</p>
         </div>
       </section>
 
-      <h2 class="section-title">I Pledge Allegiance . . .</h2>
-      <section class="pledge-wrapper">
-        <p class="pledge-text">I pledge allegiance to the flag of the United States of America, and to the republic for which it stands, one nation under God, indivisible, with liberty and justice for all.</p>
+      <h2 class="section-title">Too Cute To Not Share</h2>
+      <section class="video-wrapper">
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/blTurFmZLrU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div>
+          <p class="video-caption">&ldquo;Can I have the phone?&rdquo;</p>
+          <p class="video-caption">&ldquo;I protect you from bugs and spiders.&rdquo;</p>
+        </div>
       </section>
 
-      <h2 class="section-title">The Truth About &ldquo;Democracy&rdquo;</h2>
-      <section class="section-wrapper back-to-top-observer-target">
-        <p class="section-text">&ldquo;A democracy cannot exist as a permanent form of government. It can only exist until the voters discover that they can vote themselves largesse from the public treasury. From that moment on, the majority always votes for the candidates promising the most benefits from the public treasury with the result that a democracy always collapses over loose fiscal policy, always followed by a dictatorship. The average age of the world's greatest civilizations has been 200 years. These nations have progressed through this sequence: From bondage to spiritual faith; From spiritual faith to great courage; From courage to liberty; From liberty to abundance; From abundance to selfishness; From selfishness to apathy; From apathy to dependence; From dependence back into bondage.&rdquo; ~ Alexander Tytler</p>
-        <p class="section-text">&ldquo;This [the U.S. Constitution] is likely to be administered for a course of years and then end in despotism . . . when the people shall become so corrupted as to need despotic government, being incapable of any other.&rdquo; ~ Benjamin Franklin</p>
+      <h2 class="section-title back-to-top-observer-target">I Pledge Allegiance . . .</h2>
+      <section class="pledge-wrapper last">
+        <p class="pledge-text">I pledge allegiance to the flag of the United States of America, and to the republic for which it stands, one nation under God, indivisible, with liberty and justice for all.</p>
       </section>
 
       <a href="https://rearndt.netlify.app" target="_blank">
@@ -122,6 +142,21 @@
 </script>
 
 <style scoped lang="scss">
+
+  .citation {
+    border-top: 1px solid var(--color-citation);
+    color: var(--color-citation);
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-wide);
+    line-height: var(--line-height-medium);
+    margin-top: 2rem;
+    padding: 2rem 2rem .25rem;
+
+    @media only screen and (max-width: 600px) {
+      padding-bottom: 2rem;
+    }
+  }
 
   .hero-title-overlay {
     span:nth-child(1) {
@@ -210,9 +245,6 @@
     border-radius: var(--border-radius-large);
     height: 27.4rem;
     width: 20rem;
-
-    @media only screen and (min-width: 601px) and (max-width: 780px) {
-    }
 
     @media only screen and (max-width: 600px) {
       margin-top: 2rem;
@@ -334,6 +366,14 @@
     }
   }
 
+  .music-wrapper {
+    min-height: 63rem;
+
+    @media only screen and (max-width: 1100px) {
+      min-height: 67rem;
+    }
+  }
+
   .pledge-text {
     color: var(--color-slate-700);
     font-family: var(--font-family-serif);
@@ -389,7 +429,7 @@
     display: flex;
     justify-content: flex-end;
     min-height: 59.8rem;
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -407,14 +447,7 @@
       justify-content: flex-end;
       min-height: 60rem;
     }
-  }
 
-  .music-wrapper {
-    min-height: 63rem;
-
-    @media only screen and (max-width: 1100px) {
-      min-height: 67rem;
-    }
   }
 
   .section-wrapper {
@@ -450,7 +483,7 @@
     }
   }
 
-  .video-caption p {
+  .video-caption {
     color: var(--color-about-section-video-caption);
     font-size: var(--font-size-medium);
     font-style: var(--font-style-italic);
