@@ -206,11 +206,8 @@ a {
   color: var(--color-section-title);
   font-size: 3rem;
   margin-bottom: 2rem;
+  margin-top: 2rem;
   text-align: center;
-
-  &.first {
-    margin-top: 2rem;
-  }
 }
 
 .section-wrapper {

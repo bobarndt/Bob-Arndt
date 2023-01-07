@@ -29,7 +29,7 @@
 
     <main class="main">
 
-      <h2 class="section-title first">Pleased To Meet You</h2>
+      <h2 class="section-title">Pleased To Meet You</h2>
       <section class="section-wrapper greeting">
         <div class="intro-greeting-wrapper">
           <div class="intro-greeting">
@@ -88,7 +88,7 @@
       </section>
 
       <h2 class="section-title back-to-top-observer-target">I Pledge Allegiance . . .</h2>
-      <section class="pledge-wrapper last">
+      <section class="pledge-wrapper">
         <p class="pledge-text">I pledge allegiance to the flag of the United States of America, and to the republic for which it stands, one nation under God, indivisible, with liberty and justice for all.</p>
       </section>
 
@@ -153,7 +153,7 @@
     margin-top: 2rem;
     padding: 2rem 2rem .25rem;
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 800px) {
       padding-bottom: 2rem;
     }
   }
@@ -409,7 +409,7 @@
     }
 
     // iPhone 12 Pro portrait | 390px wide
-    @media only screen and (min-width: 375px) and (max-width: 400px) {
+    @media only screen and (max-width: 400px) {
       color: var(--color-pledge-text);
       font-size: var(--font-size-xxlarge);
       font-weight: var(--font-weight-bold);
@@ -434,20 +434,47 @@
     position: relative;
     width: 100%;
 
-    @media only screen and (min-width: 651px) and (max-width: 845px) {
-      background-size: contain;
-      flex-direction: column;
-      justify-content: flex-end;
-      min-height: 61rem;
-    }
-
-    @media only screen and (max-width: 650px) {
+    @media only screen and (min-width: 791px) and (max-width: 845px) {
       background-size: contain;
       flex-direction: column;
       justify-content: flex-end;
       min-height: 60rem;
     }
 
+    @media only screen and (min-width: 751px) and (max-width: 790px) {
+      background-size: contain;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 58rem;
+    }
+
+    @media only screen and (min-width: 701px) and (max-width: 750px) {
+      background-size: contain;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 56rem;
+    }
+
+    @media only screen and (min-width: 651px) and (max-width: 700px) {
+      background-size: contain;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 54rem;
+    }
+
+    @media only screen and (min-width: 601px) and (max-width: 650px) {
+      background-size: contain;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 55rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+      background-size: contain;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 60rem;
+    }
   }
 
   .section-wrapper {
@@ -458,17 +485,19 @@
   }
 
   .section-wrapper.greeting {
+    margin-top: 2rem;
     padding: 0 0 0;
   }
 
   .video {
     height: 0;
-    margin: 4rem 0 3rem;
+    margin: 2rem 0;
     padding-bottom: 56.25%;
     position: relative;
     width: 100%;
 
     @media only screen and (max-width: 640px) {
+      margin-top: 2rem;
       width: 100%;
     }
 

@@ -523,4 +523,13 @@
       margin-top: 2.5rem;
     }
   }
+
+  .section-wrapper.last {
+    margin-bottom: 5rem;
+
+    @media only screen and (max-width: 600px) {
+      margin-bottom: 4rem;
+      padding: 2rem 2rem 2rem;
+    }
+  }
 </style>
