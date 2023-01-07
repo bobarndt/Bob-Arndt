@@ -33,10 +33,10 @@
         <div class="intro-greeting-wrapper">
           <div class="intro-greeting">
             <h2 class="intro-subheader">I'm Bob Arndt. Thanks for visiting my site.</h2>
-            <p class="intro-text">This is no autobiography. Just &ldquo;stuff&rdquo; that means &ldquo;stuff&rdquo; to me.</p>
+            <p class="intro-text">This is not my autobiography. Just &ldquo;stuff&rdquo; that means &ldquo;stuff&rdquo; to me.</p>
             <p class="intro-quote">&ldquo;My girlfriend called up and said &lsquo;come on over, nobody's home.&rsquo; So I went over to her house and sure enough, nobody was home!&rdquo; ~ Rodney Dangerfield</p>
           </div>
-          <div class="intro-photo"></div>
+          <div class="intro-photo" height="274" width="200"></div>
         </div>
       </section>
       <h2 class="section-title first">What I'm Listening To</h2>
@@ -123,14 +123,47 @@
 
 <style scoped lang="scss">
 
-  .intro-greeting {
-    padding: 5rem 0 0 4rem;
-    width: 65%;
-
-    @media only screen and (min-width: 1001px) {
-      padding: 7rem 0 0 4rem;
-      width: 70%;
+  .hero-title-overlay {
+    span:nth-child(1) {
+      animation: hero-title-fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
     }
+
+    span:nth-child(2) {
+      animation: hero-title-fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(3) {
+      animation: hero-title-fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(4) {
+      animation: hero-title-fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(5) {
+      animation: hero-title-fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(6) {
+      animation: hero-title-fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(7) {
+      animation: hero-title-fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(8) {
+      animation: hero-title-fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+  }
+
+  .hero-title-wrapper {
+    border: var(--border-indigo);
+  }
+
+  .intro-greeting {
+    padding: 7rem 0 0 6rem;
+    width: 70%;
 
     @media only screen and (min-width: 811px) and (max-width: 1000px) {
       padding: 6rem 0 0 3rem;
@@ -211,44 +244,6 @@
     letter-spacing: var(--letter-spacing-wide);
     line-height: var(--line-height-medium);
     margin-top: 2rem;
-  }
-
-  .hero-title-overlay {
-    span:nth-child(1) {
-      animation: hero-title-fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(2) {
-      animation: hero-title-fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(3) {
-      animation: hero-title-fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(4) {
-      animation: hero-title-fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(5) {
-      animation: hero-title-fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(6) {
-      animation: hero-title-fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(7) {
-      animation: hero-title-fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(8) {
-      animation: hero-title-fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-  }
-
-  .hero-title-wrapper {
-    border: var(--border-indigo);
   }
 
   .music {
