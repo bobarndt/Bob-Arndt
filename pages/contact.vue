@@ -287,7 +287,7 @@
   .form-button-clear,
   .form-button-send {
     align-items: center;
-    background-color: var(--color-cta-button);
+    background-color: var(--color-indigo-800);
     border-radius: var(--border-radius-small);
     color: var(--color-slate-400);
     cursor: pointer;
@@ -462,7 +462,7 @@
   }
 
   .section-form {
-    background-image: var(--background-image-contact-form);
+    background-image: var(--background-image-gradient);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow-section-background);
     margin-bottom: 1.5rem;
