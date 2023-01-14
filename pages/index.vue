@@ -51,6 +51,18 @@
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
+              <img src="/images/skills/typescript.svg" height="84" width="84" alt="TypeScript">
+            </div>
+            <span class="home-skills-item-caption">TypeScript</span>
+          </div>
+          <div class="home-skills-item-wrapper">
+            <div class="home-skills-item">
+              <img src="/images/skills/angular.svg" height="84" width="84" alt="Angular">
+            </div>
+            <span class="home-skills-item-caption">Angular</span>
+          </div>
+          <div class="home-skills-item-wrapper">
+            <div class="home-skills-item">
               <img src="/images/skills/vue3.svg" height="84" width="84" alt="Vue 3">
             </div>
             <span class="home-skills-item-caption">Vue 3</span>

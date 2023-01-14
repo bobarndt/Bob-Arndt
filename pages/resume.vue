@@ -57,7 +57,8 @@
           <div class="resume-section-flex-container">
             <h2 class="resume-article-title">Technical Skills</h2>
             <ul class="resume-skills-list">
-              <li>JavaScript / VueJS / NuxtJS</li>
+              <li>JavaScript / Typescript</li>
+              <li>Angular / VueJS / NuxtJS</li>
               <li>NodeJS / NPM / Vite</li>
               <li>Ajax / JSON / RESTful APIs</li>
               <li>HTML5 / Responsive Design</li>
@@ -80,9 +81,9 @@
                 <h5 class="resume-recent-employer">Children's Health</h5>
                 <p class="resume-body-text">Contributed to ongoing development and maintenance of enterprise site <a class="link" href="https://www.childrens.com" target="_blank"><span data-content="www.childrens.com">www.childrens.com</span><span ref="externalLinkIcon" class="external-link-icon"></span></a>, as well as related internal and public-facing web properties for Children’s Medical Center of Dallas. Extensive use of IBM Websphere Application Server (CMS), JavaScript, jQuery, Sass and Gulp.</p>
                 <h5 class="resume-recent-employer">CBRE</h5>
-                <p class="resume-body-text">Participated in building CBRE myVantage with Angular 6 and Bootstrap. myVantage is an internal tool to empower CBRE salespeople to create and configure highly customized proposals for their prospects and existing customers.</p>
+                <p class="resume-body-text">Participated in building CBRE myVantage with Angular and Bootstrap. myVantage is an internal tool to empower CBRE salespeople to create and configure highly customized proposals for their prospects and existing customers.</p>
                 <h5 class="resume-recent-employer">American Airlines</h5>
-                <p class="resume-body-text">Developed front-end UI on ConnectMe chat/messaging application for airport maintenance group utilizing Angular 6. Concentration on converting Sketch designs/redlines to Angular component HTML templates. Created proof-of-concept mobile version with React Native.</p>
+                <p class="resume-body-text">Developed front-end UI on ConnectMe chat/messaging application for airport maintenance group utilizing Angular. Concentration on converting Sketch designs/redlines to Angular component HTML templates.</p>
                 <h5 class="resume-recent-employer">J.P. Morgan Chase</h5>
                 <p class="resume-body-text">Participated in integration of Merchant Services accounts functionality into customer-facing online banking application using proprietary blueJS JavaScript framework.</p>
                 <h5 class="resume-recent-employer">Cisco Systems</h5>
