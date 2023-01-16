@@ -113,11 +113,6 @@
     &.active {
       color: var(--color-azure-400);
     }
-
-    &:hover {
-      animation: pulse-icon-menu 2s linear 2;
-      color: var(--color-white);
-    }
   }
 
   .menu-item {
