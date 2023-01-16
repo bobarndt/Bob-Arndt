@@ -68,12 +68,12 @@
 
           <div class="button-wrapper">
             <button ref="formClearButton" type="reset" class="form-button-clear" name="clear-button" tabindex="6" role="button" @click="handleReset">
-              <span ref="formClearButtonSpan" class="form-button-clear-icon"></span>
-              <span>Clear</span>
+              <span ref="formClearButtonIcon" class="form-button-clear-icon"></span>
+              <span class="form-button-text" data-content="Clear">Clear</span>
             </button>
             <button ref="formSendButton" type="submit" class="form-button-send" name="send-button" tabindex="5" role="button">
-              <span ref="formSendButtonSpan" class="form-button-send-icon"></span>
-              <span>Send</span>
+              <span ref="formSendButtonIcon" class="form-button-send-icon"></span>
+              <span class="form-button-text" data-content="Send">Send</span>
             </button>
           </div>
 
@@ -144,8 +144,8 @@
         return inputValue === `` ? false : true;
       },
       loadIcons() {
-        this.$refs.formClearButtonSpan.innerHTML = this.clearIcon;
-        this.$refs.formSendButtonSpan.innerHTML = this.sendIcon;
+        this.$refs.formClearButtonIcon.innerHTML = this.clearIcon;
+        this.$refs.formSendButtonIcon.innerHTML = this.sendIcon;
       },
       setFocus() {
         this.$refs.firstNameInput.focus();
@@ -298,7 +298,7 @@
     height: 4.6rem;
     justify-content: center;
     letter-spacing: var(--letter-spacing-xwide);
-    transition: all 0.5s ease-out;
+    transition: box-shadow 500ms ease, clip-path 275ms ease, transform 500ms ease;
     width: 100%;
 
     &:focus,
@@ -307,12 +307,29 @@
       box-shadow: var(--box-shadow-medium);
       color: var(--color-white);
       outline: none;
+      transform: translateY(-.2rem);
+
+      span.form-button-text::before,
+      span.form-button-text::before {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
 
       .form-button-clear-icon,
       .form-button-send-icon {
-        animation: pulse-icon-download-resume 2s linear 2;
+        animation: pulse-icon 2s linear 2;
       }
     }
+  }
+
+  .form-button-text::before {
+    content: attr(data-content);
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+    color: var(--color-menu-link-overlay);
+    letter-spacing: var(--letter-spacing-xwide);
+    position: absolute;
+    text-decoration: underline;
+    text-decoration-color: var(--color-menu-link-overlay);
+    transition: clip-path 500ms ease;
   }
 
   .hero-title-overlay {

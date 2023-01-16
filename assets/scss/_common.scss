@@ -54,7 +54,7 @@ a {
   height: 4.6rem;
   justify-content: center;
   margin-bottom: 3.5rem;
-  transition: clip-path 275ms ease;
+  transition: box-shadow 500ms ease, clip-path 275ms ease, transform 500ms ease;
   width: var(--width-full);
 
   &:focus,
@@ -63,16 +63,16 @@ a {
     box-shadow: var(--box-shadow-medium);
     color: var(--color-white);
     outline: none;
+    transform: translateY(-.2rem);
 
     span.cta-button-text::before,
     span.cta-button-text::before {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
-  }
 
-  &:hover .cta-button-icon {
-    animation: pulse-icon-menu 2s linear 2;
-    color: var(--color-white);
+    .cta-button-icon {
+      animation: pulse-icon 2s linear 2;
+    }
   }
 
   @media only screen and (max-width: 460px) {
