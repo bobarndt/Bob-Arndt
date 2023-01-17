@@ -52,7 +52,7 @@
     height: 4.6rem;
     justify-content: center;
     margin-bottom: 3.5rem;
-    transition: clip-path 275ms ease;
+    transition: box-shadow 500ms ease, clip-path 275ms ease, transform 500ms ease;
     width: 100%;
 
     &:hover {
@@ -60,6 +60,7 @@
       box-shadow: var(--box-shadow-medium);
       color: var(--color-white);
       outline: none;
+      transform: translateY(-.2rem);
 
       span.error-button-text::before,
       span.error-button-text::before {
