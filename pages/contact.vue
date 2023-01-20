@@ -105,13 +105,13 @@
     },
     methods: {
       handleReset() {
-        this.$refs.firstNameParent.classList.remove(`invalid`);
+        this.$refs.firstNameParent.classList.remove(`valid`, `invalid`);
         this.$refs.firstNameParent.children[1].textContent = ``;
-        this.$refs.lastNameParent.classList.remove(`invalid`);
+        this.$refs.lastNameParent.classList.remove(`valid`, `invalid`);
         this.$refs.lastNameParent.children[1].textContent = ``;
-        this.$refs.emailParent.classList.remove(`invalid`);
+        this.$refs.emailParent.classList.remove(`valid`, `invalid`);
         this.$refs.emailParent.children[1].textContent = ``;
-        this.$refs.messageParent.classList.remove(`invalid`);
+        this.$refs.messageParent.classList.remove(`valid`, `invalid`);
         this.$refs.messageParent.children[1].textContent = ``;
         this.setFocus();
       },
@@ -397,7 +397,7 @@
     &:focus {
       background-color: var(--color-white);
       border-color: var(--color-indigo-700);
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+      box-shadow: var(--box-shadow-form-input);
       color: var(--color-black);
       outline: none;
     }
@@ -422,10 +422,17 @@
     margin-bottom: 3rem;
     position: relative;
 
+    &.valid {
+      .input:focus,
+      .textarea:focus {
+        border-color: var(--color-indigo-700);
+      }
+    }
+
     &.invalid input,
     &.invalid textarea {
       border-color: var(--color-rose-500);
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+      box-shadow: var(--box-shadow-form-input);
     }
 
     &.valid input,
