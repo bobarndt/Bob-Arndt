@@ -288,7 +288,7 @@
     box-shadow: var(--box-shadow-section-background);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 2rem 2rem 2.5rem;
 
     @media only screen and (min-width: 406px) and (max-width: 425px) {
