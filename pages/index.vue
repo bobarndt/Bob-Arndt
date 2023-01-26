@@ -69,6 +69,12 @@
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
+              <img src="/images/skills/rxjs.svg" height="84" width="84" alt="RxJS">
+            </div>
+            <span class="home-skills-item-caption">RxJS</span>
+          </div>
+          <div class="home-skills-item-wrapper">
+            <div class="home-skills-item">
               <img src="/images/skills/vue3.svg" height="84" width="84" alt="Vue 3">
             </div>
             <span class="home-skills-item-caption">Vue 3</span>
