@@ -87,6 +87,12 @@
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
+              <img src="/images/skills/figma.svg" height="42" width="42" alt="Figma">
+            </div>
+            <span class="home-skills-item-caption">Figma</span>
+          </div>
+          <div class="home-skills-item-wrapper">
+            <div class="home-skills-item">
               <img src="/images/skills/html5.svg" height="60" width="60" alt="HTML5">
             </div>
             <span class="home-skills-item-caption">HTML 5</span>
