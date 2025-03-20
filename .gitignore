@@ -1,8 +1,67 @@
-node_modules
-*.log*
-.nuxt
-.nitro
+#----------- Compiled Source -----------
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.rea
+
+#----------- Temporary Files -----------
+*.swp
+*.swo
+*~
+
+#----------- Packages -----------
+*.7z
+*.dmg
+*.gz
+*.iml
+*.iso
+*.jar
+*.pyc
+*.rar
+*.tar
+*.zip
+
+#----------- Logs and Databases -----------
+*.log
+npm-debug.log
+*.sql
+*.sqlite
+
+#----------- OS Generated Files -----------
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+#----------- IDE Project Files -----------
+# PHPStorm/WebStorm project files
+.idea
+# Sublime Text project files
+.sublime*
+# Visual Studio Code project files
+.vscode
+
+#----------- Project Directories -----------
 .cache
+.nitro
+.nuxt
 .output
-.env
+.sass-cache
+.tmp
+build
 dist
+dist-ssr
+node_modules
+
+#----------- Environment files -----------
+.env
+.env-sample
+
+#----------- Webpack source maps -----------
+*.map
+
+#----------- Git merge backups -----------
+*.orig
