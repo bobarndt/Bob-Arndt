@@ -25,5 +25,9 @@ export default defineNuxtConfig({
 
   css: [
     `@/assets/scss/main.scss`
-  ]
+  ],
+
+  nitro: {
+    preset: 'netlify-static'
+  }
 })
