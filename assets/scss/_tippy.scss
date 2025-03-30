@@ -1,5 +1,5 @@
 /*! tippy.scss */
 
-@import '../../node_modules/tippy.js/dist/tippy';
-@import '../../node_modules/tippy.js/themes/translucent';
-@import '../../node_modules/tippy.js/animations/scale.css';
+@use '../../node_modules/tippy.js/dist/tippy';
+@use '../../node_modules/tippy.js/themes/translucent';
+@use '../../node_modules/tippy.js/animations/scale.css';

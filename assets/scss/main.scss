@@ -1,11 +1,11 @@
 /*! main.scss */
 
-@import 'variables';
-@import 'reset';
-@import 'fonts';
-@import 'themes';
-@import 'tippy';
-@import 'common';
-@import 'hero';
-@import 'hamburger';
-@import 'animations';
+@use 'variables';
+@use 'reset';
+@use 'fonts';
+@use 'themes';
+@use 'tippy';
+@use 'common';
+@use 'hero';
+@use 'hamburger';
+@use 'animations';

@@ -1,6 +1,6 @@
 /*! _variables.scss */
 
-@import 'colors';
+@use 'colors';
 
 :root {
   --backdrop-blur: .4rem;
