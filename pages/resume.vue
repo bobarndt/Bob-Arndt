@@ -57,12 +57,11 @@
           <div class="resume-section-flex-container">
             <h2 class="resume-article-title">Technical Skills</h2>
             <ul class="resume-skills-list">
+              <li>HTML5 / Responsive Design</li>
+              <li>CSS3 / Sass / Bootstrap / TailwindCSS</li>
               <li>JavaScript / Typescript</li>
               <li>Angular / VueJS / NuxtJS</li>
               <li>NodeJS / NPM / Vite</li>
-              <li>Ajax / JSON / RESTful APIs</li>
-              <li>HTML5 / Responsive Design</li>
-              <li>CSS3 / Sass / Bootstrap / TailwindCSS</li>
               <li>Git / Github</li>
             </ul>
           </div>
