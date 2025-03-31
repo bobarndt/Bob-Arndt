@@ -77,8 +77,10 @@
                   <h3 class="resume-time-period">2008 to present</h3>
                 </div>
                 <span class="resume-employer-description">Recent Projects :</span>
+                <h5 class="resume-recent-employer">FleetPride</h5>
+                <p class="resume-body-text">Front end development on public-facing e-commerce website for <a class="link" href="https://www.fleetpride.com" target="_blank"><span data-content="www.fleetpride.com">www.fleetpride.com</span><span ref="fleetprideExternalLinkIcon" class="external-link-icon"></span></a>, the largest provider of truck and trailer parts and service in the US. Concentration on conversion of Salesforce B2B Commerce to Salesforce Lightning Web Components.</p>
                 <h5 class="resume-recent-employer">Children's Health</h5>
-                <p class="resume-body-text">Contributed to ongoing development and maintenance of enterprise site <a class="link" href="https://www.childrens.com" target="_blank"><span data-content="www.childrens.com">www.childrens.com</span><span ref="externalLinkIcon" class="external-link-icon"></span></a>, as well as related internal and public-facing web properties for Children’s Medical Center of Dallas. Extensive use of IBM Websphere Application Server (CMS), JavaScript, jQuery, Sass and Gulp.</p>
+                <p class="resume-body-text">Contributed to ongoing development and maintenance of enterprise site <a class="link" href="https://www.childrens.com" target="_blank"><span data-content="www.childrens.com">www.childrens.com</span><span ref="childrensExternalLinkIcon" class="external-link-icon"></span></a>, as well as related internal and public-facing web properties for Children’s Medical Center of Dallas. Extensive use of IBM Websphere Application Server (CMS), JavaScript, jQuery, Sass and Gulp.</p>
                 <h5 class="resume-recent-employer">CBRE</h5>
                 <p class="resume-body-text">Participated in building CBRE myVantage with Angular and Bootstrap. myVantage is an internal tool to empower CBRE salespeople to create and configure highly customized proposals for their prospects and existing customers.</p>
                 <h5 class="resume-recent-employer">American Airlines</h5>
@@ -167,7 +169,8 @@
         this.showScrollDownProgress();
       },
       loadIcons() {
-        this.$refs.externalLinkIcon.innerHTML = this.externalLinkSVG;
+        this.$refs.childrensExternalLinkIcon.innerHTML = this.externalLinkSVG;
+        this.$refs.fleetprideExternalLinkIcon.innerHTML = this.externalLinkSVG;
         this.$refs.resumeDownloadButtonIcon.innerHTML = this.resumeDownloadSVG;
       },
       showScrollDownProgress() {
