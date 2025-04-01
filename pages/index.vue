@@ -113,7 +113,19 @@
             <div class="home-skills-item">
               <img src="/images/skills/tailwind.svg" height="84" width="84" alt="TailwindCSS">
             </div>
-            <span class="home-skills-item-caption">Tailwind</span>
+            <span class="home-skills-item-caption">Tailwind CSS</span>
+          </div>
+          <div class="home-skills-item-wrapper">
+            <div class="home-skills-item">
+              <img src="/images/skills/figma.png" height="84" width="84" alt="Figma">
+            </div>
+            <span class="home-skills-item-caption">Figma</span>
+          </div>
+          <div class="home-skills-item-wrapper">
+            <div class="home-skills-item">
+              <img src="/images/skills/pixelmator-pro.png" height="84" width="84" alt="Pixelmator Pro">
+            </div>
+            <span class="home-skills-item-caption">Pixelmator Pro</span>
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
