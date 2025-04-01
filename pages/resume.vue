@@ -58,10 +58,9 @@
             <h2 class="resume-article-title">Technical Skills</h2>
             <ul class="resume-skills-list">
               <li>HTML5 / Responsive Design</li>
-              <li>CSS3 / Sass / Bootstrap / TailwindCSS</li>
-              <li>JavaScript / Typescript</li>
-              <li>Angular / VueJS / NuxtJS</li>
-              <li>NodeJS / NPM / Vite</li>
+              <li>CSS3 / Sass / Bootstrap / Tailwind CSS</li>
+              <li>JavaScript / VueJS / NuxtJS / Angular</li>
+              <li>Vite / Netlify</li>
               <li>Git / Github</li>
             </ul>
           </div>

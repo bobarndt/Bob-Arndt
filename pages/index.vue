@@ -51,18 +51,6 @@
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
-              <img src="/images/skills/typescript.svg" height="84" width="84" alt="TypeScript">
-            </div>
-            <span class="home-skills-item-caption">TypeScript</span>
-          </div>
-          <div class="home-skills-item-wrapper">
-            <div class="home-skills-item">
-              <img src="/images/skills/angular.webp" height="84" width="84" alt="Angular">
-            </div>
-            <span class="home-skills-item-caption">Angular</span>
-          </div>
-          <div class="home-skills-item-wrapper">
-            <div class="home-skills-item">
               <img src="/images/skills/vue3.svg" height="84" width="84" alt="Vue 3">
             </div>
             <span class="home-skills-item-caption">Vue 3</span>
@@ -75,15 +63,9 @@
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
-              <img src="/images/skills/node.svg" height="84" width="84" alt="NodeJS">
+              <img src="/images/skills/angular.webp" height="84" width="84" alt="Angular">
             </div>
-            <span class="home-skills-item-caption">Node</span>
-          </div>
-          <div class="home-skills-item-wrapper">
-            <div class="home-skills-item">
-              <img src="/images/skills/npm.svg" height="84" width="84" alt="NPM">
-            </div>
-            <span class="home-skills-item-caption">NPM</span>
+            <span class="home-skills-item-caption">Angular</span>
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
@@ -117,21 +99,21 @@
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
-              <img src="/images/skills/figma.png" height="84" width="84" alt="Figma">
+              <img src="/images/skills/figma.webp" height="84" width="84" alt="Figma">
             </div>
             <span class="home-skills-item-caption">Figma</span>
-          </div>
-          <div class="home-skills-item-wrapper">
-            <div class="home-skills-item">
-              <img src="/images/skills/pixelmator-pro.png" height="84" width="84" alt="Pixelmator Pro">
-            </div>
-            <span class="home-skills-item-caption">Pixelmator Pro</span>
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
               <img src="/images/skills/vite.svg" height="84" width="84" alt="Vite">
             </div>
             <span class="home-skills-item-caption">Vite</span>
+          </div>
+          <div class="home-skills-item-wrapper">
+            <div class="home-skills-item">
+              <img src="/images/skills/netlify.svg" height="84" width="84" alt="Netlify">
+            </div>
+            <span class="home-skills-item-caption">Netlify</span>
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
@@ -144,12 +126,6 @@
               <img src="/images/skills/github.svg" height="84" width="84" alt="GitHub">
             </div>
             <span class="home-skills-item-caption">GitHub</span>
-          </div>
-          <div class="home-skills-item-wrapper">
-            <div class="home-skills-item">
-              <img src="/images/skills/netlify.svg" height="84" width="84" alt="Netlify">
-            </div>
-            <span class="home-skills-item-caption">Netlify</span>
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
