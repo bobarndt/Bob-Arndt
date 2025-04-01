@@ -57,7 +57,7 @@
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
-              <img src="/images/skills/angular.svg" height="84" width="84" alt="Angular">
+              <img src="/images/skills/angular.webp" height="84" width="84" alt="Angular">
             </div>
             <span class="home-skills-item-caption">Angular</span>
           </div>
