@@ -69,7 +69,7 @@
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
-              <img src="/images/skills/nuxt3.svg" height="84" width="84" alt="Nuxt 3">
+              <img src="/images/skills/nuxt.svg" height="84" width="84" alt="Nuxt 3">
             </div>
             <span class="home-skills-item-caption">Nuxt 3</span>
           </div>
