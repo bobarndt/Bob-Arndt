@@ -141,13 +141,6 @@
           </div>
         </section>
 
-        <a href="/Bob-Arndt-resume.pdf" target="_blank">
-          <button class="cta-button">
-            <span ref="resumeDownloadButtonIcon" class="cta-button-icon"></span>
-            <span class="cta-button-text" data-content="Download Resume">Download Resume</span>
-          </button>
-        </a>
-
       </main>
     </div><!-- End .resume-wrapper div -->
 
@@ -159,7 +152,6 @@
     data() {
       return {
         externalLinkSVG: `<svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 0 24 24" width="14px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>`,
-        resumeDownloadSVG: `<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="20px" viewBox="0 0 24 24" width="20px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M17,11l-1.41-1.41L13,12.17V4h-2v8.17L8.41,9.59L7,11l5,5 L17,11z"/></g></svg>`
       }
     },
     methods: {
@@ -170,7 +162,6 @@
       loadIcons() {
         this.$refs.childrensExternalLinkIcon.innerHTML = this.externalLinkSVG;
         this.$refs.fleetprideExternalLinkIcon.innerHTML = this.externalLinkSVG;
-        this.$refs.resumeDownloadButtonIcon.innerHTML = this.resumeDownloadSVG;
       },
       showScrollDownProgress() {
         window.addEventListener(`scroll`, () => {
