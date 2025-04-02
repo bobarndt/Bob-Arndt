@@ -9,7 +9,7 @@
     <div class="footer-row-wrapper-bottom">
       <div class="footer-row-bottom">
       <div class="footer-photo-wrapper"></div>
-      <span class="footer-copyright">© 2023 REAlizations, Inc. All rights reserved.</span>
+      <span class="footer-copyright">© 2023-2025 REAlizations, Inc. All rights reserved.</span>
       </div>
     </div>
   </footer>
