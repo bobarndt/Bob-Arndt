@@ -49,7 +49,7 @@
         <section class="resume-section">
           <div class="resume-section-flex-container">
             <h2 class="resume-article-title">Professional Profile</h2>
-            <p class="resume-profile-text">Front end web development professional with over 20 years industry experience blending strong creative and technical skills. 15 years in the design and development of web sites and web applications for corporate, institutional, professional and individual clients. Adept designer with the skills to fashion clear and compelling user experiences. Strengths encompass both coding and graphic design resulting in function-rich, responsive, visually appealing sites that convey substance and professionalism.</p>
+            <p class="resume-profile-text">Front end web development professional with over 25 years industry experience blending strong creative and technical skills. Over 15 years in the design and development of web sites and web applications for corporate, institutional, professional and individual clients. Adept designer with the skills to fashion clear and compelling user experiences. Strengths encompass both coding and graphic design resulting in function-rich, responsive, visually appealing sites that convey substance and professionalism.</p>
           </div>
         </section>
 
@@ -57,11 +57,12 @@
           <div class="resume-section-flex-container">
             <h2 class="resume-article-title">Technical Skills</h2>
             <ul class="resume-skills-list">
+              <li>JavaScript / TypeScript</li>
+              <li>Angular / RxJS / Vue.js / Nuxt</li>
               <li>HTML5 / Responsive Design</li>
               <li>CSS3 / Sass / Bootstrap / Tailwind CSS</li>
-              <li>JavaScript / VueJS / NuxtJS / Angular</li>
               <li>Vite / Netlify</li>
-              <li>Git / Github</li>
+              <li>Git / Github / VSCode</li>
             </ul>
           </div>
         </section>
