@@ -37,7 +37,7 @@
     <main class="main">
       <h2 class="section-title first">Professional Profile</h2>
       <section class="section-wrapper">
-        <p class="profile-text">Front end web development professional with over 20 years industry experience blending strong creative and technical skills. 15 years in the design and development of web sites and web applications for corporate, institutional, professional and individual clients. Adept designer with the skills to fashion clear and compelling user experiences. Strengths encompass both coding and graphic design resulting in function-rich, responsive, visually appealing sites that convey substance and professionalism.</p>
+        <p class="profile-text">Front end web development professional with over 25 years industry experience blending strong creative and technical skills. Over 15 years in the design and development of web sites and web applications for corporate, institutional, professional and individual clients. Adept designer with the skills to fashion clear and compelling user experiences. Strengths encompass both coding and graphic design resulting in function-rich, responsive, visually appealing sites that convey substance and professionalism.</p>
       </section>
 
       <section class="home-skills-wrapper">
@@ -51,15 +51,9 @@
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
-              <img src="/images/skills/vue3.svg" height="84" width="84" alt="Vue 3">
+              <img src="/images/skills/typescript.svg" height="84" width="84" alt="TypeScript">
             </div>
-            <span class="home-skills-item-caption">Vue 3</span>
-          </div>
-          <div class="home-skills-item-wrapper">
-            <div class="home-skills-item">
-              <img src="/images/skills/nuxt.svg" height="84" width="84" alt="Nuxt 3">
-            </div>
-            <span class="home-skills-item-caption">Nuxt 3</span>
+            <span class="home-skills-item-caption">TypeScript</span>
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
@@ -69,15 +63,33 @@
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
+              <img src="/images/skills/rxjs.svg" height="84" width="84" alt="RxJS">
+            </div>
+            <span class="home-skills-item-caption">RxJS</span>
+          </div>
+          <div class="home-skills-item-wrapper">
+            <div class="home-skills-item">
+              <img src="/images/skills/vue3.svg" height="84" width="84" alt="Vue 3">
+            </div>
+            <span class="home-skills-item-caption">Vue</span>
+          </div>
+          <div class="home-skills-item-wrapper">
+            <div class="home-skills-item">
+              <img src="/images/skills/nuxt.svg" height="84" width="84" alt="Nuxt 3">
+            </div>
+            <span class="home-skills-item-caption">Nuxt</span>
+          </div>
+          <div class="home-skills-item-wrapper">
+            <div class="home-skills-item">
               <img src="/images/skills/html5.svg" height="60" width="60" alt="HTML5">
             </div>
-            <span class="home-skills-item-caption">HTML 5</span>
+            <span class="home-skills-item-caption">HTML</span>
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
               <img src="/images/skills/css3.svg" height="64" width="64" alt="CSS3">
             </div>
-            <span class="home-skills-item-caption">CSS 3</span>
+            <span class="home-skills-item-caption">CSS</span>
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
@@ -96,12 +108,6 @@
               <img src="/images/skills/tailwind.svg" height="84" width="84" alt="TailwindCSS">
             </div>
             <span class="home-skills-item-caption">Tailwind CSS</span>
-          </div>
-          <div class="home-skills-item-wrapper">
-            <div class="home-skills-item">
-              <img src="/images/skills/figma.webp" height="84" width="84" alt="Figma">
-            </div>
-            <span class="home-skills-item-caption">Figma</span>
           </div>
           <div class="home-skills-item-wrapper">
             <div class="home-skills-item">
